@@ -20,13 +20,17 @@
     body{
         margin: 0;
         padding: 0;
+        background-color: orangered;
     }
     main{width: 100%; align-items: center; display: flex; flex-direction: column;}
-    main .bck-container{background-image: url(Background\ image\ resource\ important.jpg); filter: blur(1.5px); padding-top: -10vh; padding-bottom: 10vh; width: 100%; border:   silver; padding-left: 0; padding-right: 0; flex-direction: column;}
-    main .bck-container .login{visibility: hidden; height: 2%;}
+    main .bck-container{background-image: url(Background\ image\ resource\ important.jpg); filter: blur(0.5px); padding-top: -1vh; padding-bottom: 10vh; width: 100%; border:   silver; padding-left: 0; padding-right: 0; flex-direction: column;}
+    main .bck-container .login{visibility: hidden; height: 2%; margin-top: 0;}
     main .main-container{height: 80%; width: 100%; background-color: transparent;
         position: absolute;
-        top: 10%;}
+        top: 8%;
+        border:  silver;
+    }
+        
     main .nav{
         height: 50px; width: 100%; justify-content: space-between; display: flex; align-items: center; padding: 0px 20px; background-color: white; position: sticky;  top: 0; border-bottom: 2px silver solid;  position: absolute;
     }
@@ -39,18 +43,18 @@
     main .container{
         width: 100%;
         /* height: 80vh; */
-        display: flex; align-items: center; flex-direction: column;
+        display: flex; align-items: flex-start; flex-direction: column;
         /* padding-top: 5vh; */
         /* padding-bottom: 4.5vh; */
        
     }
-    main .container .login{ width: 90%; height: fit-content; margin: auto auto; background-color: white; border-radius: 15px; box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; padding: 25px 20px; justify-content: center; align-items: center; }
-    main .container .login h3{width: 100%; text-align: center; margin-bottom: 5px; font-weight: 800; font-size: 26px; color: rgb(0, 0, 0, 0.6);}
+    main .container .login{ width: 90%; height: fit-content; margin: auto auto; background-color: white; border-radius: 15px; box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px; padding: 20px 20px; justify-content: center; align-items: center; }
+    main .container .login h1{width: 100%; text-align: center; margin-bottom: 5px; font-weight: 800; font-size: 24px; color: rgb(0, 0, 0, 0.7);}
     main .container .login span h5{width: 100%; text-align: left; font-size: 14px; font-weight: bolder; color: rgb(0, 0, 0, 0.8); }
     main .container .login .login-form{width: 100%; height: 80%; padding: 15px 0; border:  thin silver; border:  blue 1px; margin-top: 5px;}
     main .container .login .login-form form label{font-size: 15px; font-weight: bolder; color: rgb(0, 0, 0, 0.6);}
     main .container .login .login-form form input{width: 100%; height: 40px; border-radius: 5px; border: none; padding: 5px 10px; margin-bottom: 15px; transition: 0.3s; background-color: rgb(192, 192, 192, 0.4); margin-top: 2px;}
-    main .container .login .login-form form input:focus{outline: rgb(255, 69, 0, 0.8) solid 2px; background-color: transparent; border: none;}
+    main .container .login .login-form form input:focus{outline: rgb(255, 69, 0, 0.8) solid 2px; outline: black solid 2px; background-color: transparent; border: none;}
     main .container .login .login-form form input::placeholder{font-size: 14px; font-weight: bold;}
     main .container .login .login-form form .forgot-remember{
         display: flex; align-items: center; justify-content: space-between; border:  1px silver; height: 10%; padding: 0; margin-bottom: 10px; margin-top: -10px;
@@ -61,13 +65,14 @@
     main .container .login .login-form form .forgot-remember span a{font-size: 14px; color: rgb(192, 192, 192, 0.9); font-weight: 500; text-decoration: none;}
     main .container .login .login-form form input[type="submit"]{background-color: orangered; color: white; font-size: 20px; border: none; font-weight: 800; margin-top: 10px; margin-bottom: 0; border-radius: 30px;}
     main .container .login .login-form form input[type="submit"]:hover{background-color: rgb(255, 69, 0, 0.8); color: white; font-size: 16px; border: none;}
-    main .container .login .login-form .or-div{width: 100%; margin: 20px 0; display: flex; border:  thin silver; justify-content: center; align-items: center; }
-    main .container .login .login-form .or-div span{width: 40%;  border-top: solid 0.5px silver;}
+    main .container .login .login-form .or-div{width: 100%; margin: 10px 0; display: flex; border:  thin silver; justify-content: center; align-items: center; }
+    main .container .login .login-form .or-div span{width: 30%;  border-top: solid 0.5px silver;}
     main .container .login .login-form .or-div h5{width: 20px; color: gray; text-align: center; font-weight: 200;}
-    main .container .login .login-form .social-login{display: flex; flex-direction: column; border:  1px silver; width: 100%; height: 30%; align-items: center; margin-top: 20px;}
-    main .container .login .login-form .social-login .item{width: 90%; display: flex; height: 43px; align-items: center; border: solid 1px rgb(255, 69, 0, 0.6); padding: 0 10px; justify-content: center; border-radius: 20px; margin-bottom: 10px;}
+    main .container .login .login-form .social-login{display: flex; flex-direction: column; border:  1px silver; width: 100%; height: 30%; align-items: center; margin-top: 0px;}
+    main .container .login .login-form .social-login .item{width: 90%; display: flex; height: 43px; align-items: center; border: solid 1.5px orangered; padding: 0 10px; justify-content: center; border-radius: 20px; margin-bottom: 10px;}
+    main .container .login .login-form .social-login .item img{width: 25px; height: 25px;}
     main .container .login .login-form .social-login .item h4{margin-left: 10px; color: rgb(0, 0, 0, 0.7);}
-    main .container .login .login-form .social-login .item h4 span{font-weight: bolder; color: rgb(0, 0, 0, 0.9);}
+    main .container .login .login-form .social-login .item h4 span{font-weight: bolder;}
     main .container .login .login-form .sign-up-div{display: flex; width: 100%; border:  1px silver; justify-content: center; flex-direction: column; margin-top: 18px;}
     main .container .login .login-form .sign-up-div p{margin: 0; padding: 0; width: fit-content; text-align: center; width: 100%; margin-bottom: 5px; font-size: 13px; color: rgb(192, 192, 192, 0.9); font-weight: 800;}
     main .container .login .login-form .sign-up-div a{margin: 0; padding: 0; color: orangered; width: fit-content; font-size: 16px; text-align: center; width: 100%; text-decoration: none; font-weight: 900;}
@@ -94,6 +99,11 @@
     footer .copyright a{font-size: 12px; text-decoration: none; color: white; color: white;}
     footer .copyright .spc::after{ content: ' \00A9';}
     footer .copyright .sp2{text-decoration: underline;} */
+    @media screen and (min-width: 800px) {
+        body{
+            background-color: blue;
+        }
+    }
 </style>
 <body>
     
@@ -142,11 +152,27 @@
             
             <div class="container">
                 <div class="login">
-                    <h3>Sign In</h3>
+                    <h1>Sign In</h1>
                     <!-- <span> -->
                         <!-- <h5>Login to your Kartkrunch account to get saved addresses, settings, and history.</h5> -->
                     <!-- </span> -->
                     <div class="login-form">
+                        <div class="social-login">
+                            <div class="item">
+                                <img src="google-svgrepo-com.svg" alt="">
+                                <h4>Login with Google</h4>
+                            </div>
+                            <div class="item">
+                                <img src="apple-logo-svgrepo-com.svg" alt="">
+                                <h4>Login with Apple</h4>
+                            </div>
+                            <div class="item" style="border: solid black; background-color: black; color: white;">
+                                <h4 style="color: white;">Sign in with <span>OTP</span></h4>
+                            </div>
+                        </div>
+                        <div class="or-div">
+                            <span></span> <h5>or</h5> <span></span>
+                        </div>
                         <form action="" method="post">
                             <label for="Email">Email / Phone no.</label> <br>
                             <input type="email"> <br>
@@ -159,18 +185,8 @@
                             </div>
                             <input type="submit" value="Sign In"> 
                         </form>
-                        <div class="or-div">
-                            <span></span> <h5>or</h5> <span></span>
-                        </div>
-                        <div class="social-login">
-                            <div class="item">
-                                <img src="google-svgrepo-com.svg" alt="">
-                                <h4>Login with Google</h4>
-                            </div>
-                            <div class="item">
-                                <h4>Sign in with <span>OTP</span></h4>
-                            </div>
-                        </div>
+                        
+                        
                         <div class="sign-up-div">
                             <p>New to KartKrunch?</p>
                             <a href="">Sign up and get started</a>
