@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Montserrat:wght@600;700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <title>Kartkrunch: home of food, stores and fast delivery </title>
 </head>
+<style>
+    *{
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    body{margin: 0; padding: 0;} 
+    .main-container{padding: 0; margin: 0; width: 100%;}
+    .main-container .nav{display: flex; justify-content: center; border-bottom: solid thin silver; height: 50px; padding: 0 2%; align-items: center;}
+    .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center;}
+    .main-container .nav .bar{width: fit-content; margin-right: 13px;}
+    .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
+                                                                                                                                            .main-container .nav .delivery{display: none;}
+    .main-container .nav .logo{margin-right: auto;}
+    .main-container .nav .logo h1{ font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
+    .main-container .nav .logo h1 span{color: orange;}
+    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 35px; padding: 0 5px 0 10px; width: 45%; display: flex; flex-direction: row; background-color: rgba(226, 226, 226, 0.6);}
+    .main-container .nav .search .i1{margin-right: 5px;}
+    .main-container .nav .search form input{margin-right: 0; border:  1px silver; outline: none;  width: 62.5%; background-color: transparent;}
+    .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
+    .main-container .nav .search .i2{display: ; border:  1px gray; margin-left: 0px; padding: 3px 5px; border-radius: 100%; font-size: 16px; background-color: white;}
+    .main-container .nav .cart{border:  1px rgb(170, 7, 7); display: flex; height: 32px;  width: 70px; justify-content: space-between; align-items: center; padding: 0 11.8px; border-radius: 30px; color: white; background-color: red; margin-right: auto;}
+    .main-container .nav .cart .sp1{align-items: center; height: 100%; display: flex;}
+    .main-container .nav .cart .sp2{align-items: center; height: 100%; display: flex;}
+    .main-container .nav .cart .sp2 p{align-items: center; height: 100%; display: flex;}
+    @media screen and (min-width: 800px){
+        .main-container .nav .delivery{display: block;}
+        .main-container .nav .delivery h4{margin-left: 20px; font-size: 18px; font-weight: 500; color: rgb(209, 12, 12);}
+                                                                                                                                            /* .main-container .nav .bar p{margin-left: 5px; margin-bottom: ; color: gray; font-weight: 200; font-size: 12px;} */
+                                                                                                                                            /* .main-container .nav .bar h5{margin-left: 5px; font-size: 14px; font-weight: 500; color: rgb(0, 0, 0, 0.8); width: 110px; border: solid thin silver; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;} */
+                                                                                                                                            /* .main-container .nav .bar .ex-icon{margin-left: -2px; font-size: 16px ; color: rgb(0, 0, 0, 0.8);} */
+    }
+</style>
 <body>
-    
+    <div class="main-container">
+        <div class="nav">
+            <div class="bar nv-item">
+                <i class="material-icons">menu</i>
+                
+            </div>
+            <div class="logo nv-item">
+                <h1>K<span>k</span></h1>
+                <!-- <h1>Kart<span>K</span>runch</h1> -->
+            </div>
+            <div class="delivery nv-item">
+                <h4>Delivery</h4>
+                <p>to</p>
+                <h5>16 shifau ikosi ketu, magodo Lagos</h5>
+                <i class="material-icons ex-icon">expand_more</i>
+            </div>
+            <div class="search nv-item">
+                <form action="">
+                    <i class="fa-solid fa-magnifying-glass i1"></i>
+                    <input type="search" placeholder="Search..">
+                    <!-- <i class="fa-solid fa-xmark i2"></i> -->
+                </form>
+            </div>
+            <div class="cart nv-item">
+                <span class="sp1"><i class="material-icons-outlined">shopping_cart</i></span>
+                <span class="sp2"><h4>0</h4></span>
+            </div>
+            <!-- <div class="location nv-item"></div> -->
+        </div>
+    </div>
 </body>
 </html>
