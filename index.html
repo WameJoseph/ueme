@@ -18,35 +18,57 @@
     *{box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; font-weight: 800;}
     .main-container{width: 100%; height: 100%;}
     .main-container .main{
-        height: 80%; border:  thin silver; width: 100%; margin: 0 auto; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;
+        height: 70%; border:  thin silver; width: 100%; margin: 0 auto; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;
     }
-    .main-container .main .login{width: 95%; display: flex; justify-content: right; border:  1px silver; padding:  25px 0px;}
-    .main-container .main .login .a1{font-size: 24px; color: white; margin-right: 12px; font-weight: 900;}
-    .main-container .main .login .a2{font-size: 20px; color: rgb(0, 0, 0, 0.6); font-weight: 800; padding: 4px 8px; border-radius: 30px; background-color: white;}
+    .main-container .main .login{width: 95%; display: flex; justify-content: right;  align-items: center; border:  1px silver; padding:  20px 0px;}
+    .main-container .main .login .a1{font-size: 22px; color: white; margin-right: 12px; font-weight: 900;}
+    .main-container .main .login .a2{font-size: 18px; height: fit-content; color: rgb(0, 0, 0, 0.6); font-weight: 800; padding: 4px 8px; border-radius: 30px; background-color: white;}
+    .main-container .main .brand2{display: none;}
     .main-container .main .brand{width: 100%; display: flex; justify-content: center; color: white; font-size: 32px; margin-top: 20px; letter-spacing: 0.8px; font-weight: 800; align-items: center; background-color: ;}
-    .main-container .main .brand .span2{border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; background-color: rgb(155, 228, 47); padding: 0 0px 0 0; margin-left: 6px;}
-    .main-container .main .brand .span1{  color: gray; display: flex; font-weight: 800; border-radius: 8px; padding: 0 5px; font-size: 26px; align-items: center; height: fit-content; width: fit-content;
-        -webkit-background-clip: text;
-	background-clip: text;
-	background-image: url(background\ image.jpg);
-	color: transparent;
-    }
-    .main-container .main h3{margin: 0 auto; width: 90%; border: ; text-align: left;  color: white; font-size: 28px; margin-top: 10px; letter-spacing: 0.8px; }
+    .main-container .main .brand .span2{border-radius: 5px; height: fit-content; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; background-color: rgb(155, 228, 47); padding: 0 0px 0 0; margin-left: 6px;}
+    .main-container .main .brand .span1{  color: gray; display: flex; font-weight: 800; border-radius: 8px; padding: 0 5px; font-size: 26px; align-items: center; height: fit-content; width: fit-content; -webkit-background-clip: text;background-clip: text; background-image: url(background\ image.jpg); color: transparent;}
+    .main-container .main  .text{margin-top: 15px;}
+    .main-container .main h3{margin: 0 auto; width: 90%; border: ; text-align: left;  color: white; font-size: 30px;  letter-spacing: 0.8px; }
     .main-container .main h3 div{display:inline-flex; border-bottom:  rgb(155, 228, 47); flex-direction: column; justify-content: left; text-align: left; height: 39px; padding: 0; text-decoration: none; color: rgb(155, 228, 47); font-weight: 800; width: fit-content !important; scroll-behavior: smooth; scroll-snap-type: y mandatory;}
     .main-container .main h3 div::-webkit-scrollbar{display: none;}
-    .main-container .main h3 div a {color: rgb(140, 202, 47); font-weight: 900; scroll-snap-align: start; font-weight: 900; font-family: 'Montserrat', sans-serif !important; height: fit-content; text-align: left;}
-    .main-container .main h3 div a h3{color: rgb(140, 202, 47); font-size: 28px;  font-weight: 900; font-family: 'Montserrat Alternates', sans-serif !important;  text-align: left; height: fit-content; align-items: center; text-align: left;}
+    .main-container .main h3 div a {color: rgb(140, 202, 47);  scroll-snap-align: start; }
+    .main-container .main h3 div a h3{width: 100%; color: rgb(140, 202, 47); font-size: 30px;  font-weight: 900; font-family: 'Roboto', sans-serif !important;  text-align: left; height: fit-content; align-items: center; text-align: left;}
+    .main-container .main .search{width: 95%; margin-left: auto; margin-right: auto; border: none white; display: flex; align-items: center; justify-content: center; margin-top: 25px;}
+    .main-container .main .search form{ border: solid; padding: 0 10px; width: 75%; border: solid white; display: flex; align-items: center; justify-content: space-between; border-radius: 10px; background-color: white;}
+    .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 10px; width: 90%;}
+    .main-container .main .search form input::placeholder{font-weight: 400; font-size: 13px;}
+
+
+    @media screen and (min-width: 500px) {
+    .main-container .main  h3{margin: 0 auto; width: 90%; border: ; text-align: center;  color: white; font-size: 32px; margin-top: 10px; letter-spacing: 0.8px; }
+    }
+
+    @media screen and (min-width: 650px) {
+    .main-container .main .brand{display: none;}
+    .main-container .main .brand2{width: fit-content; margin-left: 45%; display: flex; color: white; font-size: 32px; letter-spacing: 0.8px; font-weight: 800; align-items: center; background-color: ;}
+    .main-container .main .brand2 .span2{border-radius: 5px; height: fit-content; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; background-color: rgb(155, 228, 47); padding: 0 0px 0 0; margin-left: 6px;}
+    .main-container .main .brand2 .span1{  color: gray; display: flex; font-weight: 800; border-radius: 8px; padding: 0 5px; font-size: 26px; align-items: center; height: fit-content; width: fit-content; -webkit-background-clip: text;background-clip: text; background-image: url(background\ image.jpg); color: transparent;}
+    .main-container .main  .text{}
+    .main-container .main  h3{margin: 0 auto; width: 40%; border: ; text-align: center;  color: white; font-size: 38px; margin-top: 0px; letter-spacing: 0.8px; }
+    .main-container .main h3 div{ height: 46px;}
+    .main-container .main h3 div a{}
+    .main-container .main h3 div a h3{width: 100%; color: rgb(140, 202, 47); font-size: 34px;  font-weight: 900; }
+    main-container .main .search{width: 100%; margin: 0 0 !important; margin-left: auto; border: none white; display: flex; align-items: center; justify-content: center; margin-top: 25px;}
+    .main-container .main .search form{ border: solid; padding: 0 10px; width: 50%; border: solid white; display: flex; align-items: center; justify-content: space-between; border-radius: 10px; background-color: white;}
+    .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 10px; width: 90%;}
+    }
 </style>
 <body>
     <div class="main-container">
         <div class="main">
             <div class="login">
+                <h2 class="brand2" style="border: ; width: fit-content; margin-top: 0; margin-right: auto; margin-left: 45%;">Gidi<span class="span2" ><span class="span1">Crunch</span> </span></h2> 
                 <a href="" class="a1">Sign in</a>
                 <a href="" class="a2">Sign up</a>
             </div>
                 <h2 class="brand">Gidi<span class="span2" ><span class="span1">Crunch</span> </span></h2> 
-                <h3>Food delivered better to you for 
-                    <div style="width: 30px; overflow: auto;">
+                <h3 class="text">Food delivered better to you for 
+                    <div style=" overflow: auto;">
                         <a href=""><h3>You</h3></a>
                         <a href=""><h3>Work</h3></a>
                         <a href=""><h3>Family</h3></a>
@@ -55,6 +77,13 @@
                         <a href=""><h3>Dates</h3></a>
                     </div>
                 </h3>
+            <div class="search">
+                <form action="" method="GET">
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Enter your delivery address">
+                    <i class="fa fa-arrow-right"></i>
+                </form>
+            </div>
         </div>
     </div>
 </body>
