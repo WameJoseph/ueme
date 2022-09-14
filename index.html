@@ -20,7 +20,7 @@
     .main-container{width: 100%; height: 100%;}
     .main-container::-webkit-scrollbar{display: none;}
     .main-container .main{
-        height: fit-content; border:  thin blue; width: 100%; margin: 0 0; background-image: url(order\ for\ moments\ image.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; padding-bottom: 60px; 
+        height: fit-content; border:  thin blue; width: 100%; margin: 0 0; background-image: url(fish-food\ background.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; padding-bottom: 60px; 
     }
     
     .main-container .main .login{width: 98%; display: flex; justify-content: right;  align-items: center; border:  1px silver; padding:  18px 0px;}
@@ -35,17 +35,17 @@
     .main-container .main .brand{width: 100%; display: flex; justify-content: center; color: white; font-size: 30px; margin-top: 25px; letter-spacing: 0.8px; font-weight: 800; align-items: center; background-color: ;}
     .main-container .main .brand .span2{border-radius: 5px; height: fit-content; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; background-color: rgb(155, 228, 47); padding: 0 0px 0 0; margin-left: 6px;}
     .main-container .main .brand .span1{  color: gray; display: flex; font-weight: 800; border-radius: 8px; padding: 0 5px; font-size: 26px; align-items: center; height: fit-content; width: fit-content; -webkit-background-clip: text;background-clip: text; background-image: url(fish-food\ background.jpg); color: transparent;}
-    .main-container .main  .text{margin-top: 70px;}
-    .main-container .main h3{margin: 0 auto; width: 90%; border: ; text-align: center;  color: white; font-size: 44px;  font-weight: 900; letter-spacing: 0.8px; }
+    .main-container .main  .text{margin-top: 5%;}
+    .main-container .main h3{margin: 0 auto; width: 90%; border: ; text-align: center;  color: white; font-size: 42px;  font-weight: 900; letter-spacing: 0.8px; }
     .main-container .main h3 div{display:inline-flex; border-bottom:  rgb(155, 228, 47); border-bottom: orangered; flex-direction: column; justify-content: left; text-align: left; height: 50px; padding: 0; text-decoration: none;  font-weight: 800; width: fit-content !important; scroll-behavior: smooth; scroll-snap-type: y mandatory; border-bottom: solid;}
     .main-container .main h3 div::-webkit-scrollbar{display: none;}
     .main-container .main h3 div a {scroll-snap-align: start; }
     .main-container .main h3 div a h3{width: 100%; color: rgb(113, 173, 24); color: orangered; font-size: 40px;  font-weight: 900; font-family: 'Roboto', sans-serif !important;  text-align: left; height: fit-content; align-items: center; text-align: left;}
-    .main-container .main .search{width: 95%; border-radius: 30px; margin-left: auto; margin-right: auto; border: none 0.3px silver; display: flex; align-items: center; justify-content: center; margin-top: 20%; }
-    .main-container .main .search form{ padding: 0 13px; width: 75%; border: solid 0.3px silver; display: flex; align-items: center; justify-content: space-between; background-color: white;}
+    .main-container .main .search{width: 95%; margin-left: auto; margin-right: auto; border: none 0.3px silver; display: flex; align-items: center; justify-content: center; margin-top: 20%; border-radius: 30px;}
+    .main-container .main .search form{ padding: 0 13px; width: 75%; border: solid 0.3px silver; display: flex; align-items: center; justify-content: space-between; background-color: white; border-radius: 30px; }
     .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 14px 10px; width: 89%;}
     .main-container .main .search form input::placeholder{font-weight: 400; font-size: 13px;}
-    .main-container .main .signinaddress{width: 100%; display: flex; justify-content: center; align-items: center; text-align: center; text-decoration: underline; color: white; margin-top: 5px;}
+    .main-container .main .signinaddress{width: 100%; display: flex; justify-content: center; align-items: center; text-align: center; text-decoration: underline; color: white; margin-top: 10px;}
     .main-container .main .signinaddress{font-size: 14px;}
     .main-container .downloadtheapp{width: 100%; display:  ; margin: 0px auto 0 auto; display: flex; justify-content: space-between; border-radius: 5px; background-color: rgb(255, 192, 203, 0.4); padding: 0 10px; align-items: center; height: 60px;}
     .main-container .downloadtheapp .texts{}
@@ -61,6 +61,8 @@
     .main-container .description{ width: 100%; height: fit-content; padding: 0 5%; border:  gray; flex-direction: column; padding: 0 0px; margin-top: 10px; }
     .main-container .description .orderformoments{width: 100%; padding: 0 0; border:  rgb(155, 228, 47) ; display: flex; flex-direction: column; align-items: left; justify-content: right; margin-top: 0; border:  silver; margin-bottom: 60px;}
     .main-container .description .ofm2{background-color: rgb(255, 192, 203, 0.6); border:  blue; padding-bottom: 20px;}
+    .main-container .description .ofm3 .text{order: 2;}
+    .main-container .description .ofm3 .imagediv{order: 1;}
     .main-container .description .text{width: 90%; margin-top: 20px; border:  gray; padding: 0 0 0 20px; display: flex; flex-direction: column; align-items: center; justify-content: left; order: 2; text-align: left;}
     .main-container .description .text h1{font-size: 28px; color: rgb(0, 0, 0, 0.8);  width: 100%; text-align: left;}
     .main-container .description .text h3{width: 85%; text-align: left; font-weight: 400; font-size: 16px; color: rgb(0, 0, 0, 0.8); text-align: left; margin-right: auto; margin-top: 10px;}
@@ -120,12 +122,12 @@
 
     @media screen and (min-width: 800px) {
         .main-container .main{
-        height: fit-content; border:  thin blue; width: 100%; margin: 0 0; background-image: url(order\ for\ moments\ image.jpg); background-size: cover; background-position: left; background-repeat: no-repeat; padding-bottom: 100px; 
+        height: fit-content; border:  thin blue; width: 100%; margin: 0 0;  background-size: cover; background-position: left; background-repeat: no-repeat; padding-bottom: 100px; 
     }
     .main-container .main .login .a1{font-size: 22px; color: white; margin-right: 12px; font-weight: 900;}
     /* .main-container .main .login .a2{font-size: 18px; font-weight: 800; padding: 4px 8px; } */
     .main-container .main .brand{display: none;}
-    .main-container .main .brand2{width: fit-content; margin-left: 45%; display: flex; color: white; font-size: 32px; letter-spacing: 0.8px; font-weight: 800; align-items: center; background-color: ;}
+    .main-container .main .brand2{width: fit-content; margin-left: 0; margin-right: auto; margin-left: 30px; display: flex; color: white; font-size: 32px; letter-spacing: 0.8px; font-weight: 800; align-items: center; background-color: ;}
     .main-container .main .brand2 .span2{border-radius: 5px; height: fit-content; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 0 0px 0 0; margin-left: 2px;}
     .main-container .main .brand2 .span1{  color: gray; display: flex; font-weight: 800; border-radius: 8px; padding: 0 5px; font-size: 26px; align-items: center; height: fit-content; width: fit-content; -webkit-background-clip: text;background-clip: text;  color: transparent;}
     .main-container .main  .text{margin-top: 5%;}
@@ -133,8 +135,9 @@
     .main-container .main h3 div{ height: 60px;}
     .main-container .main h3 div a{}
     .main-container .main h3 div a h3{width: 100%;  font-size: 50px;  font-weight: 900; }
-    .main-container .main .search{width: 100%; margin: 5% 0 0 0 ; margin-left: auto; border:  1.5px silver ; display: flex; align-items: center; justify-content: center; }
-    .main-container .main .search form{ padding: 0 10px; width: 30%; border: solid 1.5px silver ;display: flex; align-items: center; justify-content: space-between; background-color: white;}
+    
+    .main-container .main .search{width: 100%; margin: 5% 0 0 0 ; margin-left: auto; border:  10px gray ; display: flex; align-items: center; justify-content: center;}
+    .main-container .main .search form{ padding: 0 10px; width: 30%; border: solid 1.5px gray ;border-radius: 30px; display: flex; align-items: center; justify-content: space-between; background-color: white;}
     .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 13px 10px; width: 90%;}
     .main-container .downloadtheapp{width: 60%; margin: 20px auto 0 auto; display: flex; justify-content: space-between; border-radius: 5px; background-color: rgb(255, 192, 203, 0.4); padding: 0 20px; align-items: center;}
     .main-container .downloadtheapp .texts{}
@@ -155,6 +158,8 @@
     .main-container .description .text h3{font-weight: 400; font-size: 18px; color: rgb(0, 0, 0, 0.9); text-align: left; margin-top: 30px;}
     .main-container .description .text span .order{border: solid thin red; background-color: red; color: white; display: flex; width: fit-content; padding: 0 14px; justify-content: center; align-items: center; height: 40px; border-radius: 30px; margin-top: 40px;}
     .main-container .description .text span .order i{margin-left: 10px;}
+    .main-container .description .ofm3 .text{order: 1;}
+    .main-container .description .ofm3 .imagediv{order: 2;}
     .main-container .description .ofm2 .imagediv{margin-right: auto; margin-left: 0; width: 55%;  margin-right: 30px;  border:  gray; padding: 0 0; display: flex; align-items: center; justify-content: left; order: 1;}
     .main-container .description .ofm2 .imagediv img{width: 100%; height: 70%; border:  gray; padding: 0 0;}
     .main-container .description .imagediv{width: 58%; margin-right: 30px; border:  gray; padding: 0 0; display: flex; align-items: center; justify-content: center; order: 2;}
@@ -208,25 +213,23 @@
 
         <div class="description">
 
-            <div class="orderformoments">
+            <div class="orderformoments ofm2 ofm3" style="background-color: white">
 
-                <div class="text">
-                    <h1>It's <span style="color: rgba(194, 32, 59, 0.9);">all</span> here</h1>
-                    <h1>food for every moment</h1>
-                    <h3>Order great food for great moments, Find the perfect vendor to suit your moments </h3>
+                <div class="text text2">
+                    <h1>It's all here</h1>
+                    <h3>Great food around you </h3>
                     <span style="width: 100%; justify-content: center;">
-                    <a href="" class="order">
-                        <p>Order Now</p>
-                        <!-- <i class="material-icons-outlined">east</i> -->
-                    </a>
-                    </span>
+                        <a href="" class="order">
+                                <p>Order Now</p>
+                                <!-- <i class="material-icons-outlined">east</i> -->
+                        </a>
+                     </span>
                 </div>
-                <div class="imagediv">
-                    <img src="order for moments image.jpg" alt="">
+                <div class="imagediv img2">
+                    <img src="pexels-chan-walrus-958545.jpg" alt="">
                 </div>
                 
-
-            </div>
+            </div>   
             <div class="orderformoments ofm2">
 
                 <div class="text text2" style="order: 2;">
