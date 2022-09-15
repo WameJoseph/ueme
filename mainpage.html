@@ -46,23 +46,24 @@
         .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
         .main-container .nav .logo .h12{display: block;}
     }
-    @media screen and (min-width: 850px){
+    @media screen and (min-width: 800px){
+        .main-container .nav{ border-bottom: solid thin silver; height: 53px; padding: 0 5%; }
         .main-container .nav .logo{margin-right: auto;}
         .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif;}
         .main-container .nav .logo .h12{display: block;}
-        .main-container .nav{ border-bottom: solid thin silver; height: 50px; padding: 0 5%; }
+        
         .main-container .nav .delivery{display: block; margin-right: auto; display: flex;}
         .main-container .nav .delivery h4{margin-left: 20px; font-size: 16px; font-weight: 500; color: white; background-color: rgb(209, 12, 12); padding: 3px 5px; border-radius: 5px;}
         .main-container .nav .delivery p{margin-left: 5px; margin-bottom: ; color: rgb(163, 163, 163); font-weight: 100; font-size: 12px; margin-top: 3px; font-family: sans-serif;}
-        .main-container .nav .delivery h5{margin-left: 5px; font-size: 15px; font-weight: 600; color: rgb(0, 0, 0, 0.6); width: 160px; border-bottom:  1.6px gray; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; align-items: center; text-decoration: underline; margin-top: 3px;}
-        .main-container .nav .delivery h5:hover{color: rgb(0, 0, 0, 0.6); margin-top: 5px;}
+        .main-container .nav .delivery h5{margin-left: 5px; font-size: 15px; font-weight: 600; color: rgb(0, 0, 0, 0.8); width: 160px; border-bottom:  1.6px gray; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; align-items: center; text-decoration: underline; margin-top:; transition: .1s;}
+        .main-container .nav .delivery h5:hover{color: rgb(0, 0, 0, 0.6); margin-top: 1.5px;}
         .main-container .nav .delivery .expand-icon{margin-left: -6px; font-size: 19px ; font-weight: 700; color: rgb(0, 0, 0, 0.8); border:  1px gray; padding: 1px; transition: 0.3s; margin-top: 5px;}
         .main-container .nav .delivery .expand-icon:hover{border:  1px gray; background-color: rgb(192, 192, 192, 0.3); padding: 1px; border-radius: 5px;}
         .main-container .nav .search{margin-right: 10%; border:  thin silver; border-radius: 30px; height: 35px; width: 30%; display: flex; background-color: gainsboro; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
     .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 10px 10px; align-items: center;}
     .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
     .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 83%; background-color: transparent; }
-    .main-container .nav .search form input::placeholder{ font-size: 14px; font-weight: 400; font-family: sans-serif;}
+    .main-container .nav .search form input::placeholder{ font-size: 14px; font-weight: 500; font-family: 'Roboto', sans-serif;}
     .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
     .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-: rgb(0, 0, 0, 0.8); color: gray; cursor: pointer;}
     }
@@ -71,7 +72,7 @@
     visibility:visible;
     /* opacity:inherit; */
     position: fixed;
-    width: 300px;
+    width: 0px;
     height: 100%;
     /* width: 310px; */
     /* height: 100%; */
@@ -111,13 +112,20 @@
     .main-container .sidebar .nav-items ul li .descript{
         padding: 15px 10px;
     }
-
+    .main-container .sidebar .nav-items ul li .descript h5{
+        font-weight: 500;
+        font-size: 17px;
+    }
+    .main-container .sidebar .nav-items ul li .descript h5 span{
+        font-family: 'Montserrat Alternates', san-serif;
+        color: orangered;
+    }
 </style>
 <body>
     <div class="main-container">
         <div class="sidebar" id="sidebar">
 
-            <div class="cancel" id="close" style="height: 10%; border:  1px gray; display: flex; width: 100%; justify-content: right; align-items: flex-start; padding: 0 20px;">
+            <div class="cancel" id="close" style="height: 9%; border:  1px gray; display: flex; width: 100%; justify-content: right; align-items: flex-start; padding: 0 20px;">
                 <i class="material-icons" onclick="makeNavDissapear()" style="font-size: 30px; cursor: pointer; border:  1px; background-color: rgb(192, 192, 192, 0.3); transition: 40ms;">close</i>
             </div>
             <div class="nav-items">
@@ -142,6 +150,13 @@
                         <i class="material-icons">account_circle</i>
                         <h5>Wame Trader</h5>
                     </a></li>
+
+                    <li><a href="" style="width: 90%; padding: 10px 0; border:  1px; border-radius: 5px; background-color: orangered;  margin: 15px auto; justify-content: center;">
+                        <h5 style="margin: 0; color: white;">Food Shorts</h5>
+                        <i class="material-icons-outlined" style="margin: 0; margin-left: 10px; color: white;">movie</i>
+                        
+                    </a></li>
+                    
                     <li><a href="">
                         <i class="material-icons-outlined" style="width: fit-content; width: 25px;">help_outlined</i>
                         <h5>Help ?</h5>
@@ -150,30 +165,30 @@
                         <i class="material-icons-outlined">cancel</i>
                         <h5>Sign out</h5>
                     </a></li>
-                    <li><a href="" style="padding: 35px 0;">
+                    <li><a href="" style="padding: 15px 0;">
 
                     </a></li>
 
                     <li><a href="" class="descript">
-                        <h5>About <span style="font-family: 'Montserrat Alternates', san-serif;">Kartkrunch</span> </h5>
+                        <h5>About <span>Kartkrunch.com</span> </h5>
                     </a></li>
                     <li><a href="" class="descript">
-                        <h5>Order History</h5>
+                        <h5>Join us as a restaurant</h5>
                     </a></li>
                     <li><a href="" class="descript">
-                        <h5>Promos</h5>
+                        <h5>Our Programs</h5>
                     </a></li>
                     <li><a href="" class="descript">
-                        <h5>Add payment</h5>
+                        <h5>Privacy Policy</h5>
                     </a></li>
                     <li><a href="" class="descript">
-                        <h5>Wame Trader</h5>
+                        <h5> < code />   with us</h5>
                     </a></li>
                     <li><a href="" class="descript">
-                        <h5>Help ?</h5>
+                        <h5>Terms of service</h5>
                     </a></li>
                     <li><a href="" class="descript">
-                        <h5>Sign out</h5>
+                        <h5>FAQ</h5>
                     </a></li>
                 </ul>
             </div>
@@ -195,7 +210,7 @@
 
             <div class="delivery nv-item">
                 <!-- <h4>Delivery</h4> -->
-                <i class="material-icons-outlined" style="font-size: 20px;">location_on</i>
+                <i class="material-icons-outlined" style="font-size: 24px;">pin_drop</i>
                 <!-- <p>to</p> -->
                 <h5>31 saint Louis street, magodo ondo</h5>
                 <!-- <i class="material-icons expand-icon" >expand_more</i> -->
@@ -217,6 +232,36 @@
 
         </div>
 
+        <div class="product-nav" style="width: 100%; display: flex; height: 60px; border-bottom: solid 0.3px silver; margin: 0 auto; background-color: rgb(226, 226, 226); align-items: center; justify-content: center;">
+            <div class="content" style="display: flex; align-items: center; border:  blue 1px; width: 70%; overflow: auto; margin: 0 auto; height: 80%; ">
+                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
+                    <img src="category diet.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
+                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Diet food</h5>
+                </a>
+                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
+                    <img src="category pet-food.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
+                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Pet food</h5>
+                </a>
+                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right:13px;">
+                    <img src="category salad.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
+                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Vegan alternates</h5>
+                </a>
+                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
+                    <img src="category food-delivery.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
+                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Free delivery</h5>
+                </a>
+                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
+                    <img src="food video creator.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
+                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Food Shorts</h5>
+                </a>
+                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right:13px;">
+                    <img src="category takeaway.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
+                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Local vendors</h5>
+                </a>
+            </div>
+        </div>
+
+        
 
 
 
@@ -224,40 +269,7 @@
     </div>
 
 
-<!-- 
-    <script>
-        function makeSearchXDisplay(){
-            if (window.matchMedia("(max-width: 850px)")).matches{     
-            document.getElementById("cancelsearch").style.visibility ="visible";
-            document.getElementById("search").style.outline ="solid";
-            document.getElementById("search").style.width ="90%";
-            document.getElementById("search").style.position ="absolute";
-            document.getElementById("search").style.backgroundColor ="white";
-            document.getElementById("search").style.marginLeft ="0";
-            document.getElementById("search").style.marginRight ="auto";
-            document.getElementById("searchinput").style.width ="80%";
-            document.body.backgroundColor = "blue";}
-            
-            else{
-                document.body.backgroundColor = "orange";}
-            }
-        
-        }
-        
-        function makeSearchXnon(){
-            document.getElementById("cancelsearch").style.visibility ="hidden";
-            document.getElementById("search").style.outline ="none";
-            document.getElementById("search").style.width ="45%";
-            document.getElementById("search").style.position ="static";
-            document.getElementById("search").style.backgroundColor ="rgba(226, 226, 226, 0.6)";
-            document.getElementById("search").style.marginLeft ="0";
-            document.getElementById("search").style.marginRight ="10px";
-            document.getElementById("searchinput").style.width ="45%";
-            document.body.backgroundColor = "blue";
-        }
-            
-        
-    </script> -->
+
     <script src="mainpage.js"></script>
 </body>
 </html>
