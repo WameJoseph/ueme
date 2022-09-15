@@ -20,7 +20,7 @@
     .main-container{width: 100%; height: 100%;}
     .main-container::-webkit-scrollbar{display: none;}
     .main-container .main{
-        height: fit-content; border:  thin blue; width: 100%; margin: 0 0; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; padding-bottom: 60px; 
+        height: fit-content; border:  thin blue; width: 100%; margin: 0 0; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: rgb(255, 255, 0, 0.1); background-blend-mode: overlay; padding-bottom: 60px; 
     }
     
     .main-container .main .login{width: 98%; display: flex; justify-content: right;  align-items: center; border:  1px silver; padding:  18px 0px;}
@@ -40,12 +40,13 @@
     .main-container .main h3 div{display:inline-flex; border-bottom:  rgb(155, 228, 47); border-bottom: orangered; flex-direction: column; justify-content: left; text-align: left; height: 50px; padding: 0; text-decoration: none;  font-weight: 800; width: fit-content !important; scroll-behavior: smooth; scroll-snap-type: y mandatory; border-bottom: solid;}
     .main-container .main h3 div::-webkit-scrollbar{display: none;}
     .main-container .main h3 div a {scroll-snap-align: start; }
-    .main-container .main h3 div a h3{width: 100%; color: rgb(113, 173, 24); color: orangered; font-size: 40px;  font-weight: 900; font-family: 'Roboto', sans-serif !important;  text-align: left; height: fit-content; align-items: center; text-align: left;}
+    .main-container .main h3 div a h3{width: 100%; color: rgb(113, 173, 24); color: white; font-size: 40px;  font-weight: 900; font-family: 'Roboto', sans-serif !important;  text-align: left; height: fit-content; align-items: center; text-align: left;}
     .main-container .main .search{width: 95%; margin-left: auto; margin-right: auto; border: none 0.3px silver; display: flex; align-items: center; justify-content: center; margin-top: 20%; border-radius: 30px;}
     .main-container .main .search form{ padding: 0 13px; width: 75%; border: solid 0.3px gray; display: flex; align-items: center; justify-content: space-between; background-color: white; border-radius: 30px; }
-    .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 14px 10px; width: 89%;}
+    .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 14px 8px; width: 90%;}
     .main-container .main .search form input::placeholder{font-weight: 400; font-size: 13px;}
-    .main-container .main .signinaddress{width: 100%; display: flex; justify-content: center; align-items: center; text-align: center; text-decoration: underline; color: white; margin-top: 10px;}
+    .main-container .main .search .location{width: 75%;}
+    .main-container .main .signinaddress{width: 100%; display: flex; justify-content: center; align-items: center; text-align: center; text-decoration: none; color: white; margin-top: 10px;}
     .main-container .main .signinaddress{font-size: 14px;}
     .main-container .downloadtheapp{width: 95%; display:  ; margin: 20px auto 20px auto; display: flex; justify-content: space-between; border-radius: 10px; background-color: rgb(255, 192, 203, 0.4); padding: 0 5px; align-items: center; height: 60px;}
     .main-container .downloadtheapp .texts{}
@@ -115,6 +116,7 @@
     .main-container .main h3 div a{}
     .main-container .main h3 div a h3{width: 100%; font-weight: 900; }
     main-container .main .search{width: 100%; margin: 0 0 !important; margin-left: auto; border: none white; display: flex; align-items: center; justify-content: center; margin-top: 25px;}
+    .main-container .main .search .location{width: 50%;}
     .main-container .main .search form{ border: solid; padding: 0 10px; width: 50%; border: solid white; display: flex; align-items: center; justify-content: space-between; background-color: white;}
     .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 10px; width: 90%;}
     .main-container .main .search form input::placeholder{font-weight: 500; font-size: 15px;}
@@ -139,7 +141,8 @@
     .main-container .main .search{width: 100%; margin: 5% 0 0 0 ; margin-left: auto; border:  10px gray ; display: flex; align-items: center; justify-content: center;}
     .main-container .main .search form{ padding: 0 10px; width: 30%; border: solid 1.5px gray ;border-radius: 30px; display: flex; align-items: center; justify-content: space-between; background-color: white;}
     .main-container .main .search form input{background-color: transparent; border: none; outline: none; padding: 13px 10px; width: 90%;}
-    .main-container .downloadtheapp{width: 60%; margin: 20px auto 0 auto; display: flex; justify-content: space-between; border-radius: 5px; background-color: rgb(255, 192, 203, 0.4); padding: 0 20px; align-items: center;}
+    .main-container .main .search .location{width: 30%;}
+    .main-container .downloadtheapp{width: 60%; margin: 30px auto 0 auto; display: flex; justify-content: space-between; border-radius: 5px; background-color: rgb(255, 192, 203, 0.4); padding: 0 20px; align-items: center;}
     .main-container .downloadtheapp .texts{}
     .main-container .downloadtheapp .app-stores{display: flex; align-items: center;}
     .main-container .downloadtheapp .app-stores a img{ width: 80px; height: 70px; padding: -20px -10px; }
@@ -150,7 +153,7 @@
     .main-container .app .image a img{width: 120px; border:  thin silver; height: fit-content;}
 
 
-    .main-container .description{ width: 100%; padding: 0 5%; border:  gray; flex-direction: column; padding: 0 0px; margin-top: 30px;}
+    .main-container .description{ width: 100%; padding: 0 5%; border:  gray; flex-direction: column; padding: 0 0px; margin-top: 0px;}
     .main-container .description .orderformoments{width: 100%; flex-direction: row; padding: 0 6%; border:  rgb(155, 228, 47); display: flex; align-items: center; justify-content: space-between; margin-top: 0; border:  silver; margin-bottom: 0px;}
     .main-container .description .ofm2{background-color: rgb(255, 192, 203, 0.6); margin-top: 100px; border: none ; padding: 30px 6%;}
     .main-container .description .text{width: 40%; border:  gray; padding: 0 0; display: flex; flex-direction: column; align-items: center; justify-content: left; order: 1; text-align: left;}
@@ -158,6 +161,7 @@
     .main-container .description .text h3{font-weight: 400; font-size: 18px; color: rgb(0, 0, 0, 0.9); text-align: left; margin-top: 30px;}
     .main-container .description .text span .order{border: solid thin red; background-color: red; color: white; display: flex; width: fit-content; padding: 0 14px; justify-content: center; align-items: center; height: 40px; border-radius: 30px; margin-top: 40px;}
     .main-container .description .text span .order i{margin-left: 10px;}
+    .main-container .description .ofm3{border:  gray; margin-top: 0;}
     .main-container .description .ofm3 .text{order: 1;}
     .main-container .description .ofm3 .imagediv{order: 2;}
     .main-container .description .ofm2 .imagediv{margin-right: auto; margin-left: 0; width: 55%;  margin-right: 30px;  border:  gray; padding: 0 0; display: flex; align-items: center; justify-content: left; order: 1;}
@@ -188,15 +192,25 @@
                         <a href=""><h3>Dates</h3></a>
                     </div>
                 </h3>
-            <div class="search">
+            <div class="search" style="flex-direction: column;">
                 <form action="" method="GET">
                     <!-- <i class="fa fa-magnifying-glass"></i> -->
                     <i class="material-icons-outlined">search</i>
                     <input type="search" placeholder="Enter your delivery address">
                     <i class="fa fa-arrow-right" style="margin-right: 5px;"></i>
                 </form>
+                <div class="location" style=" height: 80px; background-color: white; position: ; margin-top: 5px; border-radius: 10px; border: solid 1.3px gray;">
+                    <a href="mainpage.html"><div style="height: 50%; border-bottom: solid 1.3px gray; align-items: center; display: flex; padding: 0 5px;">
+                        <span><i class="material-icons-outlined" style="height: fit-content; color: rgb(0, 0, 0, 0.8);">location_on</i></span>
+                        <span><h5 style="font-size: 14px; color: rgb(0, 0, 0, 0.8); margin-left: 10px;">Use current address</h5></span>
+                    </div></a>
+                    <div style="height: 50%; border-bottom:  1.3px gray; align-items: center; display: flex; padding: 0 5px;">
+                        <span><i class="material-icons-outlined" style="height: fit-content; color: rgb(0, 0, 0, 0.8);">person</i></span>
+                        <span><a href="" style="font-size: 14px; color: rgb(0, 0, 0, 0.8); margin-left: 10px;">Sign in for saved addresses</a></span>
+                    </div>
+                </div>
             </div>
-                <a href="" class="signinaddress">Login for saved addresses.</a>
+                <a href="" class="signinaddress"><span style="text-decoration: none; margin-left: 30px;">Proudly Nigerian</span>  <span style="margin-left: 6px;">&#129505;</span></a>
             
         </div>
 
@@ -217,7 +231,7 @@
 
                 <div class="text text2">
                     <h1>It's <span style="color: rgb(255, 194, 204, 0.8);">all</span> here</h1>
-                    <h3>Great food around you, the best restaurants and food entertainment</h3>
+                    <h3>find great food around you, with over 400+ store and food variety</h3>
                     <span style="width: 100%; justify-content: center;">
                         <a href="" class="order">
                                 <p>Order Now</p>
