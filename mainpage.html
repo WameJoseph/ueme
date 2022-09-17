@@ -50,7 +50,7 @@
 
     .main-container .sidebar{
     visibility:visible;
-    position: fixed;
+    position: absolute !important;
     width: 0px;
     height: 100%;
     overflow-x: hidden;
@@ -109,15 +109,14 @@
     .main-container .kart-categories .categories a .i2{
         margin-left: 5px; font-size: 20px; margin-top: 2px; 
     }
-    .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 5%;}
-    .main-container .kard-container .kard{width: 500%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
+    .main-container .kard-container{width: 100%; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 5%;}
+    .main-container .kard-container .kard{width: 500%; padding: 5px; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0px; display: block;  border:  1px blue; height: 140px; scroll-snap-align: start;}
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 130%;}
-    .main-container .kard-container .kard .kard-item img{position: relative; width: 90vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
-    .main-container .kard-container .kard .kard-item .h5{}
+    .main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;  border:  yellow ; height: 160px; width: 90vw; scroll-snap-align: start !important;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 20px;}
+    .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 3.4px; border-bottom-right-radius: 3.4px;}
 
 
         @media screen and (min-width: 600px){
@@ -130,7 +129,7 @@
     .main-container .category .categories a img{width: 35px; height: 35px; margin: 0 auto; border: solid 1px transparent;}
     .main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 15px; font-family: 'Roboto', sans-serif; font-weight: 400; text-align: center; border:  1px silver; border: solid 1px transparent; width: 70px;}
     .main-container .category .arrow{display: flex; height: 100%; width: fit-content; justify-content: center; align-items: center; margin-left: -10px;}
-    .main-container .category .arrow a{background-color: white; display: flex; border:  1px blue; width: 23px; height: 25px; border-radius: 5px; box-shadow: 2px 3px 4px #bfbfbf; justify-content: center; align-items: center;}
+    .main-container .category .arrow a{background-color: white; display: flex; border:  1px blue; width: fit-content; height: 25px; border-radius: 5px; box-shadow: 2px 3px 4px #bfbfbf; justify-content: center; align-items: center;}
     .main-container .category .arrow a .i1{font-size: 16px;}
 
     .main-container .kart-categories{
@@ -151,10 +150,9 @@
     .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
     .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
-    .main-container .kard-container .kard .kard1{ margin-right: 43%;}
-    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px;}
+    .main-container .kard-container .kard .kard1{ margin-right: 10px;}
+    .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 58vw; scroll-snap-align: ;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
-    .main-container .kard-container .kard .kard-item img{position: relative; width: 58vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
     .main-container .kard-container .kard .kard-item .h5{}
 
     }
@@ -162,11 +160,10 @@
         .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
     .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
-    .main-container .kard-container .kard .kard1{ margin-right: 25%;}
-    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px;}
+    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard1{ margin-right: 20px;}
+    .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 45vw;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
-    .main-container .kard-container .kard .kard-item img{position: relative; width: 45vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
     .main-container .kard-container .kard .kard-item .h5{}
     }
 
@@ -224,13 +221,12 @@
     .main-container .kart-categories .categories .item1{ margin-left: 0; }
 
     .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 8% 0 9.6%;}
-    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
+    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory; position: static;}
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard-item{position: static; border: solid 1px silver; width: fit-content !important; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 140px;}
+    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 140px; width: 40.1vw;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
-    .main-container .kard-container .kard .kard-item img{position: relative; width: 40.1vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
     .main-container .kard-container .kard .kard-item .h5{}
 } 
 
@@ -485,22 +481,23 @@
                             <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
                         </div>
                     </a> -->
-                    <a href="" class="a1">
-                        <img src="kfc image.jpg" class="img1" alt="">
-                        <div class="h5 h51" style="position: absolute; top: 0; width: 85%; margin-left: auto;  bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: left;">
-                            <h2 style="color: white; border:  1px silver; font-size: 20px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">KFC Chicken Deals !</h2>
-                            <h5 style="color: white; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;"></h5>
-                        </div>
-                    </a>
-
-
-                    <a href="" class="a2">
-                        <img src="dodopizzabanner.webp" class="img2" alt="">
-                        <div class="h5 h51" style="position: absolute; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-radius: 10px;">
+                    <a href="" class="a1" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg);   position: static;">
+                        <!-- <img src="order for moments image.jpg" alt=""> -->
+                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
                             <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
                             <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
                             <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
-                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.8); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="a2" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg); position: static;">
+                        <!-- <img src="order for moments image.jpg" alt=""> -->
+                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
+                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
+                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
+                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
+                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
                         </div>
                     </a>
 
@@ -516,9 +513,9 @@
                             <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
                         </div>
                     </a> -->
-                    <a href="" class="a1">
-                        <img src="order for moments image.jpg" alt="">
-                        <div class="h5 h51" style="position: absolute; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
+                    <a href="" class="a1" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg);  position: static;">
+                        <!-- <img src="order for moments image.jpg" alt=""> -->
+                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
                             <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
                             <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
                             <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
@@ -526,11 +523,13 @@
                         </div>
                     </a>
 
-                    <a href="" class="a2">
-                        <img src="kfc image.jpg"   alt="">
-                        <div class="h5 h51" style="position: absolute; top: 0; width: 85%; margin-left: auto;  bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: right;  ">
-                            <h2 style="color: white; border:  1px silver; font-size: 20px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">KFC Chicken Deals !</h2>
-                            <h5 style="color: white; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;"></h5>
+                    <a href="" class="a2" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg);  position: static;">
+                        <!-- <img src="order for moments image.jpg" alt=""> -->
+                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
+                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
+                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
+                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
+                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
                         </div>
                     </a>
                 </div>
