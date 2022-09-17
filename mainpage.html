@@ -18,12 +18,13 @@
         box-sizing: border-box;
         font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     } 
+    i{font-size: 16px;}
     a{ text-decoration: none;}
     body{margin: 0; padding: 0;} 
     .main-container{padding: 0; margin: 0; width: 100%;}
-    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin silver; height: 60px; padding: 0 5%; align-items: center;}
+    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin silver; height: 60px; padding: 0 5% 0 3%; align-items: center;}
     .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
-    .main-container .nav .bar{width: fit-content; margin-right: 15px; margin-left: 0;}
+    .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
     .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
                                                                                                                                             .main-container .nav .delivery{display: none;}
     .main-container .nav .logo{margin-right: 10px;}
@@ -31,7 +32,7 @@
     .main-container .nav .logo h1 span{color: orange;}
     .main-container .nav .logo{margin-right: 10px;}
     .main-container .nav .logo .h12{display: none;}
-    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 35px; width: 45%; display: flex; background-color: rgba(179, 179, 179, 0.6); outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
+    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 38px; width: 45%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
     .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 0 10px; align-items: center;}
     .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
     .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 70%; background-color: transparent; }
@@ -46,7 +47,130 @@
         .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
         .main-container .nav .logo .h12{display: block;}
     }
-    @media screen and (min-width: 800px){
+
+    .main-container .sidebar{
+    visibility:visible;
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y:auto;
+    background: white;
+    padding: 0px 0 10px 0;
+    margin: 0;
+    box-shadow: 1px 0px 5px 1.5px rgba(226, 222, 222, 0.795);
+    transition: 260ms;
+    }
+    .main-container .sidebar .nav-items{}
+    .main-container .sidebar .nav-items ul li{ border-top: solid 0.3px rgb(192, 192, 192, 0.3);    }
+    .main-container .sidebar .nav-items ul li a{ width: 100%; height: 100%; display: flex; border:  thin orange; padding: 20px 20px; align-items: center;}
+    .main-container .sidebar .nav-items ul li a:hover{ background-color: rgb(192, 192, 192, 0.2);}
+    .main-container .sidebar .nav-items ul li a i{ font-size: 27px; color: black;}
+    .main-container .sidebar .nav-items ul li a h5{ margin-left: 15px; font-size: 18px; color: black;}
+    .main-container .sidebar .nav-items ul li .descript{ padding: 25px 10px;}
+    .main-container .sidebar .nav-items ul li .descript h5{ font-weight: 500; font-size: 17px;}
+    .main-container .sidebar .nav-items ul li .descript h5 .kk{ font-family: 'Montserrat Alternates', san-serif; color: orangered;}
+    .main-container .product-nav{width: 100%; display: flex; height: 70px; border-bottom:  0.3px silver; margin: 0 auto; background-color: #f3f5f9; align-items: center; justify-content: center;}
+    .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 700px; overflow: auto; margin: 0 auto; height: 80%; padding-left: 18px;}
+    .main-container .product-nav .content::-webkit-scrollbar{display: none;}
+    .main-container .product-nav .content .item{display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;}
+    .main-container .product-nav .content .item img{background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;}
+    .main-container .product-nav .content .item h5{color: black; margin-left: 8px; font-family: 'Roboto', sans-serif; font-weight: 400; width: ; white-space: nowrap;}
+    .main-container .category{width: 100%; display: flex; height: fit-content;  justify-content: center; padding-left: 0px; align-items: center; margin-top: 0px;}
+    .main-container .category .categories{width: 99%; height: fit-content; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-snap-align: start; overflow: auto; margin: 0 0; border:  1px blue; padding: 15px 0 10px 0; display: flex;  align-items: center;}
+    .main-container .category .categories::-webkit-scrollbar{display: none;}
+    .main-container .category .categories a{height: 100%; scroll-snap-align: start; display: flex; border:  1px silver; padding: 0 5px;  width: fit-content; flex-direction: column; margin-right: 18px;}
+    .main-container .category .categories .a1{padding-left: 20px;}
+    .main-container .category .categories a img{width: 33px; height: 33px; margin: 0 auto; border: solid 1px transparent;}
+    .main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 15px; font-family: 'Roboto', sans-serif; font-weight: 400; border:  1px silver; border: solid 1px transparent; text-align: center;}
+    .main-container .category .arrow{display: none;}
+
+    .main-container .kart-categories{
+        width: 100%; border:  1px blue; height: 35px; margin-top: 13px;
+    }
+    .main-container .kart-categories .categories{
+        width: 99%; height: fit-content; margin: 0 auto; border:  1px silver; display: flex; overflow-x: auto;
+    }
+    .main-container .kart-categories .categories::-webkit-scrollbar{
+        display: none;
+    }
+    .main-container .kart-categories .categories a{
+        border:  1px blue; display: flex; align-items: center; justify-content: center;  border-radius: 25px;  font-weight: bolder; font-size: 14px; color: rgb(0, 0, 0, 0.9); background-color:#e6e6e6; padding: 5.5px 10px; margin-right: 10px; width: fit-content; white-space: nowrap;
+    }
+    .main-container .kart-categories .categories .item1{
+        margin-left: 13px;
+    }
+    .main-container .kart-categories .categories a .star-icon{
+        font-size: 14px; margin-left: 3px;
+    }
+    .main-container .kart-categories .categories a .i1{
+        margin-left: 8px; border-left: solid 0.3px gray; font-size: 20px; padding-left: 5px;
+    }
+    .main-container .kart-categories .categories a .i2{
+        margin-left: 5px; font-size: 20px; margin-top: 2px; 
+    }
+    .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 5%;}
+    .main-container .kard-container .kard{width: 500%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
+    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
+    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard1{ margin-right: 20px;}
+    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0px; display: block;  border:  1px blue; height: 140px; scroll-snap-align: start;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 130%;}
+    .main-container .kard-container .kard .kard-item img{position: relative; width: 90vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
+    .main-container .kard-container .kard .kard-item .h5{}
+
+
+        @media screen and (min-width: 600px){
+        .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 75%; overflow: auto; margin: 0 auto; height: 80%; }
+        .main-container .category{width: 100%; height: fit-content; border-top:  1px silver; border-bottom:  1px silver ; margin-top: 4px;}
+    .main-container .category .categories{width: 90%; padding: 15px 0 10px 0; display: flex;}
+    .main-container .category .categories::-webkit-scrollbar{display: none;}
+    .main-container .category .categories a{height: 100%; scroll-snap-align: start; display: flex; border:  1px silver; padding: 0 0px;  width: fit-content; flex-direction: column; margin-right: 8px;}
+    .main-container .category .categories .a1{padding-left: 0px;}
+    .main-container .category .categories a img{width: 35px; height: 35px; margin: 0 auto; border: solid 1px transparent;}
+    .main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 15px; font-family: 'Roboto', sans-serif; font-weight: 400; text-align: center; border:  1px silver; border: solid 1px transparent; width: 70px;}
+    .main-container .category .arrow{display: flex; height: 100%; width: fit-content; justify-content: center; align-items: center; margin-left: -10px;}
+    .main-container .category .arrow a{background-color: white; display: flex; border:  1px blue; width: 23px; height: 25px; border-radius: 5px; box-shadow: 2px 3px 4px #bfbfbf; justify-content: center; align-items: center;}
+    .main-container .category .arrow a .i1{font-size: 16px;}
+
+    .main-container .kart-categories{
+        width: 100%;margin-top: 10px;
+    }
+    .main-container .kart-categories .categories{
+        width: 89%; 
+    }
+
+    .main-container .kart-categories .categories a{
+        padding: 5.5px 10px; margin-right: 10px;
+    }
+    .main-container .kart-categories .categories .item1{
+        margin-left: 0;
+    }
+
+    .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
+    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
+    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
+    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard1{ margin-right: 43%;}
+    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
+    .main-container .kard-container .kard .kard-item img{position: relative; width: 58vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
+    .main-container .kard-container .kard .kard-item .h5{}
+
+    }
+    @media screen and (min-width: 880px){
+        .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
+    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
+    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
+    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard1{ margin-right: 25%;}
+    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
+    .main-container .kard-container .kard .kard-item img{position: relative; width: 45vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
+    .main-container .kard-container .kard .kard-item .h5{}
+    }
+
+    @media screen and (min-width: 1000px){
         .main-container .nav{ border-bottom: solid thin silver; height: 53px; padding: 0 5%; }
         .main-container .nav .logo{margin-right: auto;}
         .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif;}
@@ -59,73 +183,63 @@
         .main-container .nav .delivery h5:hover{color: rgb(0, 0, 0, 0.6); margin-top: 1.5px;}
         .main-container .nav .delivery .expand-icon{margin-left: -6px; font-size: 19px ; font-weight: 700; color: rgb(0, 0, 0, 0.8); border:  1px gray; padding: 1px; transition: 0.3s; margin-top: 5px;}
         .main-container .nav .delivery .expand-icon:hover{border:  1px gray; background-color: rgb(192, 192, 192, 0.3); padding: 1px; border-radius: 5px;}
-        .main-container .nav .search{margin-right: 10%; border:  thin silver; border-radius: 30px; height: 35px; width: 30%; display: flex; background-color: gainsboro; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
+        .main-container .nav .search{margin-right: 10%; border:  thin silver; border-radius: 30px; height: 38px; width: 30%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
     .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 10px 10px; align-items: center;}
     .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
     .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 83%; background-color: transparent; }
     .main-container .nav .search form input::placeholder{ font-size: 14px; font-weight: 500; font-family: 'Roboto', sans-serif;}
     .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
     .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-: rgb(0, 0, 0, 0.8); color: gray; cursor: pointer;}
-    }
+    
+    .main-container .sidebar .nav-items{}
+    .main-container .sidebar .nav-items ul li{ border-top: solid 0.3px rgb(192, 192, 192, 0.3);    }
+    .main-container .sidebar .nav-items ul li a{ width: 100%; height: 100%; display: flex; border:  thin blue; padding: 20px 20px; align-items: center;}
+    .main-container .sidebar .nav-items ul li a:hover{ background-color: rgb(192, 192, 192, 0.2);}
+    .main-container .sidebar .nav-items ul li a i{ font-size: 27px; color: black;}
+    .main-container .sidebar .nav-items ul li a h5{ margin-left: 15px; font-size: 18px; color: black;}
+    .main-container .sidebar .nav-items ul li .descript{ padding: 25px 10px;}
+    .main-container .sidebar .nav-items ul li .descript h5{ font-weight: 500; font-size: 17px;}
+    .main-container .sidebar .nav-items ul li .descript h5 .kk{ font-family: 'Montserrat Alternates', san-serif; color: orangered;}
+    .main-container .product-nav{width: 100%; display: flex; height: 70px; border-bottom:  0.3px silver; margin: 0 auto; background-color: #f3f5f9; align-items: center; justify-content: center;}
+    .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 68%; overflow: auto; margin: 0 auto; height: 80%; }
+    .main-container .product-nav .content::-webkit-scrollbar{display: none;}
+    .main-container .product-nav .content .item{display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;}
+    .main-container .product-nav .content .item img{background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;}
+    .main-container .product-nav .content .item h5{color: black; margin-left: 8px; font-family: 'Roboto', sans-serif; width: fit-content;}
 
-    .main-container .sidebar{
-    visibility:visible;
-    /* opacity:inherit; */
-    position: fixed;
-    width: 0px;
-    height: 100%;
-    /* width: 310px; */
-    /* height: 100%; */
-    overflow-x: hidden;
-    overflow-y:auto;
-    background: white;
-    padding: 23px 0;
-    margin: 0;
-    box-shadow: 1px 0px 5px 1.5px rgba(226, 222, 222, 0.795);
-    transition: 260ms;
-    }
-    .main-container .sidebar .nav-items{
+    .main-container .category{width: 100%; height: fit-content; border-top:  1px silver; border-bottom:  1px silver ; margin-top: 0px;}
+    .main-container .category .categories{width: 82%; height: fit-content; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-snap-align: start; overflow: auto; margin: 0 0; border:  1px blue; padding: 15px 0 10px 0; display: flex;}
+    .main-container .category .categories::-webkit-scrollbar{display: none;}
+    .main-container .category .categories a{height: 100%; scroll-snap-align: start; display: flex; border:  1px silver; padding: 0 0px;  width: fit-content; flex-direction: column; margin-right: 8px;}
+    .main-container .category .categories .a1{padding-left: 0px;}
+    .main-container .category .categories a img{width: 35px; height: 35px; margin: 0 auto; border: solid 1px transparent;}
+    .main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 18px; font-family: 'Roboto', sans-serif; font-weight: 400; text-align: center; border:  1px silver; border: solid 1px transparent; width: 70px;}
+    .main-container .category .arrow{display: flex; height: 100%; width: fit-content; justify-content: center; align-items: center; margin-left: -10px;}
+    .main-container .category .arrow a{background-color: white; display: flex; border:  1px blue; width: 26px; height: 26px; border-radius: 5px; box-shadow: 2px 3px 4px #bfbfbf; justify-content: center; align-items: center;}
+    .main-container .category .arrow a .i1{font-size: 18px;}
 
-    }
-    .main-container .sidebar .nav-items ul li{
-        border-top: solid 0.3px rgb(192, 192, 192, 0.3);
-        /* border-bottom: solid 1px rgb(226, 226, 226); */
-    }
-    .main-container .sidebar .nav-items ul li a{
-        width: 100%; height: 100%; display: flex; border:  thin blue; padding: 20px 20px; align-items: center;
-    }
+    .main-container .kart-categories{ width: 100%; margin-top: 10px;}
+    .main-container .kart-categories .categories{ width: 82%; }
+    .main-container .kart-categories .categories a{ padding: 5.5px 10px; margin-right: 13px; }
+    .main-container .kart-categories .categories .item1{ margin-left: 0; }
 
-    .main-container .sidebar .nav-items ul li a:hover{
-        background-color: rgb(192, 192, 192, 0.2);
-    }
+    .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 8% 0 9.6%;}
+    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
+    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
+    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard1{ margin-right: 20px;}
+    .main-container .kard-container .kard .kard-item a{ position: relative; width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 140px;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
+    .main-container .kard-container .kard .kard-item img{position: relative; width: 40.1vw; height: 100%; border-radius: 6px; box-shadow: 1px 1px 3px 0px rgb(202, 199, 199); transform: scaleX(-1);}
+    .main-container .kard-container .kard .kard-item .h5{}
+} 
 
-    .main-container .sidebar .nav-items ul li a i{
-        font-size: 27px;
-        color: black;
-    }
-    .main-container .sidebar .nav-items ul li a h5{
-        margin-left: 15px;
-        font-size: 18px;
-        color: black;
-    }
-
-    .main-container .sidebar .nav-items ul li .descript{
-        padding: 15px 10px;
-    }
-    .main-container .sidebar .nav-items ul li .descript h5{
-        font-weight: 500;
-        font-size: 17px;
-    }
-    .main-container .sidebar .nav-items ul li .descript h5 span{
-        font-family: 'Montserrat Alternates', san-serif;
-        color: orangered;
-    }
 </style>
 <body>
     <div class="main-container">
         <div class="sidebar" id="sidebar">
 
-            <div class="cancel" id="close" style="height: 9%; border:  1px gray; display: flex; width: 100%; justify-content: right; align-items: flex-start; padding: 0 20px;">
+            <div class="cancel" id="close" style="height: 15%; border:  1px gray; display: flex; width: 100%; justify-content: right; align-items: center; padding: 0 20px; position: sticky; position: -webkit-sticky; top: 0; background-color: white;">
                 <i class="material-icons" onclick="makeNavDissapear()" style="font-size: 30px; cursor: pointer; border:  1px; background-color: rgb(192, 192, 192, 0.3); transition: 40ms;">close</i>
             </div>
             <div class="nav-items">
@@ -170,7 +284,7 @@
                     </a></li>
 
                     <li><a href="" class="descript">
-                        <h5>About <span>Kartkrunch.com</span> </h5>
+                        <h5>About <span class="kk">Kartkrunch.com</span> </h5>
                     </a></li>
                     <li><a href="" class="descript">
                         <h5>Join us as a restaurant</h5>
@@ -182,7 +296,7 @@
                         <h5>Privacy Policy</h5>
                     </a></li>
                     <li><a href="" class="descript">
-                        <h5> < code />   with us</h5>
+                        <h5> <span><</span>code<span>/></span>   with us</h5>
                     </a></li>
                     <li><a href="" class="descript">
                         <h5>Terms of service</h5>
@@ -232,39 +346,201 @@
 
         </div>
 
-        <div class="product-nav" style="width: 100%; display: flex; height: 60px; border-bottom: solid 0.3px silver; margin: 0 auto; background-color: rgb(226, 226, 226); align-items: center; justify-content: center;">
-            <div class="content" style="display: flex; align-items: center; border:  blue 1px; width: 70%; overflow: auto; margin: 0 auto; height: 80%; ">
-                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
-                    <img src="category diet.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
-                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Diet food</h5>
+        <div class="product-nav">
+            <div class="content">
+                <a href="" class="item">
+                    <img src="category diet.png" alt="">
+                    <h5>Diet food</h5>
                 </a>
-                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
-                    <img src="category pet-food.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
-                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Pet food</h5>
+                <a href="" class="item">
+                    <img src="category pet-food.png" alt="">
+                    <h5>Pet food</h5>
                 </a>
-                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right:13px;">
-                    <img src="category salad.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
-                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Vegan alternates</h5>
+                <a href="" class="item" >
+                    <img src="category salad.png" alt="">
+                    <h5>Vegan alternates</h5>
                 </a>
-                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
-                    <img src="category food-delivery.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
-                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Free delivery</h5>
+                <a href="" class="item" >
+                    <img src="category food-delivery.png" alt="">
+                    <h5>Free delivery</h5>
                 </a>
-                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;">
-                    <img src="food video creator.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
-                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Food Shorts</h5>
+                <a href="" class="item" >
+                    <img src="food video creator.png" alt="" >
+                    <h5>Food Shorts</h5>
                 </a>
-                <a href="" class="item" style="display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right:13px;">
-                    <img src="category takeaway.png" alt="" style="background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;">
-                    <h5 style="color: black; margin-left: 8px; font-family: 'Roboto', sans-serif;">Local vendors</h5>
+                <a href="" class="item" >
+                    <img src="category takeaway.png" alt="">
+                    <h5>Local vendors</h5>
                 </a>
             </div>
         </div>
 
-        
+        <div class="category">
+            <div class="categories">
+                <a href="" class="a1">
+                    <img src="category pizza main.png" alt="">
+                    <h5>Pizza</h5>
+                </a>
+                <a href="">
+                    <img src="category french-fries.png" alt="">
+                    <h5>French fries</h5>
+                </a>
+                <a href="">
+                    <img src="category packaged fried chicken.png" alt="">
+                    <h5>Wings</h5>
+                </a>
+                
+                <a href="">
+                    <img src="category eat healthy.png" alt="">
+                    <h5>Veggie Salad</h5>
+                </a>
+                
+                <a href="">
+                    <img src="category fried-chicken (2).png" alt="">
+                    <h5>KFC bucket</h5>
+                </a>
+                <a href="">
+                    <img src="category chicken nuggets.png" alt="">
+                    <h5>Nuggets</h5>
+                </a>
+                <a href="">
+                    <img src="category balanced-diet.png" alt="">
+                    <h5>Healthy</h5>
+                </a>
+                 
+               
+                <a href="">
+                    <img src="category food-delivery.png" alt="">
+                    <h5>Free delivery</h5>
+                </a>
+                <a href="">
+                    <img src="category Rice and chicken.png" alt="">
+                    <h5>Rice & Chicken</h5>
+                </a>
+                
+                <a href="" >
+                    <img src="category dairy-products.png"alt="">
+                    <h5>Dairy Products</h5>
+                </a>
+
+                <a href="">
+                    <img src="category sushi hotate.png" alt="">
+                    <h5>Sushi</h5>
+                </a>
+
+                <a href="">
+                    <img src="category takeaway packaged 2.png" alt="">
+                    <h5>Local</h5>
+                </a>
+
+                <a href="">
+                    <img src="category salad.png" alt="">
+                    <h5>Veggie Salad</h5>
+                </a>
+                
+                <a href="">
+                    <img src="category set of shushi.png" alt="">
+                    <h5>Sushi place</h5>
+                </a>
+
+                <a href="">
+                    <img src="category diet.png" alt="">
+                    <h5>Vegetarian</h5>
+                </a>
+
+                <a href="">
+                    <img src="category pet-food.png" alt="">
+                    <h5>Pet food</h5>
+                </a>
+                
+                <a href="">
+                    <img src="category squewered.png" alt="">
+                    <h5>Asun</h5>
+                </a>
+            </div>
+            <div class="arrow">
+                <a href="#"><i class="material-icons i1">navigate_next</i></a>
+            </div>
+        </div>
+
+        <div class="kart-categories">
+            <div class="categories">
+                <a href="" class="item1">Pick up</a>
+                <a href="">Over 4.5 <i class="material-icons star-icon">star</i><i class="material-icons i1">keyboard_arrow_down</i></a>
+                <a href="">Under 30 min</a>
+                <a href="">Price<i class="material-icons i2">keyboard_arrow_down</i></a>
+            </div>
+        </div>
+
+        <div class="kard-container">
+            <div class="kard">
+
+                <div class="kard-item kard1" >
+
+                    <!-- <a href="" style=" position: relative; width: fit-content; margin-right: 18px; display: block;  border:  1px blue; border-radius: 0px; height: 20vh;">
+                        <img src="kfc image.jpg"  style="position: relative; width: 90vw; height: 100%; border-radius: 10px; box-shadow: 1px 1px 6px 0px rgb(202, 199, 199); transform: scaleX(-1);" alt="">
+                        <div class="h5" style="position: absolute; top: 0; bottom: 50%; border:  white; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: left; ">
+                            <h2 style="color: white; font-size: 18px; font-weight: 700; width: 100%; justify-content: left;  font-family: 'Montserrat', sans-serif;">Save 25% off Group order with</h2>
+                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif;">code: GOM25</h4>
+                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
+                        </div>
+                    </a> -->
+                    <a href="" class="a1">
+                        <img src="kfc image.jpg" class="img1" alt="">
+                        <div class="h5 h51" style="position: absolute; top: 0; width: 85%; margin-left: auto;  bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: left;">
+                            <h2 style="color: white; border:  1px silver; font-size: 20px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">KFC Chicken Deals !</h2>
+                            <h5 style="color: white; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;"></h5>
+                        </div>
+                    </a>
 
 
+                    <a href="" class="a2">
+                        <img src="dodopizzabanner.webp" class="img2" alt="">
+                        <div class="h5 h51" style="position: absolute; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-radius: 10px;">
+                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
+                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
+                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
+                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.8); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                        </div>
+                    </a>
 
+                </div>
+
+                <div class="kard-item kard2">
+
+                    <!-- <a href="" style=" position: relative; width: fit-content; margin-right: 18px; display: block;  border:  1px blue; border-radius: 0px; height: 20vh;">
+                        <img src="kfc image.jpg"  style="position: relative; width: 90vw; height: 100%; border-radius: 10px; box-shadow: 1px 1px 6px 0px rgb(202, 199, 199); transform: scaleX(-1);" alt="">
+                        <div class="h5" style="position: absolute; top: 0; bottom: 50%; border:  white; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: left; ">
+                            <h2 style="color: white; font-size: 18px; font-weight: 700; width: 100%; justify-content: left;  font-family: 'Montserrat', sans-serif;">Save 25% off Group order with</h2>
+                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif;">code: GOM25</h4>
+                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
+                        </div>
+                    </a> -->
+                    <a href="" class="a1">
+                        <img src="order for moments image.jpg" alt="">
+                        <div class="h5 h51" style="position: absolute; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
+                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
+                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
+                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
+                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="a2">
+                        <img src="kfc image.jpg"   alt="">
+                        <div class="h5 h51" style="position: absolute; top: 0; width: 85%; margin-left: auto;  bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: right;  ">
+                            <h2 style="color: white; border:  1px silver; font-size: 20px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">KFC Chicken Deals !</h2>
+                            <h5 style="color: white; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;"></h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="arrow" style="display: flex; padding: 5px; width: fit-content; height: fit-content; background-color: white; border-radius: 100%; box-shadow: 2px 3px 4px #bfbfbf; position: absolute; left: 90%; right: 0;">
+                    <i class="material-icons">navigate_next</i>
+            </div>
+
+        </div>
 
     </div>
 
