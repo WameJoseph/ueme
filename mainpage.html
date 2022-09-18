@@ -65,6 +65,10 @@
     .main-container .sidebar .nav-items ul li{ border-top: solid 0.3px rgb(192, 192, 192, 0.3);    }
     .main-container .sidebar .nav-items ul li a{ width: 100%; height: 100%; display: flex; border:  thin orange; padding: 20px 20px; align-items: center;}
     .main-container .sidebar .nav-items ul li a:hover{ background-color: rgb(192, 192, 192, 0.2);}
+    .main-container .sidebar .nav-items ul li .shorts{width: 90%; padding: 10px 0; border:  1px; border-radius: 5px; background-color: orangered;  margin: 15px auto; justify-content: center; transition: 0.2s;}
+    .main-container .sidebar .nav-items ul li .shorts h5{margin: 0; color: white;}
+    .main-container .sidebar .nav-items ul li .shorts:hover{background-color: rgb(247, 84, 25);}
+    .main-container .sidebar .nav-items ul li .shorts i{margin: 0; margin-left: 10px; color: white;}
     .main-container .sidebar .nav-items ul li a i{ font-size: 27px; color: black;}
     .main-container .sidebar .nav-items ul li a h5{ margin-left: 15px; font-size: 18px; color: black;}
     .main-container .sidebar .nav-items ul li .descript{ padding: 25px 10px;}
@@ -116,7 +120,18 @@
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
     .main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;  border:  yellow ; height: 160px; width: 90vw; scroll-snap-align: start !important;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 3.4px; border-bottom-right-radius: 3.4px;}
+    .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 125px; width: 88vw;  position: static; display: flex; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
+    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 34%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 66%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2% 3px 2% 10px; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 12px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
 
 
         @media screen and (min-width: 600px){
@@ -149,14 +164,25 @@
     .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
     .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: 100%; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
+    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
     .main-container .kard-container .kard .kard1{ margin-right: 10px;}
-    .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 58vw; scroll-snap-align: ;}
+    .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 58vw; }  /*width 58vw*/
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
     .main-container .kard-container .kard .kard-item .h5{}
+    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 140px; width: 88vw;  position: static; display: flex; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
+    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 40%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 60%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2% 3px 2% 10px; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 12px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
 
     }
-    @media screen and (min-width: 880px){
+    @media screen and (min-width: 800px){
         .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
     .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
@@ -165,9 +191,20 @@
     .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 45vw;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
     .main-container .kard-container .kard .kard-item .h5{}
+    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 140px; width: 45vw;  position: static; display: flex; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
+    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 34%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 66%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 3px 2% 10px; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 12px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
     }
 
-    @media screen and (min-width: 1000px){
+    @media screen and (min-width: 1100px){
         .main-container .nav{ border-bottom: solid thin silver; height: 53px; padding: 0 5%; }
         .main-container .nav .logo{margin-right: auto;}
         .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif;}
@@ -225,9 +262,17 @@
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
     .main-container .kard-container .kard .kard-item{position: static; border: solid 1px silver; width: fit-content !important; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 140px; width: 40.1vw;}
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
-    .main-container .kard-container .kard .kard-item .h5{}
+    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 135px; width: 40.1vw;  position: static; display: flex; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
+    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
+    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 32%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 68%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 16px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
+    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif; }
 } 
 
 </style>
@@ -261,9 +306,9 @@
                         <h5>Wame Trader</h5>
                     </a></li>
 
-                    <li><a href="" style="width: 90%; padding: 10px 0; border:  1px; border-radius: 5px; background-color: orangered;  margin: 15px auto; justify-content: center;">
-                        <h5 style="margin: 0; color: white;">Food Shorts</h5>
-                        <i class="material-icons-outlined" style="margin: 0; margin-left: 10px; color: white;">movie</i>
+                    <li><a href="" class="shorts">
+                        <h5>Food Shorts</h5>
+                        <i class="material-icons-outlined">movie</i>
                         
                     </a></li>
                     
@@ -481,23 +526,27 @@
                             <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
                         </div>
                     </a> -->
-                    <a href="" class="a1" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg);   position: static;">
-                        <!-- <img src="order for moments image.jpg" alt=""> -->
-                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
-                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
-                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
-                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
-                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                    <a href="" class="a1">      <!--a height:120px width:40%-->
+                       <div class="promoimage">
+     <!--image-->                 <img src="dodo-pizza-daily-boost.webp" alt="">
+                        </div>
+                        <div class="h5 h51" style="background-color: rgba(170, 7, 7, 0.76);">
+      <!--Title-->                      <h2 class="title">Dodo Pizza Daily Boost</h2>
+        <!--Sub Description-->          <h4 class="sub-description" style="color: white;">Discounted offer % <span class="emoji">&#128523</span></h4>
+        <!--Promo code-->                <!-- <h6 class="Promo-code" style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6> -->
+        <!--visit-btn-->                <h5 class="visit-btn"><span class="visit-text" >Dodo Pizza <span class="i2" style="color: initial;">&#127829</span></span></h5>
                         </div>
                     </a>
 
-                    <a href="" class="a2" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg); position: static;">
-                        <!-- <img src="order for moments image.jpg" alt=""> -->
-                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
-                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
-                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
-                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
-                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                    <a href="" class="a2">
+                        <div class="promoimage">
+                            <img src="fish-food background.jpg"  alt="">
+                        </div>
+                        <div class="h5 h51" style="background-color:khaki;  ">
+                            <h2 class="title" style="color: rgb(39, 118, 73);">Fish food from papynes</h2>
+                            <h4 class="sub-description" style="color: rgb(39, 118, 73); ">find: Shrimps, Prawns, lobster <span>&#127844</span></h4>
+                            <h6 class="promo-code" style="color: rgb(39, 118, 73); ">use code HERESO40. Min. order NGN 1,500</h6>
+                            <h5 class="visit-btn"><span class="visit-text">Visit store</span></h5>
                         </div>
                     </a>
 
@@ -513,23 +562,29 @@
                             <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
                         </div>
                     </a> -->
-                    <a href="" class="a1" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg);  position: static;">
+                    <a href="" class="a1 a3">
+                        <div class="promoimage">
+                            <img src="nigerian food background.jpg"alt="">
+                        </div>
                         <!-- <img src="order for moments image.jpg" alt=""> -->
-                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
-                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
-                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
-                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
-                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                        <div class="h5 h51" style="background-color: rgb(162, 241, 162); ">
+                            <h2 class="title" style="color: rgb(39, 118, 73);">Grab snacks and essentials</h2>
+                            <h4 class="sub-description" style="color: rgb(39, 118, 73);">with 45% off 3 orders</h4>
+                            <h6 class="promo-code" style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
+                            <h5 class="visit-btn"><span class="visit-text" >Visit store</span></h5>
                         </div>
                     </a>
 
-                    <a href="" class="a2" style="background-image:url(hoodie-oversized-jacket-coloring-drawing-vector-hoodie_7076792.jpg);  position: static;">
+                    <a href="" class="a2 a4">
+                        <div class="promoimage">
+                            <img src="nigerian-boiled-ripe-plantain-served-with-vegetable-soup_539365-392.jpg" alt="">
+                        </div>
                         <!-- <img src="order for moments image.jpg" alt=""> -->
-                        <div class="h5 h51" style="position: static; top: 0; width: 75%; margin-left: auto; background-color:rgb(220, 253, 253); bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   ">
-                            <h2 style="color: rgb(39, 118, 73); border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;">Grab snacks and essentials</h2>
-                            <h4 style="color: rgb(39, 118, 73); font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left;">with 45% off 3 orders</h4>
-                            <h6 style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6>
-                            <h5 style="color: black; font-size: 16px; font-weight: 900; width: 100%; justify-content: right; margin-top: 5px; font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto;"><span style="border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif;">Visit store</span></h5>
+                        <div class="h5 h51" style=" background-color:rgb(220, 253, 253); ">
+                            <h2 class="title" style="color: rgb(39, 118, 73);">Ogbonge Nigerian Food</h2>
+                            <h4 class="sub-description" style="color: rgb(39, 118, 73);">Visit foe fresh snails, meat, suya <span class="emoji">&#128523</span></h4>
+                            <!-- <h6 class="promo-code" style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6> -->
+                            <h5 class="visit-btn"><span class="visit-text" >Visit Negashi <span style="color: initial;">&#127844</span></span></h5>
                         </div>
                     </a>
                 </div>
