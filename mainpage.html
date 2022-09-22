@@ -22,7 +22,7 @@
     a{ text-decoration: none;}
     body{margin: 0; padding: 0;} 
     .main-container{padding: 0; margin: 0; width: 100%;}
-    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin silver; height: 60px; padding: 0 5% 0 3%; align-items: center;}
+    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin silver; height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
     .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
     .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
     .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
@@ -43,14 +43,11 @@
     .main-container .nav .cart .sp1{align-items: center; height: 100%; display: flex;}
     .main-container .nav .cart .sp2{align-items: center; height: 100%; display: flex;}
     .main-container .nav .cart .sp2 p{align-items: center; height: 100%; display: flex;}
-    @media screen and (min-width: 530px){
-        .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
-        .main-container .nav .logo .h12{display: block;}
-    }
+
 
     .main-container .sidebar{
     visibility:visible;
-    position: absolute !important;
+    position: fixed !important;
     width: 0px;
     height: 100%;
     overflow-x: hidden;
@@ -90,7 +87,7 @@
     .main-container .category .arrow{display: none;}
 
     .main-container .kart-categories{
-        width: 100%; border:  1px blue; height: 35px; margin-top: 13px;
+       display: flex; justify-content: left; align-items: center; width: 100%; border:  1px blue; height: 50px; margin-top: 0; position: sticky; top: 59px;  background-color: white;
     }
     .main-container .kart-categories .categories{
         width: 99%; height: fit-content; margin: 0 auto; border:  1px silver; display: flex; overflow-x: auto;
@@ -120,21 +117,50 @@
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
     .main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;  border:  yellow ; height: 160px; width: 90vw; scroll-snap-align: start !important;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+    .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
     .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 125px; width: 90vw;  position: static; display: flex; background-color: white;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
     .main-container .kard-container .kard .kard-item .a2{background-color: white;}
     .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 40%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 5px; border-bottom-left-radius: 5px;  height: 100%; width: 100%;}
     .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 60%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2% 3px 5% 10px; justify-content: right;   }
     .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 14px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 12px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 10px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 12px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 12px; font-family: 'Roboto', sans-serif; }
+    .main-container .kard-container .arrow{display: flex; padding: 5px; width: fit-content; height: fit-content; background-color: white; border-radius: 100%; box-shadow: 2px 3px 4px #bfbfbf; position: absolute; left: 90%; right: 0; cursor: pointer;}
 
+    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 4%; flex-direction: column; padding: 0 0% 0 0%;}
+    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 15px 0;}
+    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; padding: 0 3% 0 4%;}
+    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 22px;}
+    .main-container .catalog .container .title .seeall{display: none; width: fit-content; align-items: center; }
+    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
+    .main-container .catalog .container .title .seeall .arrow{display: flex;}
+    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
+    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
+    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
+    .main-container .catalog .container .title .pointer{display: block;}
+    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
+    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
+    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
+    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
+    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-left: 16px; width: 80vw; }
+    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
+    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
+    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
+    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
+    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
+    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
+    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
-        @media screen and (min-width: 500px){
+    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+
+        @media screen and (min-width: 480px){
         .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 75%; overflow: auto; margin: 0 auto; height: 80%; }
         .main-container .category{width: 100%; height: fit-content; border-top:  1px silver; border-bottom:  1px silver ; margin-top: 4px;}
     .main-container .category .categories{width: 90%; padding: 15px 0 10px 0; display: flex;}
@@ -148,7 +174,7 @@
     .main-container .category .arrow a .i1{font-size: 16px;}
 
     .main-container .kart-categories{
-        width: 100%;margin-top: 10px;
+        width: 100%;margin-top: 10px; 
     }
     .main-container .kart-categories .categories{
         width: 89%; 
@@ -173,7 +199,7 @@
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
     .main-container .kard-container .kard .kard-item .a2{background-color: white;}
     .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 34%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .promoimage img{ height: 100%; width: 100%;}
     .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 66%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2% 3px 2% 10px; justify-content: right;   }
     .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
@@ -181,31 +207,126 @@
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
 
+    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%;}
+    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; padding: 0;}
+    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 22px;}
+    .main-container .catalog .container .title .seeall{display: none; width: fit-content; align-items: center; display: none;}
+    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
+    .main-container .catalog .container .title .seeall .arrow{display: flex;}
+    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
+    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
+    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
+    .main-container .catalog .container .title .pointer{display: block;}
+    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
+    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
+    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
+    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
+    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; margin-left: 0; width: 50vw; }
+    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
+    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
+    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
+    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
+    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
+    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
+    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
+
+    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+
+    }
+
+    @media screen and (min-width: 530px){
+        .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
+        .main-container .nav .logo .h12{display: block;}
+    }
+
+    @media screen and (min-width: 640px) {
+        .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%;}
+    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;}
+    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 26px;}
+    .main-container .catalog .container .title .seeall{display: block; width: fit-content; align-items: center; display: flex;}
+    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
+    .main-container .catalog .container .title .seeall .arrow{display: flex;}
+    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
+    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
+    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
+    .main-container .catalog .container .title .pointer{display: none;}
+    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
+    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
+    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
+    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
+    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; width: 35vw; }
+    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
+    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
+    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
+    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
+    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
+    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
+    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
+
+    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
     }
     @media screen and (min-width: 700px){
         .main-container .kard-container .kard .kard-item a .promoimage{ width: 30%;}
         .main-container .kard-container .kard .kard-item a .h5{width: 70%;}
 }
+
     @media screen and (min-width: 800px){
         .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
     .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
     .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 45vw;}
+    /* .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 45vw;} */
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
     .main-container .kard-container .kard .kard-item .h5{}
     .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 140px; width: 45vw;  position: static; display: flex; background-color: white;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
     .main-container .kard-container .kard .kard-item .a2{background-color: white;}
     .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 34%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .promoimage img{ height: 100%; width: 100%;}
     .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 66%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 3px 2% 10px; justify-content: right;   }
     .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 12px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
+
+    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%;}
+    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; padding: 0;}
+    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 26px;}
+    .main-container .catalog .container .title .seeall{display: block; width: fit-content; align-items: center; display: flex;}
+    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
+    .main-container .catalog .container .title .seeall .arrow{display: flex;}
+    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
+    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
+    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
+    .main-container .catalog .container .title .pointer{display: none;}
+    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
+    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
+    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
+    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
+    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; width: 28vw; }
+    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
+    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
+    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
+    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
+    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
+    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
+    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
+
+    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
     }
 
     @media screen and (min-width: 1100px){
@@ -256,7 +377,7 @@
     .main-container .category .arrow a{background-color: white; display: flex; border:  1px blue; width: 26px; height: 26px; border-radius: 5px; box-shadow: 2px 3px 4px #bfbfbf; justify-content: center; align-items: center;}
     .main-container .category .arrow a .i1{font-size: 18px;}
 
-    .main-container .kart-categories{ width: 100%; margin-top: 10px;}
+    .main-container .kart-categories{ width: 100%; margin-top: 0px; height: 50px; margin-top: 0; position: sticky; top: 53px;}
     .main-container .kart-categories .categories{ width: 82%; }
     .main-container .kart-categories .categories a{ padding: 5.5px 10px; margin-right: 13px; }
     .main-container .kart-categories .categories .item1{ margin-left: 0; }
@@ -266,17 +387,47 @@
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
     .main-container .kard-container .kard .kard-item{position: static; border: solid 1px silver; width: fit-content !important; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 135px; width: 40.1vw;  position: static; display: flex; background-color: white;}
+    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 130px; width: 40.1vw;  position: static; display: flex; background-color: white;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
     .main-container .kard-container .kard .kard-item .a2{background-color: white;}
-    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 32%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 10px; border-bottom-left-radius: 10px;  height: 100%; width: 100%;}
-    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 68%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 20px 2% 15px; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 18px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 16px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 30%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .promoimage img{height: 100%; width: 100%;}
+    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 70%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 1.5% 5px 2% 15px; justify-content: right;   }
+    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
+    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 16px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif; }
+   
+    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 8% 0 9.6%;}
+    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;}
+    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 26px;}
+    .main-container .catalog .container .title .seeall{display: block; width: fit-content; align-items: center; display: flex;}
+    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
+    .main-container .catalog .container .title .seeall .arrow{display: flex;}
+    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
+    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
+    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
+    .main-container .catalog .container .title .pointer{display: none;}
+    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
+    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
+    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
+    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
+    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; width: 26vw; }
+    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
+    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
+    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
+    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
+    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
+    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
+    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 12px;}
+    .main-container .catalog .container .content .content1 .product .description span{margin: 0 5px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
+
+    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+
 } 
 
 </style>
@@ -355,7 +506,7 @@
         </div>
 
 
-        <div class="nav">
+        <div class="nav" id="nav">
             <div class="bar nv-item">
                 <i class="material-icons" onclick="makeNavAppear()">menu</i>   
             </div>
@@ -508,7 +659,7 @@
             </div>
         </div>
 
-        <div class="kart-categories">
+        <div class="kart-categories" id="kart-categories">
             <div class="categories">
                 <a href="" class="item1">Pick up</a>
                 <a href="">Over 4.5 <i class="material-icons star-icon">star</i><i class="material-icons i1">keyboard_arrow_down</i></a>
@@ -521,24 +672,15 @@
             <div class="kard">
 
                 <div class="kard-item kard1" >
-
-                    <!-- <a href="" style=" position: relative; width: fit-content; margin-right: 18px; display: block;  border:  1px blue; border-radius: 0px; height: 20vh;">
-                        <img src="kfc image.jpg"  style="position: relative; width: 90vw; height: 100%; border-radius: 10px; box-shadow: 1px 1px 6px 0px rgb(202, 199, 199); transform: scaleX(-1);" alt="">
-                        <div class="h5" style="position: absolute; top: 0; bottom: 50%; border:  white; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: left; ">
-                            <h2 style="color: white; font-size: 18px; font-weight: 700; width: 100%; justify-content: left;  font-family: 'Montserrat', sans-serif;">Save 25% off Group order with</h2>
-                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif;">code: GOM25</h4>
-                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
-                        </div>
-                    </a> -->
                     <a href="" class="a1">      <!--a height:120px width:40%-->
                        <div class="promoimage">
-     <!--image-->                 <img src="dodo-pizza-daily-boost.webp" alt="">
+<!--image-->               <img src="dodo-pizza-daily-boost.webp" alt="">
                         </div>
-                        <div class="h5 h51" style="background-color: rgba(170, 7, 7, 0.76);">
-      <!--Title-->                      <h2 class="title">Dodo Pizza Daily Boost</h2>
-        <!--Sub Description-->          <h4 class="sub-description" style="color: white;">Discounted offer % <span class="emoji">&#128523</span></h4>
-        <!--Promo code-->                <!-- <h6 class="Promo-code" style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6> -->
-        <!--visit-btn-->                <h5 class="visit-btn"><span class="visit-text" >Dodo Pizza <span class="i2" style="color: initial;">&#127829</span></span></h5>
+                        <div class="h5 h51" style="background-color: rgba(170, 7, 7, 1);">
+<!--Title-->                <h2 class="title">Dodo Pizza Daily Boost</h2>
+<!--Sub Description-->      <h4 class="sub-description" style="color: white;">Discounted offer % <span class="emoji">&#128523</span></h4>
+<!--Promo code-->           <!-- <h6 class="Promo-code" style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6> -->
+<!--visit-btn-->            <h5 class="visit-btn"><span class="visit-text" >Dodo Pizza <span class="i2" style="color: initial;">&#127829</span></span></h5>
                         </div>
                     </a>
 
@@ -553,19 +695,9 @@
                             <h5 class="visit-btn"><span class="visit-text">Visit store</span></h5>
                         </div>
                     </a>
-
                 </div>
 
                 <div class="kard-item kard2">
-
-                    <!-- <a href="" style=" position: relative; width: fit-content; margin-right: 18px; display: block;  border:  1px blue; border-radius: 0px; height: 20vh;">
-                        <img src="kfc image.jpg"  style="position: relative; width: 90vw; height: 100%; border-radius: 10px; box-shadow: 1px 1px 6px 0px rgb(202, 199, 199); transform: scaleX(-1);" alt="">
-                        <div class="h5" style="position: absolute; top: 0; bottom: 50%; border:  white; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 3% 20px 3% 20px; justify-content: left; ">
-                            <h2 style="color: white; font-size: 18px; font-weight: 700; width: 100%; justify-content: left;  font-family: 'Montserrat', sans-serif;">Save 25% off Group order with</h2>
-                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif;">code: GOM25</h4>
-                            <h4 style="color: white; font-size: 16px; font-weight: 700; width: 100%; justify-content: left; margin-top: 5px; font-family: 'Montserrat', sans-serif; margin-top: auto;">KFC Chicken &#127831;</h4>
-                        </div>
-                    </a> -->
                     <a href="" class="a1 a3">
                         <div class="promoimage">
                             <img src="nigerian food background.jpg"alt="">
@@ -583,27 +715,367 @@
                         <div class="promoimage">
                             <img src="chicken kard.jpg" alt="">
                         </div>
-                        <!-- <img src="order for moments image.jpg" alt=""> -->
                         <div class="h5 h51" style=" background-color:rgb(220, 253, 253); ">
                             <h2 class="title" style="color: rgb(39, 118, 73);">Ogbonge Nigerian Food</h2>
                             <h4 class="sub-description" style="color: rgb(39, 118, 73);">Visit foe fresh snails, meat, suya <span class="emoji">&#128523</span></h4>
-                            <!-- <h6 class="promo-code" style="color: rgb(39, 118, 73); font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: 13px; font-family: 'Montserrat', sans-serif; text-align: left;">use code HERESO40. Min. order <span style="text-decoration-style: double; text-decoration: line-through;">N</span>1, 500</h6> -->
                             <h5 class="visit-btn"><span class="visit-text" >Visit Negashi <span style="color: initial;">&#127844</span></span></h5>
                         </div>
                     </a>
                 </div>
+
             </div>
 
-            <div class="arrow" style="display: flex; padding: 5px; width: fit-content; height: fit-content; background-color: white; border-radius: 100%; box-shadow: 2px 3px 4px #bfbfbf; position: absolute; left: 90%; right: 0;">
+            <div class="arrow">
                     <i class="material-icons">navigate_next</i>
             </div>
 
         </div>
 
+        <div class="catalog" >
+
+            <!-- CONTAINER -->
+
+            <div class="container">
+                <div class="title">
+                    <h3>Try Something New</h3>
+                    <div class="seeall">
+                        <a href="#" class="seeall-text" style="">See All</a>
+                        <div class="arrow">
+                            <i class="material-icons i1" >navigate_before</i>
+                            <i class="material-icons i2" >navigate_next</i>
+                        </div>
+                    </div>
+                    <a href="" class="pointer"><i class="material-icons movei">arrow_forward</i></a>
+                </div>
+
+                    <div class="content">
+                        <div class="content1">
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">Saudi Broaster</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(kfcburger3.jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">KFC Chicken</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(11\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Gidi Burger logo.png" alt="">
+                                        <h4 class="store-name">Gidi Burger</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="content1">
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(2\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">Sushi Dushi</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(9\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">Chiyoki aqua</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(6\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Gidi Burger logo.png" alt="">
+                                        <h4 class="store-name">Gidi Burger</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                        </div>
+
+
+                    </div>
+            </div>
+
+            <!-- END CONTAINER -->
+
+
+            <!-- FOOD SHORTS CONTAINER -->
+
+            <div class="container shorts-container">
+                <div class="title">
+                    <div class="title-text">
+                        <img src="food video creator.png" width="30px" height="30px" style="margin-right: 10px;" alt="">
+                        <h3 style="font-family: 'Montserrat', san-serif; font-size: 22px;">Food Shorts </h3>
+                    </div>
+                    <!-- <div class="arrow"> -->
+                        <!-- <i class="material-icons" style="padding: 10px 10px; font-size: 20px; border-radius: 100%; background-color: rgb(216, 215, 215);">east</i> -->
+                        
+                    <!-- </div> -->
+                </div>
+
+                <div class="content" style="border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 10px 0; ">
+                    <div class="content1" style="width: fit-content; height: fit-content; display: flex; justify-content: left;">
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(office\ eating\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgba(139, 139, 139, 0.2); background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end;">
+                        <div class="decription" style="border: solid 1px; width: 100%; height: 50%; margin-top: auto;">
+                            <p></p>
+                        </div>
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(office\ eating\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25); background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(office\ eating\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25); background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
+                    
+                    </a>
+                    </div>
+                </div>
+
+            </div>
+             <!-- END  FOOD SHORTS CONTAINER -->
+
+            <!-- CONTAINER -->
+
+            <div class="container">
+                <div class="title">
+                    <h3>Wallet Friendly</h3>
+                    <div class="seeall">
+                        <a href="#" class="seeall-text" style="">See All</a>
+                        <div class="arrow">
+                            <i class="material-icons i1" >navigate_before</i>
+                            <i class="material-icons i2" >navigate_next</i>
+                        </div>
+                    </div>
+                    <a href="" class="pointer"><i class="material-icons movei">arrow_forward</i></a>
+                </div>
+
+                    <div class="content">
+                        <div class="content1">
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(8\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">Saudi Broaster</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(3\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">KFC Chicken</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(1\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Gidi Burger logo.png" alt="">
+                                        <h4 class="store-name">Gidi Burger</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="content1">
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(4\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">Sushi Dushi</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(9\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h4 class="store-name">Chiyoki aqua</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                            <a href="" class="product">
+                                <div class="store-image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(7\).jpg);"></div>
+                                <div class="h5">
+                                    <span>
+                                        <img src="Gidi Burger logo.png" alt="">
+                                        <h4 class="store-name">Gidi Burger</h4>
+                                    </span>
+                                    <i class="material-icons">favorite_border</i>
+                                </div>
+                                <div class="description">
+                                    <h6>5.4 mi  </h6>
+                                    <span></span>
+                                    <h6>  45 min  </h6>
+                                    <span></span>
+                                    <h6> $0 delivery fee over $12</h6>
+                                </div>
+                            </a>
+
+                        </div>
+
+
+                    </div>
+            </div>
+
+            <!-- END CONTAINER -->
+           
+
+        </div>
+
+
+
+
+
     </div>
-
-
-
     <script src="mainpage.js"></script>
 </body>
 </html>
