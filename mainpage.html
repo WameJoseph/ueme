@@ -87,8 +87,11 @@
     .main-container .category .arrow{display: none;}
 
     .main-container .kart-categories{
-       display: flex; justify-content: left; align-items: center; width: 100%; border:  1px blue; height: 50px; margin-top: 0; position: sticky; top: 59px;  background-color: white;
+       display: flex; justify-content: left; align-items: center; width: 100%; border:  1px blue; height: 50px; margin-top: 0; position: sticky; top: 60px;  background-color: white; 
     }
+
+
+
     .main-container .kart-categories .categories{
         width: 99%; height: fit-content; margin: 0 auto; border:  1px silver; display: flex; overflow-x: auto;
     }
@@ -96,8 +99,15 @@
         display: none;
     }
     .main-container .kart-categories .categories a{
-        border:  1px blue; display: flex; align-items: center; justify-content: center;  border-radius: 25px;  font-weight: bolder; font-size: 14px; color: rgb(0, 0, 0, 0.9); background-color:#e6e6e6; padding: 5.5px 10px; margin-right: 10px; width: fit-content; white-space: nowrap;
+        border:  1px blue; display: flex; align-items: center; justify-content: center;  border-radius: 25px;  font-weight: bolder; font-size: 14px; color: rgb(0, 0, 0, 0.9); background-color:#e6e6e6; padding: 5.5px 10px; margin-right: 10px; width: fit-content; white-space: nowrap; animation: move 10ms ;
     }
+    
+    @keyframes move{
+        from{}
+        to {padding: 3px 8px;}
+    }
+
+
     .main-container .kart-categories .categories .item1{
         margin-left: 13px;
     }
@@ -131,10 +141,10 @@
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 12px; font-family: 'Roboto', sans-serif; }
     .main-container .kard-container .arrow{display: flex; padding: 5px; width: fit-content; height: fit-content; background-color: white; border-radius: 100%; box-shadow: 2px 3px 4px #bfbfbf; position: absolute; left: 90%; right: 0; cursor: pointer;}
 
-    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 4%; flex-direction: column; padding: 0 0% 0 0%;}
-    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 15px 0;}
-    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; padding: 0 3% 0 4%;}
-    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 22px;}
+    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 4%; flex-direction: column; padding: 0 0% 0 0%; background-color: rgb(232, 232, 232);}
+    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 10px 0; background-color: white; margin-top: 3px;}
+    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; padding: 10px 3% 0 4%;}
+    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 20px;}
     .main-container .catalog .container .title .seeall{display: none; width: fit-content; align-items: center; }
     .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
     .main-container .catalog .container .title .seeall .arrow{display: flex;}

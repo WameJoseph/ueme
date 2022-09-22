@@ -30,15 +30,19 @@
     
 
 function makeNavAppear() {
-    document.getElementById("sidebar").style.width = "300px";
+    document.getElementById("sidebar").style.width = "330px";
     document.getElementById("sidebar").style.height = "100%";
     document.getElementById("sidebar").style.visibility = "visible";
+    document.getElementById("nav").style.position = 'static';
+    document.getElementById("kart-categories").style.position = 'static';
 
 }
 function makeNavDissapear() {
     document.getElementById("sidebar").style.width = "0";
     document.getElementById("sidebar").style.height = "100%";
     document.getElementById("sidebar").style.visibility = "hidden";
+    document.getElementById("nav").style.position = 'sticky';
+    document.getElementById("kart-categories").style.position = 'sticky';
 }
 
 
