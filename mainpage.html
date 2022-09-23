@@ -22,7 +22,7 @@
     a{ text-decoration: none;}
     body{margin: 0; padding: 0;} 
     .main-container{padding: 0; margin: 0; width: 100%;}
-    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin silver; height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
+    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(232, 232, 232); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
     .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
     .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
     .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
@@ -121,7 +121,7 @@
     .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
     .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
     .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;  border:  yellow ; height: 160px; width: 90vw; scroll-snap-align: start !important;}
+    .main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;  border:  yellow ; height: 200px; width: 90vw; scroll-snap-align: start !important;}
     .main-container .kard-container .kard .kard-item .a1{margin-right: 20px;}
     .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
     .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 125px; width: 90vw;  position: static; display: flex; background-color: white;}
@@ -137,10 +137,10 @@
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 12px; font-family: 'Roboto', sans-serif; }
     .main-container .kard-container .arrow{display: flex; padding: 5px; width: fit-content; height: fit-content; background-color: white; border-radius: 100%; box-shadow: 2px 3px 4px #bfbfbf; position: absolute; left: 90%; right: 0; cursor: pointer;}
 
-    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 4%; flex-direction: column; padding: 0 0% 0 0%; background-color: rgb(232, 232, 232);}
-    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 10px 0; background-color: white; margin-top: 3px;}
+    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 4%; flex-direction: column; padding: 0 0% 0 0%; background-color: #f3f5f9;}
+    .main-container .catalog .container{width: 100%; border-top: solid .3px rgb(0, 0, 0, 0.4); border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 5px 0 10px 0; background-color: white; margin-bottom: 8px;}
     .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 13px; display: flex; justify-content: space-between; align-items: center; padding: 10px 3% 0 4%;}
-    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 21px;}
+    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 18px;}
     .main-container .catalog .container .title .seeall{display: none; }
     .main-container .catalog .container .title .pointer{display: block; color: black;}
     .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 5px; margin-right: 5px; font-weight: 900; background-color: rgb(216, 215, 215); font-size: 20px;}
@@ -156,10 +156,25 @@
     .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.5); font-size: 22px; margin: auto 0; font-weight: 800;}
     .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
     .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
-    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
+    .main-container .catalog .container .content .content1 .product .description span{margin: 0 3px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
-    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container{width: 100%;  border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top: solid .3px rgb(0, 0, 0, 0.4);}
     .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
+    .main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 18px; }
+    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
+    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
+    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-left: 15px;}
+    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
+    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
+    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 17px;}
+
+    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
+    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
+    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
+
+
+
 
         @media screen and (min-width: 480px){
         .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 75%; overflow: auto; margin: 0 auto; height: 80%; }
@@ -208,7 +223,7 @@
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
     .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
 
-    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%;}
+    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%; background-color: white;}
     .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
     .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; padding: 0;}
     .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 22px;}
@@ -234,8 +249,20 @@
     .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
     .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
-    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container{width: 100%;  border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top: solid .3px rgb(0, 0, 0, 0.4);}
     .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
+    .main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 18px; }
+    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
+    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
+    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-left: 0; margin-right: 15px;}
+    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
+    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
+    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 17px;}
+
+    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
+    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
+    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
 
     }
 
@@ -271,8 +298,7 @@
     .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
     .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
-    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
-    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+
     }
     @media screen and (min-width: 700px){
         .main-container .kard-container .kard .kard-item a .promoimage{ width: 30%;}
@@ -326,8 +352,20 @@
     .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
     .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
-    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container{width: 100%;  border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top: solid .3px rgb(0, 0, 0, 0.4);}
     .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
+    .main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 22px; }
+    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
+    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
+    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-right: 15px; margin-left: 0;}
+    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
+    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
+    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 16px;}
+
+    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
+    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
+    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
     }
 
     @media screen and (min-width: 1100px){
@@ -426,8 +464,19 @@
     .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 12px;}
     .main-container .catalog .container .content .content1 .product .description span{margin: 0 5px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
-    .main-container .catalog .shorts-container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
+    .main-container .catalog .shorts-container{width: 100%;  border-bottom:  .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top:  .3px rgb(0, 0, 0, 0.4);}
     .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
+    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
+    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
+    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
+    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-right: 15px; margin-left: 0;}
+    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
+    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
+    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 17px;}
+
+    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
+    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
+    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
 
 } 
 
@@ -877,8 +926,8 @@
             <div class="container shorts-container">
                 <div class="title">
                     <div class="title-text">
-                        <img src="food video creator.png" width="30px" height="30px" style="margin-right: 10px;" alt="">
-                        <h3 style="font-family: 'Montserrat', san-serif; font-size: 22px;">Food Shorts </h3>
+                        <img src="food video creator.png" alt="">
+                        <h3>Food Shorts </h3>
                     </div>
                     <!-- <div class="arrow"> -->
                         <!-- <i class="material-icons" style="padding: 10px 10px; font-size: 20px; border-radius: 100%; background-color: rgb(216, 215, 215);">east</i> -->
@@ -886,46 +935,96 @@
                     <!-- </div> -->
                 </div>
 
-                <div class="content" style="border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 10px 0; ">
-                    <div class="content1" style="width: fit-content; height: fit-content; display: flex; justify-content: left;">
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(office\ eating\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgba(139, 139, 139, 0.2); background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end;">
-                        <div class="decription" style="border: solid 1px; width: 100%; height: 50%; margin-top: auto;">
-                            <p></p>
+                <div class="content" >
+                    <div class="content1">
+                        
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(2\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
                         </div>
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(office\ eating\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25); background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(office\ eating\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25); background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(nigerian\ food\ background.jpg); background-size: cover; background-position: center;  image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
-                    <a href="" style="width: 180px; height: 250px; border:  1px; margin-right: 15px; background-image: url(pizza\ background.jpg); background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px;">
-                    
-                    </a>
+
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(3\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
+                        </div>
+
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(3\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
+                        </div>
+
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(9\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
+                        </div>
+
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(7\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
+                        </div>
+
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(1\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
+                        </div>
+
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(4\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
+                        </div>
+
+                        <div class="short">
+                            <a href="" style="background-image: url(background\ pexels-chan-walrus-941869\ \(11\).jpg);">
+                                <div class="description">
+                                    <h5>The new kfc chicken ad on Lorem ipsum dolor sit.</h5>     
+                                </div>
+                                 <p class="views">84k views</p>
+                            </a>
+                                <i class="material-icons">more_vert</i>
+                        </div>
+
+
+
+
+
+
+
+
                     </div>
                 </div>
 
