@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainpage.css">
     <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
         font-family: 'Roboto', sans-serif;
     }
     .naira{text-decoration-style:double; text-decoration-line: line-through;}
-    .star-icon{font-size: 14px; margin: 0 8px 0 3px; margin-top: -1px; color: rgb(0, 0, 0, 0.6); font-weight: bold;}
+    .star-icon{font-size: 14px; margin: 0 8px 0 3px; margin-top: 0px; color: rgb(0, 0, 0, 0.6); font-weight: 900;}
     a{text-decoration: none;}
     body{margin: 0; padding: 0;}
     .main-container{margin: 0; padding: 0; width: 100%;}
@@ -78,18 +79,22 @@
     .main-container .box .brand .image .a1{color: rgb(228, 228, 228, 0.6); font-size: 26px;}
     .main-container .box .brand .image .a2{padding: 5px 10px 4px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.6); height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; letter-spacing: 1px; margin-top: auto;}
     .main-container .box .brand .image .a2 i{height: fit-content; width: fit-content; font-weight: 700;}
-    .main-container .box .brand .logo{width: 65px; height: 65px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 5%;  border-radius: 50%; box-shadow: 0 0 5px rgb(138, 137, 137);}
+    .main-container .box .brand .logo{width: 65px; height: 65px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 5%;  border-radius: 50%; box-shadow: 0 0 3px rgb(138, 137, 137);}
     .main-container .box .brand .logo img{width: 45px; height: 45px; border-radius: 100%;}
 
-    .main-container .box .container{display: flex; padding: 0 5%; align-items: center; margin-top: -20px; justify-content: space-between;}
-    .main-container .box .container .brand-name{ width: fit-content; }
-    .main-container .box .container .brand-name h1{font-size: 26px;}
+    .main-container .box .container{display: flex; padding: 0 5%; border:  1px; align-items: center; margin-top: -25px; justify-content: space-between;}
+    .main-container .box .container .brand-name{ width: 100%; border:  1px blue; }
+    .main-container .box .container .brand-name .flex{display: flex; justify-content: space-between; width: 100%;  border:  1px; align-items: center;}
+    .main-container .box .container .brand-name .flex h1{font-size: 22px; color: rgb(0, 0, 0, 0.7);}
+    .main-container .box .container .brand-name .flex span{display: flex; align-items: center;}
+    .main-container .box .container .brand-name .flex span i{width: 25px; font-size: 22px; font-weight: 800; color: rgb(0, 0, 0, 0.6);}
+    .main-container .box .container .brand-name .flex span h3{color: rgb(0, 0, 0, 0.6); font-size: 20px;}
     .main-container .box .container .brand-name .category{display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.6); margin-top: 5px;   border:  1px silver; flex-direction: column; justify-content: left;}
     .main-container .box .container .brand-name .category .sp{display: flex; align-items: center; height: fit-content; justify-content: left; width: 100%; text-align: left; margin-bottom: 5px;}
-    .main-container .box .container .brand-name .category a{font-weight: 600; font-size: 14px; font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0, 0.5); display: flex; align-items: center; }
-    .main-container .box .container .brand-name .category .dot{border:  1px rgb(0, 0, 0, 0.4); width: 6px; height: 6px; background-color: rgb(0, 0, 0, 0.4); margin: 0 5px; border-radius: 100%;}
+    .main-container .box .container .brand-name .category a{font-weight: 600; font-size: 14px; font-family: 'Roboto', sans-serif; color: rgba(46, 46, 46, 0.4); display: flex; align-items: center; }
+    .main-container .box .container .brand-name .category .dot{border:  1px rgb(0, 0, 0, 0.4); width: 4px; height: 4px; background-color: rgb(0, 0, 0, 0.4); margin: 0 5px; border-radius: 100%;}
     .main-container .box .container .exclamation{display: none;}
-    .main-container .box .container .exclamation i{color: rgb(0, 0, 0, 0.8); font-size: 20px; font-weight: bolder; margin-right: 5px;}
+    /* .main-container .box .container .exclamation i{color: rgb(0, 0, 0, 0.8); font-size: 20px; font-weight: bolder; margin-right: 5px;} */
 
 
     @media screen and (min-width: 530px){
@@ -105,8 +110,12 @@
     .main-container .box .brand .logo{width: 70px; height: 70px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 5%;  border-radius: 50%; box-shadow: 0 0 5px rgb(138, 137, 137);}
     .main-container .box .brand .logo img{width: 50px; height: 50px; border-radius: 100%;}
 
+    .main-container .box .container .brand-name{ width: fit-content; }
     .main-container .box .container .brand-name .category{flex-direction: row; justify-content: left;}
     .main-container .box .container .brand-name .category .sp{display: flex; align-items: center; height: fit-content; justify-content: left; width: fit-content; text-align: left; margin-bottom: 5px;}
+    
+    .main-container .box .container .exclamation{ border:  1px silver; display: flex; align-items: center; justify-content: space-between; color: rgb(0, 0, 0, 0.6);}
+    .main-container .box .container .exclamation i{color: rgb(0, 0, 0, 0.8); font-size: 20px; font-weight: bolder; margin-right: 5px;}
     }
 
     @media screen and (min-width: 1100px){
@@ -134,12 +143,12 @@
     .main-container .box .brand .image{width: 100%; height: 280px; border:  1px blue; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); background-size: cover; background-position: center; box-shadow: 1px 1px 4px silver;}
     .main-container .box .brand .image .a2{padding: 6px 10px 5px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 10px silver; height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 15px; letter-spacing: 1px;}
     .main-container .box .brand .image .a2 i{height: fit-content; width: fit-content; font-weight: 900;}
-    .main-container .box .brand .logo{width: 80px; height: 80px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 10%;  border-radius: 50%; box-shadow: 0 0 5px rgb(138, 137, 137);}
+    .main-container .box .brand .logo{width: 80px; height: 80px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 10%;  border-radius: 50%;}
     .main-container .box .brand .logo img{width: 60px; height: 60px; border-radius: 100%;}
 
     .main-container .box .container{display: flex; padding: 0 10%; align-items: center; margin-top: -20px; justify-content: space-between;}
     .main-container .box .container .brand-name{ width: fit-content; }
-    .main-container .box .container .brand-name h1{font-size: 32px;}
+    .main-container .box .container .brand-name .flex h1{font-size: 32px;}
     .main-container .box .container .brand-name .category{display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.6); margin-top: 5px;}
     .main-container .box .container .brand-name .category a{font-weight: 600; font-size: 14px; font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0, 0.5); display: flex; align-items: center;}
     .main-container .box .container .brand-name .category .dot{border:  1px rgb(0, 0, 0, 0.4); width: 6px; height: 6px; background-color: rgb(0, 0, 0, 0.4); margin: 0 5px; border-radius: 100%;}
@@ -266,15 +275,21 @@
                     <i class="material-icons-outlined a1">error_outline</i>
                     <a href="" class="a2">Products <i class="material-icons">expand_more</i></a>
                 </div>
-                <a href="" class="logo" ><img src="Dodo pizza logo.png" alt=""></a>
+                <a href="" class="logo" id="sticky-item" ><img src="Dodo pizza logo.png" alt=""></a>
             </div>
             
             <div class="container">
                 <div class="brand-name">
-                    <h1>Dodo Pizza</h1>
+                    <div class="flex" >
+                        <h1>Dodo Pizza</h1>
+                        <span>
+                            <i class="material-icons-outlined">favorite_outlined</i>
+                            <h3>30k</h3>
+                        </span>
+                    </div>
                     <div class="category">
                     <span class="sp">
-                        <a href=""><span class="em" style="color: initial; margin-right: 3px; font-size: 13px;">&#127829</span> Pizza cat.</a>
+                        <a href=""><span class="em" style="color: initial; margin-right: 3px; font-size: 13px;">&#127829</span> Pizza </a>
                         <span class="dot"></span>  
                         <a href="">4.5 <i class="material-icons star-icon">star</i></a>
                         <a href="">(<span style="font-size: 13.4px;">45 confirmed reviews</span> )</a>
@@ -292,11 +307,139 @@
                     <i class="material-icons">error_outline</i>
                     <h5>Have any questions about this store?</h5>
                 </div>
+               
+            </div>
+
+            <div class="status" style="width: 90%; margin: 0 auto; display: flex; justify-content: left; align-items: center;">
+                <i class="material-icons" style="color: lime; font-size: 16px; font-weight: 800; margin-right: 5px;">update</i>
+                <p style="color: rgb(0, 0, 0, 0.7);">open</p>
             </div>
         </div>
 
+        <div class="catalog">
+        <!-- SOCIAL POST CONTAINER -->
+        <div class="container social-post-container">
+            <div class="title">
+                <h3>The community</h3>
+                <img src="" alt="">
+            </div>
 
+            <div class="content" >
 
+                <div class="content1">
+
+                    <div class="post">
+                        <a href="">
+                            <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(2\).jpg);"></div>
+
+                            <div class="text">
+                                <div class="logo">
+                                    <img src="Gidi Burger logo.png" alt="">
+                                    <h5>Gidi Burger</h5>
+                                </div>
+                                <div class="info">
+                                    <h3>Be part of the experience &#128523</h3>
+                                    <p>Gidi burger aims to get environmental in our ways by the environment  with all purchases made</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="material-icons">favorite_border</i>
+                                    <h5>300k</h5>
+                                </div>
+                            </div> 
+                        </a>
+
+                    </div>
+
+                    <div class="post">
+
+                        <a href="">
+                            <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(3\).jpg);"></div>
+
+                            <div class="text">
+                                <div class="logo">
+                                    <img src="Dodo pizza logo.png" alt="">
+                                    <h5>Dodo Pizza</h5>
+                                </div>
+
+                                <div class="info">
+                                    <h3>Let's get Greener together &#127758</h3>
+                                    <p>Dodo pizza Lorem ipsum dolor. the environment  with all purchases made</p>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">favorite_border</i>
+                                    <h5>2.5M</h5>
+                                </div>
+
+                            </div>
+                             
+                        </a>
+
+                    </div>
+
+                    <div class="post">
+
+                        <a href="">
+                            <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(7\).jpg);"></div>
+
+                            <div class="text">
+                                <div class="logo">
+                                    <img src="Dodo pizza logo.png" alt="">
+                                    <h5>Gidi Burger</h5>
+                                </div>
+
+                                <div class="info">
+                                    <h3>Let's get Greener together &#127758</h3>
+                                    <p>Gidi burger aims to get in our ways by supporting  the environment  with all purchases made</p>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">favorite_border</i>
+                                    <h5>400</h5>
+                                </div>
+
+                            </div>
+                             
+                        </a>
+
+                    </div>
+
+                    <div class="post">
+
+                        <a href="">
+                            <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(5\).jpg);"></div>
+
+                            <div class="text">
+                                <div class="logo">
+                                    <img src="Dodo pizza logo.png" alt="">
+                                    <h5>Gidi Burger</h5>
+                                </div>
+
+                                <div class="info">
+                                    <h3>Let's get Greener together &#127758</h3>
+                                    <p>Gidi burger aims to get in our ways by supporting  the environment  with all purchases made</p>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">favorite_border</i>
+                                    <h5>100k</h5>
+                                </div>
+
+                            </div>
+                             
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        <!-- COMMUNITY CONTAINER ENDS -->
+        </div>
+        <!-- CATALOG -->
+
+        
     </div>
 
     <script src="mainpage.js"></script>
