@@ -10,479 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Montserrat:wght@600;700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="mainpage.css">
     <title>Kartkrunch: home of food, stores and fast delivery </title>
 </head>
-<style>
-    *{
-        margin: 0; padding: 0;
-        box-sizing: border-box;
-        font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    } 
-    i{font-size: 16px;}
-    a{ text-decoration: none;}
-    body{margin: 0; padding: 0;} 
-    .main-container{padding: 0; margin: 0; width: 100%;}
-    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(232, 232, 232); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
-    .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
-    .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
-    .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
-                                                                                                                                            .main-container .nav .delivery{display: none;}
-    .main-container .nav .logo{margin-right: 10px;}
-    .main-container .nav .logo h1{ font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif; margin-right: auto;}
-    .main-container .nav .logo h1 span{color: orange;}
-    .main-container .nav .logo{margin-right: 10px;}
-    .main-container .nav .logo .h12{display: none;}
-    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 38px; width: 45%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
-    .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 0 10px; align-items: center;}
-    .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
-    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 70%; background-color: transparent; }
-    .main-container .nav .search form input::placeholder{ font-size: 16px;}
-    .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
-    .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-color: rgb(0, 0, 0, 0.8); color: white; cursor: pointer;}
-    .main-container .nav .cart{border:  1px rgb(170, 7, 7); display: flex; height: 32px;  width: 70px; justify-content: space-between; align-items: center; padding: 0 11.8px; border-radius: 30px; color: white; background-color: red; margin-right: ; margin-left: ;}
-    .main-container .nav .cart .sp1{align-items: center; height: 100%; display: flex;}
-    .main-container .nav .cart .sp2{align-items: center; height: 100%; display: flex;}
-    .main-container .nav .cart .sp2 p{align-items: center; height: 100%; display: flex;}
 
-
-    .main-container .sidebar{
-    visibility:visible;
-    position: fixed !important;
-    width: 0px;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y:auto;
-    background: white;
-    padding: 0px 0 10px 0;
-    margin: 0;
-    box-shadow: 1px 0px 5px 1.5px rgba(226, 222, 222, 0.795);
-    transition: 260ms;
-    }
-    .main-container .sidebar .nav-items{}
-    .main-container .sidebar .nav-items ul li{ border-top: solid 0.3px rgb(192, 192, 192, 0.3);    }
-    .main-container .sidebar .nav-items ul li a{ width: 100%; height: 100%; display: flex; border:  thin orange; padding: 20px 20px; align-items: center;}
-    .main-container .sidebar .nav-items ul li a:hover{ background-color: rgb(192, 192, 192, 0.2);}
-    .main-container .sidebar .nav-items ul li .shorts{width: 90%; padding: 10px 0; border:  1px; border-radius: 5px; background-color: orangered;  margin: 15px auto; justify-content: center; transition: 0.2s;}
-    .main-container .sidebar .nav-items ul li .shorts h5{margin: 0; color: white;}
-    .main-container .sidebar .nav-items ul li .shorts:hover{background-color: rgb(247, 84, 25);}
-    .main-container .sidebar .nav-items ul li .shorts i{margin: 0; margin-left: 10px; color: white;}
-    .main-container .sidebar .nav-items ul li a i{ font-size: 27px; color: black;}
-    .main-container .sidebar .nav-items ul li a h5{ margin-left: 15px; font-size: 18px; color: black;}
-    .main-container .sidebar .nav-items ul li .descript{ padding: 25px 10px;}
-    .main-container .sidebar .nav-items ul li .descript h5{ font-weight: 500; font-size: 17px;}
-    .main-container .sidebar .nav-items ul li .descript h5 .kk{ font-family: 'Montserrat Alternates', san-serif; color: orangered;}
-    .main-container .product-nav{width: 100%; display: flex; height: 70px; border-bottom:  0.3px silver; margin: 0 auto; background-color: #f3f5f9; align-items: center; justify-content: center;}
-    .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 700px; overflow: auto; margin: 0 auto; height: 80%; padding-left: 18px;}
-    .main-container .product-nav .content::-webkit-scrollbar{display: none;}
-    .main-container .product-nav .content .item{display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;}
-    .main-container .product-nav .content .item img{background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;}
-    .main-container .product-nav .content .item h5{color: black; margin-left: 8px; font-family: 'Roboto', sans-serif; font-weight: 400; width: ; white-space: nowrap;}
-    .main-container .category{width: 100%; display: flex; height: fit-content;  justify-content: center; padding-left: 0px; align-items: center; margin-top: 0px;}
-    .main-container .category .categories{width: 99%; height: fit-content; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-snap-align: start; overflow: auto; margin: 0 0; border:  1px blue; padding: 15px 0 10px 0; display: flex;  align-items: center;}
-    .main-container .category .categories::-webkit-scrollbar{display: none;}
-    .main-container .category .categories a{height: 100%; scroll-snap-align: start; display: flex; border:  1px silver; padding: 0 5px;  width: fit-content; flex-direction: column; margin-right: 18px;}
-    .main-container .category .categories .a1{padding-left: 20px;}
-    .main-container .category .categories a img{width: 33px; height: 33px; margin: 0 auto; border: solid 1px transparent;}
-    .main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 15px; font-family: 'Roboto', sans-serif; font-weight: 400; border:  1px silver; border: solid 1px transparent; text-align: center;}
-    .main-container .category .arrow{display: none;}
-
-    .main-container .kart-categories{
-       display: flex; justify-content: left; align-items: center; width: 100%; border:  1px blue; height: 50px; margin-top: 0; position: sticky; top: 60px;  background-color: white; 
-    }
-
-
-
-    .main-container .kart-categories .categories{
-        width: 99%; height: fit-content; margin: 0 auto; border:  1px silver; display: flex; overflow-x: auto;
-    }
-    .main-container .kart-categories .categories::-webkit-scrollbar{
-        display: none;
-    }
-    .main-container .kart-categories .categories a{
-        border:  1px blue; display: flex; align-items: center; justify-content: center;  border-radius: 25px;  font-weight: bolder; font-size: 14px; color: rgb(0, 0, 0, 0.9); background-color:#e6e6e6; padding: 5.5px 10px; margin-right: 10px; width: fit-content; white-space: nowrap; animation: move 10ms ;
-    }
-    
-
-
-    .main-container .kart-categories .categories .item1{
-        margin-left: 13px;
-    }
-    .main-container .kart-categories .categories a .star-icon{
-        font-size: 14px; margin-left: 3px;
-    }
-    .main-container .kart-categories .categories a .i1{
-        margin-left: 8px; border-left: solid 0.3px gray; font-size: 20px; padding-left: 5px;
-    }
-    .main-container .kart-categories .categories a .i2{
-        margin-left: 5px; font-size: 20px; margin-top: 2px; 
-    }
-    .main-container .kard-container{width: 100%; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 5%;}
-    .main-container .kard-container .kard{width: 500%; padding: 5px; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
-    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
-    .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;  border:  yellow ; height: 200px; width: 90vw; scroll-snap-align: start !important;}
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
-    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 125px; width: 90vw;  position: static; display: flex; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
-    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 40%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{border-top-left-radius: 5px; border-bottom-left-radius: 5px;  height: 100%; width: 100%;}
-    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 60%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2% 3px 5% 10px; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 14px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 12px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 10px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 12px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 12px; font-family: 'Roboto', sans-serif; }
-    .main-container .kard-container .arrow{display: flex; padding: 5px; width: fit-content; height: fit-content; background-color: white; border-radius: 100%; box-shadow: 2px 3px 4px #bfbfbf; position: absolute; left: 90%; right: 0; cursor: pointer;}
-
-    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 4%; flex-direction: column; padding: 0 0% 0 0%; background-color: #f3f5f9;}
-    .main-container .catalog .container{width: 100%; border-top: solid .3px rgb(0, 0, 0, 0.4); border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 5px 0 10px 0; background-color: white; margin-bottom: 8px;}
-    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 13px; display: flex; justify-content: space-between; align-items: center; padding: 10px 3% 0 4%;}
-    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 18px;}
-    .main-container .catalog .container .title .seeall{display: none; }
-    .main-container .catalog .container .title .pointer{display: block; color: black;}
-    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 5px; margin-right: 5px; font-weight: 900; background-color: rgb(216, 215, 215); font-size: 20px;}
-    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
-    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
-    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
-    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-left: 16px; width: 80vw; }
-    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
-    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
-    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
-    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 17px; font-family: 'Montserrat', sans-serif;}
-    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.5); font-size: 22px; margin: auto 0; font-weight: 800;}
-    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
-    .main-container .catalog .container .content .content1 .product .description span{margin: 0 3px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
-
-    .main-container .catalog .shorts-container{width: 100%;  border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top: solid .3px rgb(0, 0, 0, 0.4);}
-    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
-    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
-    .main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 18px; }
-    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
-    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
-    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-left: 15px;}
-    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
-    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
-    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 17px;}
-
-    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
-    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
-    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
-
-
-
-
-        @media screen and (min-width: 480px){
-        .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 75%; overflow: auto; margin: 0 auto; height: 80%; }
-        .main-container .category{width: 100%; height: fit-content; border-top:  1px silver; border-bottom:  1px silver ; margin-top: 4px;}
-    .main-container .category .categories{width: 90%; padding: 15px 0 10px 0; display: flex;}
-    .main-container .category .categories::-webkit-scrollbar{display: none;}
-    .main-container .category .categories a{height: 100%; scroll-snap-align: start; display: flex; border:  1px silver; padding: 0 0px;  width: fit-content; flex-direction: column; margin-right: 8px;}
-    .main-container .category .categories .a1{padding-left: 0px;}
-    .main-container .category .categories a img{width: 35px; height: 35px; margin: 0 auto; border: solid 1px transparent;}
-    .main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 15px; font-family: 'Roboto', sans-serif; font-weight: 400; text-align: center; border:  1px silver; border: solid 1px transparent; width: 70px;}
-    .main-container .category .arrow{display: flex; height: 100%; width: fit-content; justify-content: center; align-items: center; margin-left: -10px;}
-    .main-container .category .arrow a{background-color: white; display: flex; border:  1px blue; width: fit-content; height: 25px; border-radius: 5px; box-shadow: 2px 3px 4px #bfbfbf; justify-content: center; align-items: center;}
-    .main-container .category .arrow a .i1{font-size: 16px;}
-
-    .main-container .kart-categories{
-        width: 100%;margin-top: 10px; 
-    }
-    .main-container .kart-categories .categories{
-        width: 89%; 
-    }
-
-    .main-container .kart-categories .categories a{
-        padding: 5.5px 10px; margin-right: 10px;
-    }
-    .main-container .kart-categories .categories .item1{
-        margin-left: 0;
-    }
-
-    .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
-    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
-    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
-    .main-container .kard-container .kard .kard1{ margin-right: 10px;}
-    .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 58vw; }  /*width 58vw*/
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
-    .main-container .kard-container .kard .kard-item .h5{}
-    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 140px; width: 88vw;  position: static; display: flex; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
-    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 34%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{ height: 100%; width: 100%;}
-    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 66%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2% 3px 2% 10px; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 12px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
-
-    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%; background-color: white;}
-    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
-    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; padding: 0;}
-    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 22px;}
-    .main-container .catalog .container .title .seeall{display: none; width: fit-content; align-items: center; display: none;}
-    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
-    .main-container .catalog .container .title .seeall .arrow{display: flex;}
-    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
-    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
-    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
-    .main-container .catalog .container .title .pointer{display: block;}
-    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
-    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
-    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
-    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
-    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; margin-left: 0; width: 50vw; }
-    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
-    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
-    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
-    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
-    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
-    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
-    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
-
-    .main-container .catalog .shorts-container{width: 100%;  border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top: solid .3px rgb(0, 0, 0, 0.4);}
-    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
-    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
-    .main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 18px; }
-    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
-    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
-    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-left: 0; margin-right: 15px;}
-    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
-    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
-    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 17px;}
-
-    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
-    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
-    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
-
-    }
-
-    @media screen and (min-width: 530px){
-        .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
-        .main-container .nav .logo .h12{display: block;}
-    }
-
-    @media screen and (min-width: 640px) {
-        .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%;}
-    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
-    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;}
-    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 26px;}
-    .main-container .catalog .container .title .seeall{display: block; width: fit-content; align-items: center; display: flex;}
-    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
-    .main-container .catalog .container .title .seeall .arrow{display: flex;}
-    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
-    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
-    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
-    .main-container .catalog .container .title .pointer{display: none;}
-    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
-    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
-    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
-    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
-    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; width: 35vw; }
-    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
-    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
-    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
-    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
-    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
-    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
-    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
-
-
-    }
-    @media screen and (min-width: 700px){
-        .main-container .kard-container .kard .kard-item a .promoimage{ width: 30%;}
-        .main-container .kard-container .kard .kard-item a .h5{width: 70%;}
-}
-
-    @media screen and (min-width: 800px){
-        .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 5% 0 6%;}
-    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory;}
-    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
-    .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    /* .main-container .kard-container .kard .kard-item a{ width: fit-content; margin-right: 0; display: block;  border:  1px blue; height: 135px; width: 45vw;} */
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px;}
-    .main-container .kard-container .kard .kard-item .h5{}
-    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 140px; width: 45vw;  position: static; display: flex; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
-    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 34%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{ height: 100%; width: 100%;}
-    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 66%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2.3% 3px 2% 10px; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 12px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 14px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 14px; font-family: 'Roboto', sans-serif; }
-
-    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 5% 0 6%;}
-    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
-    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; padding: 0;}
-    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 26px;}
-    .main-container .catalog .container .title .seeall{display: block; width: fit-content; align-items: center; display: flex;}
-    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
-    .main-container .catalog .container .title .seeall .arrow{display: flex;}
-    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
-    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
-    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
-    .main-container .catalog .container .title .pointer{display: none;}
-    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
-    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
-    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
-    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
-    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; width: 28vw; }
-    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
-    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
-    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
-    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
-    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
-    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
-    .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
-
-    .main-container .catalog .shorts-container{width: 100%;  border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top: solid .3px rgb(0, 0, 0, 0.4);}
-    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
-    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
-    .main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 22px; }
-    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
-    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
-    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-right: 15px; margin-left: 0;}
-    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
-    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
-    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 16px;}
-
-    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
-    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
-    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
-    }
-
-    @media screen and (min-width: 1100px){
-        .main-container .nav{ border-bottom: solid thin silver; height: 53px; padding: 0 5%; }
-        .main-container .nav .logo{margin-right: auto;}
-        .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif;}
-        .main-container .nav .logo .h12{display: block;}
-        
-        .main-container .nav .delivery{display: block; margin-right: auto; display: flex;}
-        .main-container .nav .delivery h4{margin-left: 20px; font-size: 16px; font-weight: 500; color: white; background-color: rgb(209, 12, 12); padding: 3px 5px; border-radius: 5px;}
-        .main-container .nav .delivery p{margin-left: 5px; margin-bottom: ; color: rgb(163, 163, 163); font-weight: 100; font-size: 12px; margin-top: 3px; font-family: sans-serif;}
-        .main-container .nav .delivery h5{margin-left: 5px; font-size: 15px; font-weight: 600; color: rgb(0, 0, 0, 0.8); width: 160px; border-bottom:  1.6px gray; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; align-items: center; text-decoration: underline; margin-top:; transition: .1s;}
-        .main-container .nav .delivery h5:hover{color: rgb(0, 0, 0, 0.6); margin-top: 1.5px;}
-        .main-container .nav .delivery .expand-icon{margin-left: -6px; font-size: 19px ; font-weight: 700; color: rgb(0, 0, 0, 0.8); border:  1px gray; padding: 1px; transition: 0.3s; margin-top: 5px;}
-        .main-container .nav .delivery .expand-icon:hover{border:  1px gray; background-color: rgb(192, 192, 192, 0.3); padding: 1px; border-radius: 5px;}
-        .main-container .nav .search{margin-right: 10%; border:  thin silver; border-radius: 30px; height: 38px; width: 30%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
-    .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 10px 10px; align-items: center;}
-    .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
-    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 83%; background-color: transparent; }
-    .main-container .nav .search form input::placeholder{ font-size: 14px; font-weight: 500; font-family: 'Roboto', sans-serif;}
-    .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
-    .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-: rgb(0, 0, 0, 0.8); color: gray; cursor: pointer;}
-    
-    .main-container .sidebar .nav-items{}
-    .main-container .sidebar .nav-items ul li{ border-top: solid 0.3px rgb(192, 192, 192, 0.3);    }
-    .main-container .sidebar .nav-items ul li a{ width: 100%; height: 100%; display: flex; border:  thin blue; padding: 20px 20px; align-items: center;}
-    .main-container .sidebar .nav-items ul li a:hover{ background-color: rgb(192, 192, 192, 0.2);}
-    .main-container .sidebar .nav-items ul li a i{ font-size: 27px; color: black;}
-    .main-container .sidebar .nav-items ul li a h5{ margin-left: 15px; font-size: 18px; color: black;}
-    .main-container .sidebar .nav-items ul li .descript{ padding: 25px 10px;}
-    .main-container .sidebar .nav-items ul li .descript h5{ font-weight: 500; font-size: 17px;}
-    .main-container .sidebar .nav-items ul li .descript h5 .kk{ font-family: 'Montserrat Alternates', san-serif; color: orangered;}
-    .main-container .product-nav{width: 100%; display: flex; height: 70px; border-bottom:  0.3px silver; margin: 0 auto; background-color: #f3f5f9; align-items: center; justify-content: center;}
-    .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 68%; overflow: auto; margin: 0 auto; height: 80%; }
-    .main-container .product-nav .content::-webkit-scrollbar{display: none;}
-    .main-container .product-nav .content .item{display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;}
-    .main-container .product-nav .content .item img{background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;}
-    .main-container .product-nav .content .item h5{color: black; margin-left: 8px; font-family: 'Roboto', sans-serif; width: fit-content;}
-
-    .main-container .category{width: 100%; height: fit-content; border-top:  1px silver; border-bottom:  1px silver ; margin-top: 0px;}
-    .main-container .category .categories{width: 82%; height: fit-content; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-snap-align: start; overflow: auto; margin: 0 0; border:  1px blue; padding: 15px 0 10px 0; display: flex;}
-    .main-container .category .categories::-webkit-scrollbar{display: none;}
-    .main-container .category .categories a{height: 100%; scroll-snap-align: start; display: flex; border:  1px silver; padding: 0 0px;  width: fit-content; flex-direction: column; margin-right: 8px;}
-    .main-container .category .categories .a1{padding-left: 0px;}
-    .main-container .category .categories a img{width: 35px; height: 35px; margin: 0 auto; border: solid 1px transparent;}
-    .main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 18px; font-family: 'Roboto', sans-serif; font-weight: 400; text-align: center; border:  1px silver; border: solid 1px transparent; width: 70px;}
-    .main-container .category .arrow{display: flex; height: 100%; width: fit-content; justify-content: center; align-items: center; margin-left: -10px;}
-    .main-container .category .arrow a{background-color: white; display: flex; border:  1px blue; width: 26px; height: 26px; border-radius: 5px; box-shadow: 2px 3px 4px #bfbfbf; justify-content: center; align-items: center;}
-    .main-container .category .arrow a .i1{font-size: 18px;}
-
-    .main-container .kart-categories{ width: 100%; margin-top: 0px; height: 50px; margin-top: 0; position: sticky; top: 53px;}
-    .main-container .kart-categories .categories{ width: 82%; }
-    .main-container .kart-categories .categories a{ padding: 5.5px 10px; margin-right: 13px; }
-    .main-container .kart-categories .categories .item1{ margin-left: 0; }
-
-    .main-container .kard-container{width: 100%; border:  1px silver; margin-top: 10px; display: flex; justify-content: center; align-items: center; padding: 0 8% 0 9.6%;}
-    .main-container .kard-container .kard{width: 250%; padding: 5px; border:  1px ; display: flex; overflow: auto; margin-right: 0; justify-content: space-between; scroll-behavior: smooth; scroll-snap-type: x mandatory; position: static;}
-    .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
-    .main-container .kard-container .kard .kard-item{position: static; border: solid 1px silver; width: fit-content !important; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
-    .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-    .main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 130px; width: 40.1vw;  position: static; display: flex; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
-    .main-container .kard-container .kard .kard-item .a2{background-color: white;}
-    .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 30%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .promoimage img{height: 100%; width: 100%;}
-    .main-container .kard-container .kard .kard-item a .h5{position: static; top: 0; width: 70%; margin-left: auto; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 1.5% 5px 2% 15px; justify-content: right;   }
-    .main-container .kard-container .kard .kard-item a .h5 .title{color: white; border:  1px silver; font-size: 16px; font-weight: 700; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .sub-description{font-size: 14px; font-weight: 700; width: 100%; justify-content: right; margin-top: 1%; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .promo-code{font-size: 14px; font-weight: 400; width: 100%; justify-content: right; margin-top: auto; margin-bottom: auto; font-family: 'Montserrat', sans-serif; text-align: left;}
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn{font-size: 16px; font-weight: 900; width: 100%; justify-content: right;  font-family: 'Montserrat', sans-serif; text-align: left; margin-top: auto; }
-    .main-container .kard-container .kard .kard-item a .h5 .visit-btn .visit-text{border:  1px silver; color: rgb(0, 0, 0, 0.6); padding: 6px 10px; border-radius: 30px; background-color: white; font-size: 15px; font-family: 'Roboto', sans-serif; }
-   
-    .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 2%; flex-direction: column; padding: 0 8% 0 9.6%;}
-    .main-container .catalog .container{width: 100%; border:  1px silver; padding: 0px 0 20px 0;}
-    .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;}
-    .main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 26px;}
-    .main-container .catalog .container .title .seeall{display: block; width: fit-content; align-items: center; display: flex;}
-    .main-container .catalog .container .title .seeall .seeall-text{margin-right: 30px; color: black; font-weight: 700; font-size: ; white-space: nowrap;}
-    .main-container .catalog .container .title .seeall .arrow{display: flex;}
-    .main-container .catalog .container .title .seeall .arrow i{cursor: pointer; border-radius: 100%; font-size: 18px; font-weight: 800; padding: 3px;}
-    .main-container .catalog .container .title .seeall .arrow .i1{margin-right: 5px;  background-color: rgb(216, 215, 215, 0.3);}
-    .main-container .catalog .container .title .seeall .arrow .i2{ margin-right: 0; background-color: rgb(216, 215, 215);}
-    .main-container .catalog .container .title .pointer{display: none;}
-    .main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 3px; margin-right: 5px; font-weight: 800; background-color: rgb(216, 215, 215); font-size: 18px;}
-    .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
-    .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
-    .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align: start;}
-    .main-container .catalog .container .content .content1 .product{border:  1px silver; padding: 0 0px; margin-right: 18px; width: 26vw; }
-    .main-container .catalog .container .content .content1 .product .store-image{height: 154px; width: 100%; background-image: url(kfcburger3.jpg); background-size: cover; background-position: center; border-radius: 3px;}
-    .main-container .catalog .container .content .content1 .product .h5{height: fit-content; width: 100%; border:  1px silver; display: flex; justify-content: space-between; padding: 10px 0px 5px 2px; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .h5 span{display: flex; align-items: center; justify-content: left;}
-    .main-container .catalog .container .content .content1 .product .h5 span img{width: 25px; height: 25px; margin-right: 10px;}
-    .main-container .catalog .container .content .content1 .product .h5 span h4{color: rgb(0, 0, 0, 0.8); font-size: 16px; font-family: 'Montserrat', sans-serif;}
-    .main-container .catalog .container .content .content1 .product .h5 i{color: rgb(0, 0, 0, 0.4); font-size: 22px; margin: auto 0; font-weight: 800;}
-    .main-container .catalog .container .content .content1 .product .description{padding: 2px 0 0px 2px; font-family: 'Montserrat' ,sans-serif; font-weight: 500; display: flex; border:  1px silver; align-items: center;}
-    .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 12px;}
-    .main-container .catalog .container .content .content1 .product .description span{margin: 0 5px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
-
-    .main-container .catalog .shorts-container{width: 100%;  border-bottom:  .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top:  .3px rgb(0, 0, 0, 0.4);}
-    .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
-    .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
-    .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 0px 0; }
-    .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
-    .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-right: 15px; margin-left: 0;}
-    .main-container .catalog .shorts-container .content .content1 .short a{width: 100%; height: 100%; border:  1px; margin-right: 15px;  background-size: cover; background-position: center; image-resolution: 100dpi; background-color: rgb(0, 0, 0, 0.25);  background-blend-mode: overlay; border-radius: 3px; display: flex; justify-content: right; align-items: flex-end; flex-direction: column;}
-    .main-container .catalog .shorts-container .content .content1 .short a .description{border:  1px; width: 100%; height: 25%; margin-top: auto; color: white; display: flex; align-items: flex-end; justify-content: left; padding: 0 5px 0px 8px; }
-    .main-container .catalog .shorts-container .content .content1 .short a .description h5{font-weight: 500; font-size: 17px;}
-
-    .main-container .catalog .shorts-container .content .content1 .short a p{height: 10%; width: 100%; display: flex; justify-content: left; color: white; padding-left: 8px;}
-    .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
-    .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
-
-} 
-
-</style>
 <body>
     <div class="main-container">
+        <!-- SIDEBAR OPENS -->
         <div class="sidebar" id="sidebar">
 
             <div class="cancel" id="close" style="height: 15%; border:  1px gray; display: flex; width: 100%; justify-content: right; align-items: center; padding: 0 20px; position: sticky; position: -webkit-sticky; top: 0; background-color: white;">
@@ -554,8 +88,9 @@
             </div>
 
         </div>
+        <!-- SIDEBAR CLOSES -->
 
-
+        <!-- NAV OPENS -->
         <div class="nav" id="nav">
             <div class="bar nv-item">
                 <i class="material-icons" onclick="makeNavAppear()">menu</i>   
@@ -591,6 +126,7 @@
             <!-- <div class="location nv-item"></div> -->
 
         </div>
+        <!-- NAV CLOSE -->
 
         <div class="product-nav">
             <div class="content">
@@ -1165,17 +701,191 @@
 
                     </div>
             </div>
-
             <!-- END CONTAINER -->
            
 
+
+            <!-- SOCIAL POST CONTAINER -->
+            <div class="container social-post-container">
+                <div class="title">
+                    <h3>The community</h3>
+                    <img src="" alt="">
+                </div>
+
+                <div class="content" >
+
+                    <div class="content1">
+
+                        <div class="post">
+
+                            <a href="">
+                                <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(2\).jpg);"></div>
+
+                                <div class="text">
+                                    <div class="logo">
+                                        <img src="Gidi Burger logo.png" alt="">
+                                        <h5>Gidi Burger</h5>
+                                    </div>
+
+                                    <div class="info">
+                                        <h3>Be part of the experience &#128523</h3>
+                                        <p>Gidi burger aims to get environmental in our ways by supporting  the environment  with all purchases made</p>
+                                    </div>
+
+                                    <div class="icon">
+                                        <i class="material-icons">favorite_border</i>
+                                        <h5>300k</h5>
+                                    </div>
+
+                                </div>
+                                 
+                            </a>
+
+                        </div>
+
+                        <div class="post">
+
+                            <a href="">
+                                <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(3\).jpg);"></div>
+
+                                <div class="text">
+                                    <div class="logo">
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h5>Dodo Pizza</h5>
+                                    </div>
+
+                                    <div class="info">
+                                        <h3>Let's get Greener together &#127758</h3>
+                                        <p>Dodo pizza Lorem ipsum dolor sit amet consectetur, adipisicing elit. the environment  with all purchases made</p>
+                                    </div>
+
+                                    <div class="icon">
+                                        <i class="material-icons">favorite_border</i>
+                                        <h5>2.5M</h5>
+                                    </div>
+
+                                </div>
+                                 
+                            </a>
+
+                        </div>
+
+                        <div class="post">
+
+                            <a href="">
+                                <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(7\).jpg);"></div>
+
+                                <div class="text">
+                                    <div class="logo">
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h5>Gidi Burger</h5>
+                                    </div>
+
+                                    <div class="info">
+                                        <h3>Let's get Greener together &#127758</h3>
+                                        <p>Gidi burger aims to get environmental in our ways by supporting  the environment  with all purchases made</p>
+                                    </div>
+
+                                    <div class="icon">
+                                        <i class="material-icons">favorite_border</i>
+                                        <h5>400</h5>
+                                    </div>
+
+                                </div>
+                                 
+                            </a>
+
+                        </div>
+
+                        <div class="post">
+
+                            <a href="">
+                                <div class="img" style="background-image: url(background\ pexels-chan-walrus-941869\ \(5\).jpg);"></div>
+
+                                <div class="text">
+                                    <div class="logo">
+                                        <img src="Dodo pizza logo.png" alt="">
+                                        <h5>Gidi Burger</h5>
+                                    </div>
+
+                                    <div class="info">
+                                        <h3>Let's get Greener together &#127758</h3>
+                                        <p>Gidi burger aims to get environmental in our ways by supporting  the environment  with all purchases made</p>
+                                    </div>
+
+                                    <div class="icon">
+                                        <i class="material-icons">favorite_border</i>
+                                        <h5>100k</h5>
+                                    </div>
+
+                                </div>
+                                 
+                            </a>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+
         </div>
-
-
-
-
-
-    </div>
+    <footer>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="" class="main">Sub-brands & partners</a> 
+                <a href="" class="item">Vegan Crunch</a>
+                <a href="" class="item">Gidi Crunch</a>
+                <a href="" class="item">Sweet Crunch</a>
+                <a href="" class="item">Kart Krunch</a>
+                <a href="" class="item">KFC Chicken</a>
+                <a href="" class="item">Debonair's Pizza</a>
+                <a href="" class="item">.. 400+ </a>
+                
+            </div>
+            <div class="logo">
+                <a href="" class="main">Product Categories</a> 
+                <a href="" class="item">Nigerian</a>
+                <a href="" class="item">Food Short Favs..</a>
+                <a href="" class="item">Shaurma</a>
+                <a href="" class="item">Pizza</a>
+                <a href="" class="item">.. 327+ </a>
+            </div>
+            <div class="logo">
+                <a href="" class="main">Delivery Vendors</a> 
+                <a href="" class="item" style="width: fit-content; color: rgb(255, 255, 255, 0.6); border:  green; margin: 0 auto; font-size: 14px; font-weight: 200; padding: 2px; border:  1px white; width: 90px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Christy WA Logistidgjkdfhkhygfdkhy</a>
+                <a href="" class="item" style="width: fit-content; color: rgb(255, 255, 255, 0.6); border:  green; margin: 0 auto; font-size: 14px; font-weight: 200; padding: 2px; width: 90px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Kwik Delivery</a>
+                <a href="" class="item" style="width: fit-content; color: rgb(255, 255, 255, 0.6); border:  green; margin: 0 auto; font-size: 14px; font-weight: 200; padding: 2px; width: 110px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Krunch official Delivery</a>
+                <a href="" class="item" style="width: fit-content; color: rgb(255, 255, 255, 0.6); border:  green; margin: 0 auto; font-size: 14px; font-weight: 200; padding: 2px; width: 90px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Meenrah Logistics</a>
+                <a href="" class="item" style="width: fit-content; color: rgb(255, 255, 255, 0.6); border:  green; margin: 0 auto; font-size: 14px; font-weight: 200; padding: 2px;">.. 200+ </a>
+            </div>
+            <div class="logo">
+                <a href="" class="main">Join us</a> 
+                <a href="" class="item">As a Restaurant</a>
+                <a href="" class="item">As a Delivery service</a>
+                <a href="" class="item">As a Developer</a>
+            </div>
+        </div>
+        <div class="us" style="margin: 20px auto 0 auto; width: 90%; border:  1px white; padding: 10px 0 0 0;">
+            <div class="social" style="width: 100%; display: flex; justify-content: center;">
+                <a href=""><i class="fa-brands fa-facebook" style="color: white; font-size: 18px; padding: 0px; border:  1px; margin-right: 20px;"></i></a>
+                <a href=""><i class="fa fa-twitter" style="color: white; font-size: 18px; padding: 0px; border:  1px;  margin-right: 20px;"></i></a>
+                <a href=""><i class="fa fa-instagram" style="color: white; font-size: 18px; padding: 0px; border:  1px; margin-right: 20px;"></i></a>
+            </div>
+            <div class="brand" style="display: flex; margin: 25px 0 0 0; justify-content: space-between; width: 100%;">
+                <a href="" class="privacy" style="color: white; font-size: 12px;">Privacy policy</a>
+                <a href="" class="logo" style="font-family: 'Montserrat Alternates', san-serif; color: white; font-weight: 300; font-size: 14px;">Kart<span style="padding: 1px 3px; border-radius: 5px; background-color: white; color: black; margin-left: 2px;">Krunch</span></a>
+                <a href="" class="about"  style="color: white; font-size: 12px;">About us</a>
+            </div>
+            <div class="creation" style="width: 100%; justify-content: center; display: flex; margin-top: 15px;">
+                <a href="" class="copyright" style="color: white; font-size: 10px; font-weight: 300;">copyright &copy; 2022 KartLovesWe.</a>
+            </div>
+        </div>
+    </footer>
     <script src="mainpage.js"></script>
 </body>
 </html>

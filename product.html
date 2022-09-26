@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Montserrat:wght@600;700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title></title>
+</head>
+<style>
+    *{
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    .naira{text-decoration-style:double; text-decoration-line: line-through;}
+    .star-icon{font-size: 14px; margin: 0 8px 0 3px; margin-top: -1px; color: rgb(0, 0, 0, 0.6); font-weight: bold;}
+    a{text-decoration: none;}
+    body{margin: 0; padding: 0;}
+    .main-container{margin: 0; padding: 0; width: 100%;}
+    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(237, 237, 237); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
+    .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
+    .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
+    .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
+                                                                                                                                            .main-container .nav .delivery{display: none;}
+    .main-container .nav .logo{margin-right: 10px;}
+    .main-container .nav .logo h1{ font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif; margin-right: auto;}
+    .main-container .nav .logo h1 span{color: orange;}
+    .main-container .nav .logo{margin-right: 10px;}
+    .main-container .nav .logo .h12{display: none;}
+    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 38px; width: 45%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
+    .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 0 10px; align-items: center;}
+    .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
+    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 70%; background-color: transparent; }
+    .main-container .nav .search form input::placeholder{ font-size: 16px;}
+    .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
+    .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-color: rgb(0, 0, 0, 0.8); color: white; cursor: pointer;}
+    .main-container .nav .cart{border:  1px rgb(170, 7, 7); display: flex; height: 32px;  width: 70px; justify-content: space-between; align-items: center; padding: 0 11.8px; border-radius: 30px; color: white; background-color: red; margin-right: ; margin-left: ;}
+    .main-container .nav .cart .sp1{align-items: center; height: 100%; display: flex;}
+    .main-container .nav .cart .sp2{align-items: center; height: 100%; display: flex;}
+    .main-container .nav .cart .sp2 p{align-items: center; height: 100%; display: flex;}
+
+    .main-container .sidebar{
+        visibility:visible;
+        position: fixed !important;
+        width: 0px;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y:auto;
+        background: white;
+        padding: 0px 0 10px 0;
+        margin: 0;
+        box-shadow: 1px 0px 5px 1.5px rgba(226, 222, 222, 0.795);
+        transition: 260ms;
+    }
+    .main-container .sidebar .nav-items{}
+    .main-container .sidebar .nav-items ul li{ border-top: solid 0.3px rgb(192, 192, 192, 0.3);    }
+    .main-container .sidebar .nav-items ul li a{ width: 100%; height: 100%; display: flex; border:  thin orange; padding: 20px 20px; align-items: center;}
+    .main-container .sidebar .nav-items ul li a:hover{ background-color: rgb(192, 192, 192, 0.2);}
+    .main-container .sidebar .nav-items ul li .shorts{width: 90%; padding: 10px 0; border:  1px; border-radius: 5px; background-color: orangered;  margin: 15px auto; justify-content: center; transition: 0.2s;}
+    .main-container .sidebar .nav-items ul li .shorts h5{margin: 0; color: white;}
+    .main-container .sidebar .nav-items ul li .shorts:hover{background-color: rgb(247, 84, 25);}
+    .main-container .sidebar .nav-items ul li .shorts i{margin: 0; margin-left: 10px; color: white;}
+    .main-container .sidebar .nav-items ul li a i{ font-size: 27px; color: black;}
+    .main-container .sidebar .nav-items ul li a h5{ margin-left: 15px; font-size: 18px; color: black;}
+    .main-container .sidebar .nav-items ul li .descript{ padding: 25px 10px;}
+    .main-container .sidebar .nav-items ul li .descript h5{ font-weight: 500; font-size: 17px;}
+    .main-container .sidebar .nav-items ul li .descript h5 .kk{ font-family: 'Montserrat Alternates', san-serif; color: orangered;}
+    
+    .main-container .box{width: 100%; height: 100%; border:  1px silver; justify-content: center; }
+    .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
+    .main-container .box .brand .image{width: 100%; height: 180px; border:  1px blue; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; flex-direction: column; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); background-size: cover; background-position: center; box-shadow: 1px 1px 4px silver; display: flex; justify-content: right; padding: 10px 5%; align-items: flex-end;}
+    .main-container .box .brand .image .a1{color: rgb(228, 228, 228, 0.6); font-size: 26px;}
+    .main-container .box .brand .image .a2{padding: 5px 10px 4px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.6); height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; letter-spacing: 1px; margin-top: auto;}
+    .main-container .box .brand .image .a2 i{height: fit-content; width: fit-content; font-weight: 700;}
+    .main-container .box .brand .logo{width: 65px; height: 65px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 5%;  border-radius: 50%; box-shadow: 0 0 5px rgb(138, 137, 137);}
+    .main-container .box .brand .logo img{width: 45px; height: 45px; border-radius: 100%;}
+
+    .main-container .box .container{display: flex; padding: 0 5%; align-items: center; margin-top: -20px; justify-content: space-between;}
+    .main-container .box .container .brand-name{ width: fit-content; }
+    .main-container .box .container .brand-name h1{font-size: 26px;}
+    .main-container .box .container .brand-name .category{display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.6); margin-top: 5px;   border:  1px silver; flex-direction: column; justify-content: left;}
+    .main-container .box .container .brand-name .category .sp{display: flex; align-items: center; height: fit-content; justify-content: left; width: 100%; text-align: left; margin-bottom: 5px;}
+    .main-container .box .container .brand-name .category a{font-weight: 600; font-size: 14px; font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0, 0.5); display: flex; align-items: center; }
+    .main-container .box .container .brand-name .category .dot{border:  1px rgb(0, 0, 0, 0.4); width: 6px; height: 6px; background-color: rgb(0, 0, 0, 0.4); margin: 0 5px; border-radius: 100%;}
+    .main-container .box .container .exclamation{display: none;}
+    .main-container .box .container .exclamation i{color: rgb(0, 0, 0, 0.8); font-size: 20px; font-weight: bolder; margin-right: 5px;}
+
+
+    @media screen and (min-width: 530px){
+    .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
+    .main-container .nav .logo .h12{display: block;}
+    }
+
+    @media screen and (min-width: 700px) {
+    .main-container .box{width: 100%; height: 100%; border:  1px silver; justify-content: center; }
+    .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
+    .main-container .box .brand .image{width: 100%; height: 200px; border:  1px blue; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); background-size: cover; background-position: center; box-shadow: 1px 1px 4px silver;}
+    .main-container .box .brand .image .a1{display: none;}
+    .main-container .box .brand .logo{width: 70px; height: 70px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 5%;  border-radius: 50%; box-shadow: 0 0 5px rgb(138, 137, 137);}
+    .main-container .box .brand .logo img{width: 50px; height: 50px; border-radius: 100%;}
+
+    .main-container .box .container .brand-name .category{flex-direction: row; justify-content: left;}
+    .main-container .box .container .brand-name .category .sp{display: flex; align-items: center; height: fit-content; justify-content: left; width: fit-content; text-align: left; margin-bottom: 5px;}
+    }
+
+    @media screen and (min-width: 1100px){
+    .main-container .nav{ border-bottom: solid thin #f3f5f9; box-shadow: 1px 1px 3px #f3f5f9; height: 53px; padding: 0 5%; }
+    .main-container .nav .logo{margin-right: auto;}
+    .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif;}
+    .main-container .nav .logo .h12{display: block;}
+    
+    .main-container .nav .delivery{display: block; margin-right: auto; display: flex;}
+    .main-container .nav .delivery h4{margin-left: 20px; font-size: 16px; font-weight: 500; color: white; background-color: rgb(209, 12, 12); padding: 3px 5px; border-radius: 5px;}
+    .main-container .nav .delivery p{margin-left: 5px; margin-bottom: ; color: rgb(163, 163, 163); font-weight: 100; font-size: 12px; margin-top: 3px; font-family: sans-serif;}
+    .main-container .nav .delivery h5{margin-left: 5px; font-size: 15px; font-weight: 600; color: rgb(0, 0, 0, 0.8); width: 160px; border-bottom:  1.6px gray; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; align-items: center; text-decoration: underline; margin-top:; transition: .1s;}
+    .main-container .nav .delivery h5:hover{color: rgb(0, 0, 0, 0.6); margin-top: 1.5px;}
+    .main-container .nav .delivery .expand-icon{margin-left: -6px; font-size: 19px ; font-weight: 700; color: rgb(0, 0, 0, 0.8); border:  1px gray; padding: 1px; transition: 0.3s; margin-top: 5px;}
+    .main-container .nav .delivery .expand-icon:hover{border:  1px gray; background-color: rgb(192, 192, 192, 0.3); padding: 1px; border-radius: 5px;}
+    .main-container .nav .search{margin-right: 10%; border:  thin silver; border-radius: 30px; height: 38px; width: 30%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
+    .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 10px 10px; align-items: center;}
+    .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
+    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 83%; background-color: transparent; }
+    .main-container .nav .search form input::placeholder{ font-size: 14px; font-weight: 500; font-family: 'Roboto', sans-serif;}
+    .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
+    .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-: rgb(0, 0, 0, 0.8); color: gray; cursor: pointer;} 
+    .main-container .box{width: 100%; height: 100%; border:  1px silver; justify-content: center; }
+    .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
+    .main-container .box .brand .image{width: 100%; height: 280px; border:  1px blue; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); background-size: cover; background-position: center; box-shadow: 1px 1px 4px silver;}
+    .main-container .box .brand .image .a2{padding: 6px 10px 5px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 10px silver; height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 15px; letter-spacing: 1px;}
+    .main-container .box .brand .image .a2 i{height: fit-content; width: fit-content; font-weight: 900;}
+    .main-container .box .brand .logo{width: 80px; height: 80px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 10%;  border-radius: 50%; box-shadow: 0 0 5px rgb(138, 137, 137);}
+    .main-container .box .brand .logo img{width: 60px; height: 60px; border-radius: 100%;}
+
+    .main-container .box .container{display: flex; padding: 0 10%; align-items: center; margin-top: -20px; justify-content: space-between;}
+    .main-container .box .container .brand-name{ width: fit-content; }
+    .main-container .box .container .brand-name h1{font-size: 32px;}
+    .main-container .box .container .brand-name .category{display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.6); margin-top: 5px;}
+    .main-container .box .container .brand-name .category a{font-weight: 600; font-size: 14px; font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0, 0.5); display: flex; align-items: center;}
+    .main-container .box .container .brand-name .category .dot{border:  1px rgb(0, 0, 0, 0.4); width: 6px; height: 6px; background-color: rgb(0, 0, 0, 0.4); margin: 0 5px; border-radius: 100%;}
+    .main-container .box .container .exclamation{ border:  1px silver; display: flex; align-items: center; justify-content: space-between; color: rgb(0, 0, 0, 0.6);}
+    .main-container .box .container .exclamation i{color: rgb(0, 0, 0, 0.8); font-size: 20px; font-weight: bolder; margin-right: 5px;}
+}
+</style>
+<body>
+    <div class="main-container">
+         <!-- SIDEBAR OPENS -->
+         <div class="sidebar" id="sidebar">
+
+            <div class="cancel" id="close" style="height: 15%; border:  1px gray; display: flex; width: 100%; justify-content: right; align-items: center; padding: 0 20px; position: sticky; position: -webkit-sticky; top: 0; background-color: white;">
+                <i class="material-icons" onclick="makeNavDissapear()" style="font-size: 30px; cursor: pointer; border:  1px; background-color: rgb(192, 192, 192, 0.3); transition: 40ms;">close</i>
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="">
+                        <i class="material-icons-outlined">home</i>
+                        <h5>Home</h5>
+                    </a></li>
+                    <li><a href="">
+                        <i class="material-icons-outlined">manage_search</i>
+                        <h5>Order History</h5>
+                    </a></li>
+                    <li><a href="">
+                        <i class="material-icons-outlined">redeem</i>
+                        <h5>Promos</h5>
+                    </a></li>
+                    <li><a href="">
+                        <i class="material-icons-outlined">payments</i>
+                        <h5>Add payment</h5>
+                    </a></li>
+                    <li><a href="">
+                        <i class="material-icons">account_circle</i>
+                        <h5>Wame Trader</h5>
+                    </a></li>
+
+                    <li><a href="" class="shorts">
+                        <h5>Food Shorts</h5>
+                        <i class="material-icons-outlined">movie</i>
+                        
+                    </a></li>
+                    
+                    <li><a href="">
+                        <i class="material-icons-outlined" style="width: fit-content; width: 25px;">help_outlined</i>
+                        <h5>Help ?</h5>
+                    </a></li>
+                    <li><a href="">
+                        <i class="material-icons-outlined">cancel</i>
+                        <h5>Sign out</h5>
+                    </a></li>
+                    <li><a href="" style="padding: 15px 0;">
+
+                    </a></li>
+
+                    <li><a href="" class="descript">
+                        <h5>About <span class="kk">Kartkrunch.com</span> </h5>
+                    </a></li>
+                    <li><a href="" class="descript">
+                        <h5>Join us as a restaurant</h5>
+                    </a></li>
+                    <li><a href="" class="descript">
+                        <h5>Our Programs</h5>
+                    </a></li>
+                    <li><a href="" class="descript">
+                        <h5>Privacy Policy</h5>
+                    </a></li>
+                    <li><a href="" class="descript">
+                        <h5> <span><</span>code<span>/> </span>   with us</h5>
+                    </a></li>
+                    <li><a href="" class="descript">
+                        <h5>Terms of service</h5>
+                    </a></li>
+                    <li><a href="" class="descript">
+                        <h5>FAQ</h5>
+                    </a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- SIDEBAR CLOSES -->
+
+        <div class="nav" id="nav">
+            <div class="bar nv-item">
+                <i class="material-icons" onclick="makeNavAppear()">menu</i>   
+            </div>
+
+            <div class="logo nv-item">
+                <a href="">
+                    <h1>K<span>k</span></h1>
+                    <h1 class="h12">Kart<span>K</span>runch</h1>
+                </a>
+            </div>
+
+            <div class="delivery nv-item">
+                <!-- <h4>Delivery</h4> -->
+                <i class="material-icons-outlined" style="font-size: 24px;">pin_drop</i>
+                <!-- <p>to</p> -->
+                <h5>31 saint Louis street, magodo ondo</h5>
+                <!-- <i class="material-icons expand-icon" >expand_more</i> -->
+            </div>
+
+            <div class="search nv-item" onclick="makeSearchXDisplay()" onblur="makeSearchXnon()" id="search">
+                <form action="">
+                    <i class="material-icons i1">search</i>
+                    <input type="search" placeholder="Search food, places, vendors..." id="searchinput" style="border:  1px silver;">
+                    <i class="fa-solid fa-xmark i2" id="cancelsearch"></i>
+                </form>
+            </div>
+
+            <div class="cart nv-item">
+                <span class="sp1"><i class="material-icons-outlined">shopping_cart</i></span>
+                <span class="sp2"><h4>0</h4></span>
+            </div>
+            <!-- <div class="location nv-item"></div> -->
+
+        </div>
+        <!-- NAV CLOSES -->
+
+        <div class="box" >
+            <div class="brand">
+                <div class="image">
+                    <i class="material-icons-outlined a1">error_outline</i>
+                    <a href="" class="a2">Products <i class="material-icons">expand_more</i></a>
+                </div>
+                <a href="" class="logo" ><img src="Dodo pizza logo.png" alt=""></a>
+            </div>
+            
+            <div class="container">
+                <div class="brand-name">
+                    <h1>Dodo Pizza</h1>
+                    <div class="category">
+                    <span class="sp">
+                        <a href=""><span class="em" style="color: initial; margin-right: 3px; font-size: 13px;">&#127829</span> Pizza cat.</a>
+                        <span class="dot"></span>  
+                        <a href="">4.5 <i class="material-icons star-icon">star</i></a>
+                        <a href="">(<span style="font-size: 13.4px;">45 confirmed reviews</span> )</a>
+                    </span>
+                    <span class="sp">
+                        <span class="dot"></span>
+                        <a href="">40 min.</a>
+                        <span class="dot"></span>
+                        <a href="" class="naira">NN</a>
+                    </span>
+                    </div>
+
+                </div>
+                <div class="exclamation">
+                    <i class="material-icons">error_outline</i>
+                    <h5>Have any questions about this store?</h5>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="mainpage.js"></script>
+</body>
+</html>
