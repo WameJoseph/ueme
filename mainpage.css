@@ -7,7 +7,7 @@ i{font-size: 16px;}
 a{ text-decoration: none;}
 body{margin: 0; padding: 0;} 
 .main-container{padding: 0; margin: 0; width: 100%;}
-.main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(232, 232, 232); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
+.main-container .nav{display: flex; justify-content: left; border-bottom: solid 1px rgb(232, 232, 232); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
 .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
 .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
 .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
@@ -61,15 +61,15 @@ transition: 260ms;
 .main-container .product-nav .content{display: flex; align-items: center; border:  blue 1px; width: 700px; overflow: auto; margin: 0 auto; height: 80%; padding-left: 18px;}
 .main-container .product-nav .content::-webkit-scrollbar{display: none;}
 .main-container .product-nav .content .item{display: flex; padding: 5px 15px 5px 5px; align-items: center; background-color: white; border-radius: 30px; width: fit-content; box-shadow: 1px 1px 0.3px 0.3px rgb(211, 209, 209, 0.3); margin-right: 13px;}
-.main-container .product-nav .content .item img{background-color: skyblue; width: 30px; height: 30px; border-radius: 100%;}
+.main-container .product-nav .content .item img{background-color: skyblue; width: 25px; height: 25px; border-radius: 100%;}
 .main-container .product-nav .content .item h5{color: black; margin-left: 8px; font-family: 'Roboto', sans-serif; font-weight: 400; width: ; white-space: nowrap;}
-.main-container .category{width: 100%; display: flex; height: fit-content;  justify-content: center; padding-left: 0px; align-items: center; margin-top: 0px;}
-.main-container .category .categories{width: 99%; height: fit-content; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-snap-align: start; overflow: auto; margin: 0 0; border:  1px blue; padding: 15px 0 10px 0; display: flex;  align-items: center;}
+.main-container .category{width: 100%; border:  silver; display: flex; height: fit-content;  justify-content: center; padding-left: 0px; align-items: center; margin-top: 0px;}
+.main-container .category .categories{width: 99%; height: fit-content; scroll-behavior: smooth; scroll-snap-type: x mandatory; scroll-snap-align: start; overflow: auto; margin: 0 0; border:  1px blue; padding: 10px 0 10px 0; display: flex;  align-items: center;}
 .main-container .category .categories::-webkit-scrollbar{display: none;}
 .main-container .category .categories a{height: 100%; scroll-snap-align: start; display: flex; border:  1px silver; padding: 0 5px;  width: fit-content; flex-direction: column; margin-right: 18px;}
 .main-container .category .categories .a1{padding-left: 20px;}
-.main-container .category .categories a img{width: 33px; height: 33px; margin: 0 auto; border: solid 1px transparent;}
-.main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 15px; font-family: 'Roboto', sans-serif; font-weight: 400; border:  1px silver; border: solid 1px transparent; text-align: center;}
+.main-container .category .categories a img{width: 25px; height: 25px; margin: 0 auto; border: solid 1px transparent;}
+.main-container .category .categories a h5{ height: fit-content; color: black; display: flex; justify-content: center; font-size: 11px; margin-top: 10px; font-family: 'Roboto', sans-serif; font-weight: 400; border:  1px silver; border: solid 1px transparent; text-align: center;}
 .main-container .category .arrow{display: none;}
 
 .main-container .kart-categories{
@@ -107,10 +107,10 @@ transition: 260ms;
 .main-container .kard-container .kard::-webkit-scrollbar{display: none;}
 .main-container .kard-container .kard .kard-item{border: solid 1px silver; width: fit-content; display: flex; border:  1px gold; justify-content: space-between; scroll-snap-align: start; margin-right: 0;}
 .main-container .kard-container .kard .kard1{ margin-right: 20px;}
-.main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;  border:  yellow ; height: 200px; width: 90vw; scroll-snap-align: start !important;}
+.main-container .kard-container .kard .kard-item a{position: static; margin-right: 0px; display: block; border-radius: 5px;   height: 900px; width: 90vw; scroll-snap-align: start !important;}
 .main-container .kard-container .kard .kard-item .a1{margin-right: 20px;}
 .main-container .kard-container .kard .kard-item .h5{border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
-.main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 135px; width: 90vw;  position: static; display: flex; background-color: white;}
+.main-container .kard-container .kard .kard-item a{ margin-right: 0; border:  1px blue; height: 145px; width: 90vw;  position: static; display: flex; background-color: white;}
 .main-container .kard-container .kard .kard-item .a1{margin-right: 13px; background-color: white;}
 .main-container .kard-container .kard .kard-item .a2{background-color: white;}
 .main-container .kard-container .kard .kard-item a .promoimage{position: static; top: 0; width: 45%; margin: 0; background-color: white; bottom: 50%; border:  1px silver; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 0; justify-content: right;   }
@@ -124,12 +124,12 @@ transition: 260ms;
 .main-container .kard-container .arrow{display: none;}
 
 .main-container .catalog{width: 100%; border:  1px blue; display: flex; justify-content: center; margin-top: 4%; flex-direction: column; padding: 0 0% 0 0%; background-color: #f3f5f9;}
-.main-container .catalog .container{width: 100%; border-top: solid .3px rgb(0, 0, 0, 0.4); border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 10px 0; background-color: white; margin-bottom: 8px;}
+.main-container .catalog .container{width: 100%; border-top:  .3px rgb(0, 0, 0, 0.4); border-bottom:  .3px rgb(0, 0, 0, 0.4); padding: 0px 0 10px 0; background-color: white; margin-bottom: 8px;}
 .main-container .catalog .container .title{border:  1px silver; width: 100%; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; padding: 10px 3% 0 4%;}
-.main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 20px;}
+.main-container .catalog .container .title h3{font-family: 'Montserrat', san-serif; font-size: 23px;}
 .main-container .catalog .container .title .seeall{display: none; }
 .main-container .catalog .container .title .pointer{display: block; color: black;}
-.main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 5px; margin-right: 5px; font-weight: 900; background-color: rgb(216, 215, 215); font-size: 20px;}
+.main-container .catalog .container .title .pointer i{ cursor: pointer; border-radius: 100%; padding: 5px; margin-right: 5px; font-weight: 900; background-color: rgb(225, 225, 225, 0.4); font-size: 20px;}
 .main-container .catalog .container .content{border:  1px silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 10px;}
 .main-container .catalog .container .content::-webkit-scrollbar{display: none;}
 .main-container .catalog .container .content .content1{border:  1px silver; width: fit-content; height: fit-content; display: flex; justify-content: left; justify-content: space-between; margin-right: 10px; scroll-snap-align:unset !important;}
@@ -144,10 +144,10 @@ transition: 260ms;
 .main-container .catalog .container .content .content1 .product .description h6{font-family: 'Montserrat' ,sans-serif; font-weight: 700; color: rgb(0, 0, 0, 0.4); font-size: 11px;}
 .main-container .catalog .container .content .content1 .product .description span{margin: 0 3px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
-.main-container .catalog .shorts-container{width: 100%;  border-bottom: solid .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top: solid .3px rgb(0, 0, 0, 0.4);}
+.main-container .catalog .shorts-container{width: 100%;  border-bottom:  .3px rgb(0, 0, 0, 0.4); padding: 0px 0 15px 0; border-top:  .3px rgb(0, 0, 0, 0.4);}
 .main-container .catalog .shorts-container .title .title-text{display: flex; align-items: center; color: ;}
 .main-container .catalog .shorts-container .title .title-text img{width:28px; height:28px; margin-right: 10px;}
-.main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 18px; }
+.main-container .catalog .shorts-container .title .title-text h3{font-family: 'Montserrat', san-serif; font-size: 20px; }
 .main-container .catalog .shorts-container .content{border:  silver; width: 100%; height: fit-content; display: flex; justify-content: left; overflow: auto; overflow-y: hidden; scroll-behavior: ; scroll-snap-type: x mandatory; padding: 0px 0; }
 .main-container .catalog .shorts-container .content .content1{width: fit-content; height: fit-content; display: flex; justify-content: left;}
 .main-container .catalog .shorts-container .content .content1 .short{width: 180px; height: 250px; margin-left: 15px;}
@@ -160,18 +160,19 @@ transition: 260ms;
 .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
 
 .main-container .catalog .social-post-container .title h3{font-size: 22px;}
-.main-container .catalog .social-post-container .content .content1 .post{width: 400px; height: 120px; display: flex; justify-content: left; align-items: center; margin-left: 0; scroll-snap-align: start; padding-left: 13px;}
-.main-container .catalog .social-post-container .content .content1 .post a{ width: 100%; height: 100%; border: solid 1px rgb(192, 192, 192, 0.6); border-radius: 10px; display: flex; justify-content: left; align-items: center; }
-.main-container .catalog .social-post-container .content .content1 .post a .img{width: 35%; height: 100%; border-top-left-radius: 9px; border-bottom-left-radius: 9px; background-size: cover; background-position: center;}
+.main-container .catalog .social-post-container .content .content1{height: fit-content;}
+.main-container .catalog .social-post-container .content .content1 .post{width: 330px; height: 110px; display: flex; justify-content: left; align-items: center; margin-left: 0; scroll-snap-align: start; padding-left: 13px;}
+.main-container .catalog .social-post-container .content .content1 .post a{ width: 100%; height: 100%; padding: 9px 8px; border: solid 1px rgb(192, 192, 192, 0.6); border-radius: 15px; display: flex; justify-content: left; align-items: center; }
+.main-container .catalog .social-post-container .content .content1 .post a .img{width:32%; height: 100%; border-radius: 12px; background-size: cover; background-position: center;}
 
-.main-container .catalog .social-post-container .content .content1 .post a .text{border:  1px; width: 80%; padding: 5px 0 10px 0; padding-left: 10px; height: 100%;}
+.main-container .catalog .social-post-container .content .content1 .post a .text{border:  1px; width: 68%; padding: 0 0 5px 10px; height: 100%;}
 .main-container .catalog .social-post-container .content .content1 .post a .text .logo{display: flex; align-items: center; color: rgb(0, 0, 0, 0.8);}
 .main-container .catalog .social-post-container .content .content1 .post a .text .logo img{width: 23px; height: 23px; margin-right: 10px;}
 .main-container .catalog .social-post-container .content .content1 .post a .text .logo h5{font-family: 'Roboto', san-serif; font-weight: 800;}
-.main-container .catalog .social-post-container .content .content1 .post a .info{margin-top: 5px;}
-.main-container .catalog .social-post-container .content .content1 .post a .info h3{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0, 0.8); width: 78%; margin-right: auto; text-align: left; font-size: 14px; margin-bottom: 8px;}
-.main-container .catalog .social-post-container .content .content1 .post a .info p{width: 100%; color: rgb(0, 0, 0, 0.6); font-size: 12px; padding-right: 5px;} 
-.main-container .catalog .social-post-container .content .content1 .post a .icon{width: 100%; margin-top: 5px; display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.6); border:  1px; } 
+.main-container .catalog .social-post-container .content .content1 .post a .info{margin-top: 2px; width: 100%;}
+.main-container .catalog .social-post-container .content .content1 .post a .info h3{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0, 0.8); width: 100%; margin-right: auto; text-align: left; font-size: 14px; margin-bottom: 3px;}
+.main-container .catalog .social-post-container .content .content1 .post a .info p{width: 100%; color: rgb(0, 0, 0, 0.6); text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-size: 12px; padding-right: 0; border:  1px silver; } 
+.main-container .catalog .social-post-container .content .content1 .post a .icon{width: 100%;display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.6); border:  1px; margin-top: 8px; } 
 .main-container .catalog .social-post-container .content .content1 .post a .icon i{margin-right: 5px; font-size: 14px;} 
 
 
@@ -301,7 +302,7 @@ footer .wrapper .logo .item{
 .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
 .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
 
-.main-container .catalog .social-post-container .content .content1 .post{width: 500px; height: 140px; display: flex; justify-content: left; align-items: center; margin-right: 13px;  margin-left: 0;}
+
 
 }
 
@@ -338,6 +339,13 @@ footer .wrapper .logo .item{
 .main-container .catalog .container .content .content1 .product .description span{margin: 0 1px; border-left: solid; border-radius: 100%; color: rgb(0, 0, 0, 0.4); height: 0.5px; width: 1px;}
 
 
+
+.main-container .catalog .social-post-container .content .content1 .post{width: 350px; height: 120px; display: flex; justify-content: left; align-items: center; margin-left: 0; scroll-snap-align: start; padding: 0 13px 0 0;}
+.main-container .catalog .social-post-container .content .content1 .post a{ width: 100%; height: 100%; padding: 9px 8px; border: solid 1px rgb(192, 192, 192, 0.6); border-radius: 15px; display: flex; justify-content: left; align-items: center; }
+.main-container .catalog .social-post-container .content .content1 .post a .img{width:30%; height: 100%; border-radius: 12px; background-size: cover; background-position: center;}
+.main-container .catalog .social-post-container .content .content1 .post a .text{border:  1px; width: 70%; padding: 0 0 5px 10px; height: 100%;}
+.main-container .catalog .social-post-container .content .content1 .post a .icon{margin-top: 12px; } 
+
 }
 @media screen and (min-width: 700px){
     .main-container .kard-container .kard .kard-item a .promoimage{ width: 30%;}
@@ -347,13 +355,11 @@ footer .wrapper .logo .item{
 .main-container .catalog .shorts-container .content .content1 .short i{background-color: rgb(232, 232, 232, 0.3); background-color: transparent; padding: 5px; border-radius: 100%; position: relative; margin-left: 80%; color: white; bottom: 97%; cursor: pointer; transition: 30ms;}
 .main-container .catalog .shorts-container .content .content1 .short i:hover{background-color: rgb(255, 255, 255, 0.1);}
 
-.main-container .catalog .social-post-container .content .content1 .post{width: 500px; height: 140px; display: flex; justify-content: left; align-items: center; padding-right: 13px; padding-left: 0; }
-.main-container .catalog .social-post-container .content .content1 .post a{ width: 100%; height: 100%; border: solid 1px rgb(0, 0, 0, 0.6); border-radius: 10px; display: flex; justify-content: left; align-items: center;}
-.main-container .catalog .social-post-container .content .content1 .post a .img{width: 35%; height: 100%; border-top-left-radius: 9px; border-bottom-left-radius: 9px; background-size: cover; background-position: center;}
-
-.main-container .catalog .social-post-container .content .content1 .post a .info{margin-top: 10px;}
-.main-container .catalog .social-post-container .content .content1 .post a .info{margin-top: 5px;}
-.main-container .catalog .social-post-container .content .content1 .post a .info h3{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0, 0.8); width: 78%; margin-right: auto; text-align: left; font-size: 14px; margin-bottom: 0; margin-top: 5%;}
+.main-container .catalog .social-post-container .content .content1 .post{width: 360px; height: 130px; display: flex; justify-content: left; align-items: center; margin-left: 0; scroll-snap-align: start; padding: 0 13px 0 0;}
+.main-container .catalog .social-post-container .content .content1 .post a{ width: 100%; height: 100%; padding: 9px 8px; border: solid 1px rgb(192, 192, 192, 0.6); border-radius: 15px; display: flex; justify-content: left; align-items: center; }
+.main-container .catalog .social-post-container .content .content1 .post a .img{width:33%; height: 100%; border-radius: 12px; background-size: cover; background-position: center;}
+.main-container .catalog .social-post-container .content .content1 .post a .text{border:  1px; width: 67%; padding: 5px 0 5px 10px; height: 100%;}
+.main-container .catalog .social-post-container .content .content1 .post a .icon{margin-top: 18px; } 
 }
 
 @media screen and (min-width: 800px){
