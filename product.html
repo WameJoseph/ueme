@@ -97,13 +97,13 @@
     .main-container .box .brand .image .a2 i{height: fit-content; margin-left: 8px; width: fit-content; font-weight: 700; font-size: 20px; color: black;}
     .main-container .box .brand .logo{width: 75px; height: 75px; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 80px; margin-left: 4%;  border-radius: 50%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
     .main-container .box .brand .logo img{width: 70px; height: 70px; border-radius: 18px;}
-    .main-container .box .brand .brand-name{margin-top: -60px; margin-left: 4%;}
-    .main-container .box .brand .brand-name h1{font-size: 30px; font-family: 'Montserrat', sans-serif; width: 100%;}
+    .main-container .box .brand .brand-name{margin-top: -60px; margin-left: 5%;}
+    .main-container .box .brand .brand-name h1{font-size: 29px; font-family: 'Montserrat', sans-serif; width: 100%;}
     .main-container .box .brand .brand-name .details{display: flex; flex-direction: column; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left;}
     .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: auto;}
     .main-container .box .brand .brand-name .details .sp2{margin-top: 1px;}
-    .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center; justify-content: left; color: rgb(0, 0, 0, 0.76);}
-    .main-container .box .brand .brand-name .details span .ratings{color: rgb(0, 0, 0, 0.8); font-size: 14px; margin-left: 10px;}
+    .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 500; justify-content: left; color: rgba(87, 87, 87, 0.8);}
+    .main-container .box .brand .brand-name .details span .ratings{ font-size: 14px; margin-left: 10px;}
     .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 10px; display: none;}
     .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 10px;}
 
@@ -160,12 +160,13 @@
 }
 </style>
 <body>
-    <div id="overlay" onclick="off()" style="align-items: center;">
-        <div class="div" style="width: 90%; margin: auto auto; height: 400px; background-color: white; border-radius: 10px;">
 
-        </div>
-    </div>
     <div class="main-container">
+        <div id="overlay" onclick="off()" style="align-items: center;">
+            <div class="div" style="width: 90%; margin: auto auto; height: 75%; background-color: white; border-radius: 10px;">
+
+             </div>
+        </div>
          <!-- SIDEBAR OPENS -->
          <div class="sidebar" id="sidebar">
 
@@ -325,7 +326,7 @@
         }
         
         function off() {
-          document.getElementById("overlay").style.display = "none";
+        //   document.getElementById("overlay").style.display = "none";
         }
     </script>
     <script src="mainpage.js"></script>
