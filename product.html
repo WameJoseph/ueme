@@ -16,6 +16,19 @@
     <title></title>
 </head>
 <style>
+    #overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
     *{
         margin: 0; padding: 0;
         box-sizing: border-box;
@@ -79,11 +92,22 @@
     .main-container .box{width: 100%; height: 100%; border:  1px silver; justify-content: center; }
     .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
     .main-container .box .brand .image{width: 100%; height: 230px; border:  1px blue; flex-direction: column;  background-size: cover; background-position: center; box-shadow: 0; display: flex; justify-content: right; padding: 10px 4%; align-items: flex-end;}
-    .main-container .box .brand .image .a1{color: rgb(228, 228, 228, 0.8); background-color: rgb(228, 228, 228, 0.2); padding: 3px 3px; border-radius: 100%; font-size: 26px;}
-    .main-container .box .brand .image .a2{padding: 5px 10px 5px 10px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0 0 3px rgb(192, 192, 192, 0.6);height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; letter-spacing: 1px; margin-top: auto;}
+    .main-container .box .brand .image .a1{color: rgb(228, 228, 228, 0.8); background-color: rgb(228, 228, 228, 0.4); padding: 3px 3px; border-radius: 100%; font-size: 26px; margin-top: auto;}
+    .main-container .box .brand .image .a2{padding: 5px 10px 5px 10px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0 0 3px rgb(192, 192, 192, 0.6);height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; letter-spacing: 1px; margin-top: 0;}
     .main-container .box .brand .image .a2 i{height: fit-content; margin-left: 8px; width: fit-content; font-weight: 700; font-size: 20px; color: black;}
     .main-container .box .brand .logo{width: 75px; height: 75px; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 80px; margin-left: 4%;  border-radius: 50%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
     .main-container .box .brand .logo img{width: 70px; height: 70px; border-radius: 18px;}
+    .main-container .box .brand .brand-name{margin-top: -60px; margin-left: 4%;}
+    .main-container .box .brand .brand-name h1{font-size: 30px; font-family: 'Montserrat', sans-serif; width: 100%;}
+    .main-container .box .brand .brand-name .details{display: flex; flex-direction: column; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left;}
+    .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: auto;}
+    .main-container .box .brand .brand-name .details .sp2{margin-top: 1px;}
+    .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center; justify-content: left; color: rgb(0, 0, 0, 0.76);}
+    .main-container .box .brand .brand-name .details span .ratings{color: rgb(0, 0, 0, 0.8); font-size: 14px; margin-left: 10px;}
+    .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 10px; display: none;}
+    .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 10px;}
+
+
 
     @media screen and (min-width: 530px){
     .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
@@ -122,15 +146,25 @@
 
     .main-container .box{width: 80%; height: 100%; border:  1px silver; justify-content: center; margin: 0 auto; margin-top: 10px;}
     .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
-    .main-container .box .brand .image{width: 100%; height: 300px; border:  1px blue; border-radius: 10px; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); padding: 10px 6%; background-size: cover; background-position: center; box-shadow: none;}
-    .main-container .box .brand .image .a2{padding: 6px 10px 5px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 10px silver; height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 15px; letter-spacing: 1px;}
+    .main-container .box .brand .image{width: 100%; height: 300px; border:  1px blue; border-radius: 10px; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); padding: 10px 2%; background-size: cover; background-position: center; box-shadow: none;}
+    .main-container .box .brand .image .a2{padding: 6px 10px 5px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 10px silver; height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 15px; letter-spacing: 1px; margin-top: auto;}
     .main-container .box .brand .image .a2 i{height: fit-content; width: fit-content; font-weight: 900;}
     .main-container .box .brand .logo{width: 90px; height: 90px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 45px; margin-left: 2%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
     .main-container .box .brand .logo img{width: 70px; height: 70px; border-radius: 100%;}
+    .main-container .box .brand .brand-name{margin-top: -40px; margin-left: 0%;}
+    .main-container .box .brand .brand-name h1{font-size: 40px; font-family: 'Montserrat', sans-serif;}
+    .main-container .box .brand .brand-name .details{display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left; }
+    .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: 0;}
+    .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 10px; display: block;}
 
 }
 </style>
 <body>
+    <div id="overlay" onclick="off()" style="align-items: center;">
+        <div class="div" style="width: 90%; margin: auto auto; height: 400px; background-color: white; border-radius: 10px;">
+
+        </div>
+    </div>
     <div class="main-container">
          <!-- SIDEBAR OPENS -->
          <div class="sidebar" id="sidebar">
@@ -252,17 +286,29 @@
         <div class="box" >
             <div class="brand">
                 <div class="image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(9\).jpg);">
-                    <i class="material-icons-outlined a1">error_outline</i>
+                    
                     <a href="" class="a2">Customer Support <i class="material-icons">support_agent</i></a>
+                    <i class="material-icons-outlined a1" onclick="on();">error_outline</i>
                 </div>
             <span style="display: flex; flex-direction: column;">
                 <a href="" class="logo" id="sticky-item" ><img src="Gidi Burger logo.png" alt=""></a>
 
-                <div class="brand-name" style="margin-top: -60px; margin-left: 5%;">
+                <div class="brand-name">
                     <h1>Chick Fill-A</h1>
-                    <span>
-                        <p style="display: flex; align-items: center; justify-content: left; color: rgb(0, 0, 0, 0.8);">Rating: 4.5 <i class="fa fa-star star-icon"></i></p>
-                    </span>
+                    <div class="details">
+                        <span class="sp1">
+                            <p class="p">Rating: 4.5 <i class="fa fa-star star-icon"></i> </p>
+                            <p class="p ratings">(15,000 Ratings)</p>
+                            <span class="split"></span>
+                        </span>
+
+                        <span class="sp2">
+                            <a href="" class="p a1">Pizza</a>              
+                            <a href="" class="p a2" style="margin-left: 5px;">Dinner</a>
+                            <span class="split2"></span>
+                            <p class="p naira">NN</p>
+                        </span>
+                    </div>
                 </div>
             </span>
             </div>
@@ -272,6 +318,16 @@
 
     </div>
 
+
+    <script>
+        function on() {
+          document.getElementById("overlay").style.display = "flex";
+        }
+        
+        function off() {
+          document.getElementById("overlay").style.display = "none";
+        }
+    </script>
     <script src="mainpage.js"></script>
 </body>
 </html>
