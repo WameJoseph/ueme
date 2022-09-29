@@ -32,7 +32,8 @@
     *{
         margin: 0; padding: 0;
         box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        scroll-behavior: smooth;
     }
     .naira{text-decoration-style:double; text-decoration-line: line-through; }
     .star-icon{font-size: 11px; border: silver ; margin-left: 3px; margin-top: -2px; font-weight: 900;}
@@ -40,11 +41,12 @@
     a{text-decoration: none;}
     body{margin: 0; padding: 0;}
     .main-container{margin: 0; padding: 0; width: 100%;}
-    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(237, 237, 237); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white;}
+    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(237, 237, 237); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white; animation: mymove 1s;}
     .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
     .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
     .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
-                                                                                                                                            .main-container .nav .delivery{display: none;}
+                                                                                                                            
+    .main-container .nav .delivery{display: none;}
     .main-container .nav .logo{margin-right: 10px;}
     .main-container .nav .logo h1{ font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif; margin-right: auto;}
     .main-container .nav .logo h1 span{color: orange;}
@@ -91,13 +93,13 @@
     
     .main-container .box{width: 100%; height: 100%; border:  1px silver; justify-content: center; }
     .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
-    .main-container .box .brand .image{width: 100%; height: 230px; border:  1px blue; flex-direction: column;  background-size: cover; background-position: center; box-shadow: 0; display: flex; justify-content: right; padding: 10px 4%; align-items: flex-end;}
+    .main-container .box .brand .image{width: 100%; height: 230px; border:  1px blue; background-size: cover; background-position: center; box-shadow: 0; display: flex; justify-content: space-between; padding: 10px 4%; align-items: flex-end; }
     .main-container .box .brand .image .a1{color: rgb(228, 228, 228, 0.8); background-color: rgb(228, 228, 228, 0.4); background-color: rgb(128, 128, 128, 0.2); padding: 3px 3px; border-radius: 100%; font-size: 26px; margin-top: auto;}
-    .main-container .box .brand .image .a2{padding: 5px 10px 5px 10px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0 0 3px rgb(192, 192, 192, 0.6);height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; letter-spacing: 1px; margin-top: 0;}
+    .main-container .box .brand .image .a2{padding: 5px 10px 5px 10px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0 0 3px rgb(192, 192, 192, 0.6);height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; letter-spacing: 1px; margin-top: 0; margin-bottom: auto;}
     .main-container .box .brand .image .a2 i{height: fit-content; margin-left: 8px; width: fit-content; font-weight: 700; font-size: 20px; color: black;}
-    .main-container .box .brand .logo{width: 75px; height: 75px; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 80px; margin-left: 4%;  border-radius: 50%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
-    .main-container .box .brand .logo img{width: 70px; height: 70px; border-radius: 18px;}
-    .main-container .box .brand .brand-name{margin-top: -60px; margin-left: 5%;}
+    .main-container .box .brand .image .logo{width: 75px; height: 75px; background-color: white; display: flex; justify-content: center; align-items: center;  margin-left: 1%;  border-radius: 50%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
+    .main-container .box .brand .image .logo img{width: 70px; height: 70px; border-radius: 18px;}
+    .main-container .box .brand .brand-name{margin-top: 10px; margin-left: 5%;}
     .main-container .box .brand .brand-name h1{font-size: 29px; font-family: 'Montserrat', sans-serif; width: 100%;}
     .main-container .box .brand .brand-name .details{display: flex; flex-direction: column; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left;}
     .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: auto;}
@@ -149,10 +151,10 @@
     .main-container .box .brand .image{width: 100%; height: 300px; border:  1px blue; border-radius: 10px; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); padding: 10px 2%; background-size: cover; background-position: center; box-shadow: none;}
     .main-container .box .brand .image .a2{padding: 6px 10px 5px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 10px silver; height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 15px; letter-spacing: 1px; margin-top: auto;}
     .main-container .box .brand .image .a2 i{height: fit-content; width: fit-content; font-weight: 900;}
-    .main-container .box .brand .logo{width: 90px; height: 90px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 45px; margin-left: 2%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
-    .main-container .box .brand .logo img{width: 70px; height: 70px; border-radius: 100%;}
-    .main-container .box .brand .brand-name{margin-top: -40px; margin-left: 0%;}
-    .main-container .box .brand .brand-name h1{font-size: 40px; font-family: 'Montserrat', sans-serif;}
+    /* .main-container .box .brand .logo{width: 90px; height: 90px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 45px; margin-left: 2%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
+    .main-container .box .brand .logo img{width: 70px; height: 70px; border-radius: 100%;} */
+    .main-container .box .brand .brand-name{margin-top: 20px; margin-left: 0%;}
+    .main-container .box .brand .brand-name h1{font-size: 38px; font-family: 'Montserrat', sans-serif;}
     .main-container .box .brand .brand-name .details{display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left; }
     .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: 0;}
     .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 10px; display: block;}
@@ -287,12 +289,12 @@
         <div class="box" >
             <div class="brand">
                 <div class="image" style="background-image: url(background\ pexels-chan-walrus-941869\ \(9\).jpg);">
-                    
+                    <a href="" class="logo" id="sticky-item" ><img src="Gidi Burger logo.png" alt=""></a>
                     <a href="" class="a2">Customer Support <i class="material-icons">support_agent</i></a>
                     <!-- <i class="material-icons-outlined a1" onclick="on();">error_outline</i> -->
                 </div>
             <span style="display: flex; flex-direction: column;">
-                <a href="" class="logo" id="sticky-item" ><img src="Gidi Burger logo.png" alt=""></a>
+                
 
                 <div class="brand-name">
                     <h1>Chick Fill-A</h1>
@@ -331,12 +333,12 @@
                     <div class="container" style="display: flex; width: 100%; border: solid 1px silver; height: 60px; border-radius: 10px;">
                         <div class="delcost" style="width: 50%; height: 100%; align-items: center; margin-top: 9px;">
                             <h3 style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.8);"><span class="naira">NN</span> 0.00</h3>
-                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.3); font-family: 'Roboto', sans-serif;">delivery time</p>
+                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.6); ">delivery fee</p>
                         </div>
                         <span style="height: 80%; margin: auto 0; border-left: 1px solid rgb(0, 0, 0, 0.3);"></span>
                         <div class="delcost 01" style="width: 50%; height: 100%; align-items: center; margin-top: 9px;">
-                            <h3 style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.8);">18 min</h3>
-                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.3); font-family: 'Roboto', sans-serif;">delivery time</p>
+                            <h3 style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.8); font-size: 18px;">18 min</h3>
+                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.6); ">delivery time</p>
                         </div>
                     </div>    
 
@@ -345,37 +347,58 @@
             </div>
             
         </div>
-        <div class="menu" style="width: 100%; border-top: solid 1px rgb(0, 0, 0, 0.3); margin-top: 30px;">
-            <div class="select" style="width: 100%; overflow: auto; height: fit-content; padding: 10px 0 10px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue;">
-                <a href="#title" style="height: 40px; color: black; border-bottom: solid 2px;  display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap;">FEATURED ITEMS</a>
-                <a href="" style="height: 40px; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap;">RICE AND NOODLES</a>
-                <a href="" style="height: 40px; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap;">DEAL OF THE MONTH</a>
-                <a href="" style="height: 40px; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap;">Featured items</a>
-                <a href="" style="height: 40px; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap;">Featured items</a>
-                <a href="" style="height: 40px; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap;">Featured items</a>
+        <div class="menu" style="width: 100%; border-top:  1px rgb(192, 192, 192, 0.6); margin-top: 30px; background-color: rgba(87, 87, 87, 0.2);">
+            <div class="select" style="width: 100%; overflow: hidden; height: fit-content; padding: 0px 0 0px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue; background-color: white; margin: 0 0; border-bottom: solid 0.2px rgb(202, 202, 202, 0.2);">
+                <a href="#featured1" style="height: 45px; font-size: 16px; font-weight: 400;  color: black; border-bottom: solid 2px;  display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
             </div>
 
-            <div class="content" id="featured" style="width: 100%; border:  1px rgb(0, 0, 0, 0.3); padding: 10px 0;">
-                <div class="title" id="title" style="padding: 0 4%; width: 100%;  margin-bottom: 5px;">
-                    <h2 style="font-family: 'Roboto', san-serif; font-size: 22px; font-family: 'Montserrat', sans-serif;">Featured items</h2>
+            <div class="content1" id="featured1" style="width: 100%; border:  1px rgb(0, 0, 0, 0.3); padding: 0px 0 0 0; background-color: white;">
+                <div class="title" id="title" style="padding: 25px 4% 15px 4%; width: 100%;  margin-bottom: 5px;">
+                    <h2 style="font-family: 'Roboto', san-serif; font-size: 22px; font-family: 'Montserrat', sans-serif;">Dunkin Refreshers</h2>
                 </div>
                 <div class="menu" style="width: 100%;">
-                    <a href="" style="display: block; border-bottom: solid 1px rgb(0, 0, 0, 0.3); width: 100%; padding: 8px 4%; height: 92px; display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.8);">
-                        <div class="image" style="height: 75px; width: 80px; background-image: url(background\ pexels-chan-walrus-941869\ \(8\).jpg); background-size: cover;  border-radius: 5px; margin-right: 10px;"></div>
-                        <span>
-                            <h3 style="color: black;">Roasted chicken with...</h3>
-                            <p style="color: rgb(0, 0, 0, 0.8); margin-top: 2px;">NGN 3,000</p>
+                    <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 10px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                        <div class="image" style="height: 90px; width: 95px; background-image: url(dodo-pizza-deluxe-offer.webp); background-size: cover;  border-radius: 3px; margin-right: 15px;"></div>
+                        <span style="width: 80%; border:  1px silver;">
+                            <h3 style="color: black; font-size: 16px;">Deluxe offer</h3>
+                            <p class="p2" style="margin-top: 3px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">Findin yourself hungry in search of breakfast? Dunkin....</p>
+                            <p style="color: rgb(0, 0, 0, 0.9); margin-top: 3px; font-size: 14px; font-weight: 400;">NGN 3,000</p>
                         </span>
                     </a>
-                    <a href="" style="display: block; border-bottom: solid 1px rgb(0, 0, 0, 0.3); width: 100%; padding: 8px 4%; display: flex; justify-content: left; align-items: center; color: rgb(0, 0, 0, 0.8);">
-                        <div class="image" style="height: 75px; width: 80px; background-image: url(background\ pexels-chan-walrus-941869\ \(5\).jpg); background-size: cover;  border-radius: 5px; margin-right: 10px;"></div>
-                        <span>
-                            <h3 style="color: black;">Roasted chicken with...</h3>
-                            <p style="color: rgb(0, 0, 0, 0.8); margin-top: 2px;">NGN 3,000</p>
+                    <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 10px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                        <div class="image" style="height: 90px; width: 95px; background-image: url(dodo-pizza-deluxe-offer.webp); background-size: cover;  border-radius: 3px; margin-right: 15px;"></div>
+                        <span style="width: 80%; border:  1px silver;">
+                            <h3 style="color: black; font-size: 16px;">Deluxe offer</h3>
+                            <p class="p2" style="margin-top: 3px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">Findin yourself hungry in search of breakfast? Dunkin....</p>
+                            <p style="color: rgb(0, 0, 0, 0.9); margin-top: 3px; font-size: 14px; font-weight: 400;">NGN 3,000</p>
+                        </span>
+                    </a>
+                    <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 10px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                        <div class="image" style="height: 90px; width: 95px; background-image: url(dodo-pizza-deluxe-offer.webp); background-size: cover;  border-radius: 3px; margin-right: 15px;"></div>
+                        <span style="width: 80%; border:  1px silver;">
+                            <h3 style="color: black; font-size: 16px;">Deluxe offer</h3>
+                            <p class="p2" style="margin-top: 3px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">Findin yourself hungry in search of breakfast? Dunkin....</p>
+                            <p style="color: rgb(0, 0, 0, 0.9); margin-top: 3px; font-size: 14px; font-weight: 400;">NGN 3,000</p>
+                        </span>
+                    </a>
+                    <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 10px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                        <div class="image" style="height: 90px; width: 95px; background-image: url(dodo-pizza-deluxe-offer.webp); background-size: cover;  border-radius: 3px; margin-right: 15px;"></div>
+                        <span style="width: 80%; border:  1px silver;">
+                            <h3 style="color: black; font-size: 16px;">Deluxe offer</h3>
+                            <p class="p2" style="margin-top: 3px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">Findin yourself hungry in search of breakfast? Dunkin....</p>
+                            <p style="color: rgb(0, 0, 0, 0.9); margin-top: 3px; font-size: 14px; font-weight: 400;">NGN 3,000</p>
                         </span>
                     </a>
                 </div>
             </div>
+
+
+
         </div>
 
 
