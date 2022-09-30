@@ -48,7 +48,7 @@
     a{text-decoration: none;}
     body{margin: 0; padding: 0;}
     .main-container{margin: 0; padding: 0; width: 100%;}
-    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(237, 237, 237); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white; animation: mymove 1s;}
+    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(237, 237, 237); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white; animation: mymove 1s; position: static;}
     .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
     .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
     .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
@@ -59,10 +59,10 @@
     .main-container .nav .logo h1 span{color: orange; font-weight: 700;}
     .main-container .nav .logo{margin-right: 10px;}
     .main-container .nav .logo .h12{display: none;}
-    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 38px; width: 45%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
+    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 38px; width: fit-content; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
     .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 0 10px; align-items: center;}
     .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
-    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 70%; background-color: transparent; }
+    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none; display: none;  width: 70%; background-color: transparent; }
     .main-container .nav .search form input::placeholder{ font-size: 16px;}
     .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
     .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-color: rgb(0, 0, 0, 0.8); color: white; cursor: pointer;}
@@ -111,10 +111,10 @@
     .main-container .box .brand .brand-name .details{display: flex; flex-direction: column; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left;}
     .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: auto;}
     .main-container .box .brand .brand-name .details .sp2{margin-top: 1px;}
-    .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center;  font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.5);}
-    .main-container .box .brand .brand-name .details span .ratings{ font-size: 14px; margin-left: 10px; color: rgb(0, 0, 0, 0.4); color: rgb(0, 0, 0, 0.5);}
+    .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center;  font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.44); line-height: 20px;}
+    .main-container .box .brand .brand-name .details span .ratings{ font-size: 14px; margin-left: 10px; color: rgb(0, 0, 0, 0.4); color: rgb(0, 0, 0, 0.44);}
     .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.4); display: none;}
-    .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.4);}
+    .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.44);}
 
 
 
@@ -322,11 +322,11 @@
                         </span>
                     </div>
 
-                    <div class="open-closed" style="margin-top: 30px; display: flex; align-items: center; justify-content: left;">
-                        <i class="material-icons" style="color: rgb(0, 0, 0, 0.6); font-size: 14px; font-weight: 600;">schedule</i>
+                    <div class="open-closed" style="margin-top: 40px; display: flex; align-items: center; justify-content: left;">
+                        <i class="material-icons" style="color: rgb(0, 0, 0, 0.44); font-size: 14px; font-weight: 600;">schedule</i>
                         <p class="open" style="display: flex; align-items: center; font-size: 14px; justify-content: left; color: rgba(6, 173, 15, 0.76); margin-left: 5px;">Open</p>
-                        <span style="width: 3px; height: 1px; border: solid 1px; margin: 0 10px; color: rgb(0, 0, 0, 0.5);"></span>
-                        <p class="close-time" style="display: flex; align-items: center; font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.5);">Closes at 8:40 PM</p>
+                        <span style="width: 3px; height: 1px; border: solid 1px; margin: 0 10px; color: rgb(0, 0, 0, 0.44);"></span>
+                        <p class="close-time" style="display: flex; align-items: center; font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.44);">Closes at 8:40 PM</p>
                     </div>
 
                     </span>
@@ -340,12 +340,12 @@
                     <div class="container" style="display: flex; width: 100%; border: solid 1px silver; height: 60px; border-radius: 10px;">
                         <div class="delcost" style="width: 50%; height: 100%; align-items: center; margin-top: 9px;">
                             <h3 style="width: 100%; text-align: center; font-size: 18px; font-weight: 800; color: rgb(0, 0, 0, 0.8);"><span class="naira">N</span> 0.00</h3>
-                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.4); line-height: 10px;">delivery fee</p>
+                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.4); line-height: 14px;">delivery fee</p>
                         </div>
                         <span style="height: 80%; margin: auto 0; border-left: 1px solid rgb(0, 0, 0, 0.3);"></span>
                         <div class="delcost 01" style="width: 50%; height: 100%; align-items: center; margin-top: 9px;">
                             <h3 style="width: 100%; text-align: center; font-size: 18px; font-weight: 800; color: rgb(0, 0, 0, 0.8); font-size: 18px;">18 min</h3>
-                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.4); line-height: 10px; ">delivery time</p>
+                            <p style="width: 100%; text-align: center; color: rgb(0, 0, 0, 0.4); line-height: 14px; ">delivery time</p>
                         </div>
                     </div>    
 
@@ -354,14 +354,14 @@
             </div>
             
         </div>
-        <div class="menu" style="width: 100%; border-top:  1px rgb(192, 192, 192, 0.6); margin-top: 30px; background-color: rgba(87, 87, 87, 0.2);">
-            <div class="select" style="width: 100%; overflow: hidden; height: fit-content; padding: 0px 0 0px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue; background-color: white; margin: 0 0; border-bottom: solid 0.2px rgb(202, 202, 202, 0.2);">
-                <a href="#Deals" style="height: 45px; font-size: 16px; font-weight: 400;  color: black; border-bottom: solid 2px;  display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Deals !</a>
-                <a href="#Combos" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Combos</a>
-                <a href="#Pizzas" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Pizzas</a>
-                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
-                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
-                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+        <div class="menu" style="width: 100%; border-top:  1px rgb(192, 192, 192, 0.6); margin-top: 0px; background-color: rgba(87, 87, 87, 0.2);">
+            <div class="select" style="width: 100%; overflow: auto; height: fit-content; padding: 0px 0 0px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue; background-color: white; margin: 0 0; border-bottom: solid 0.2px rgb(202, 202, 202, 0.2); margin-top: 30px; position: sticky !important; position: -webkit-sticky !important; top: 0;">
+                <a href="#Deals" style="height: 55px; font-size: 16px; font-weight: 400;  color: black; border-bottom: solid 2px;  display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Deals !</a>
+                <a href="#Combos" style="height: 55px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Combos</a>
+                <a href="#Pizzas" style="height: 55px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Pizzas</a>
+                <a href="" style="height: 55px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="" style="height: 55px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="" style="height: 55px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
             </div>
 
             <div class="content1" id="Deals" style="width: 100%; border:  1px rgb(0, 0, 0, 0.3); padding: 0px 0 0 0; background-color: white;">
