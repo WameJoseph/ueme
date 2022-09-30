@@ -8,12 +8,14 @@
     <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Montserrat:wght@600;700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@600;700;800&family=Khula:wght@800&family=Montserrat+Alternates:wght@600;700;800&family=Montserrat:wght@600;700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script>
-
+    <link rel="preload" href="">
     <title></title>
 </head>
 <style>
@@ -33,7 +35,7 @@
     *{
         margin: 0; padding: 0;
         box-sizing: border-box;
-        font-family: 'Gilroy-bold', sans-serif;
+        font-family: 'inter', sans-serif;
         scroll-behavior: smooth;
     }
     .naira{text-decoration-style:double; text-decoration-line: line-through; }
@@ -107,8 +109,8 @@
     .main-container .box .brand .brand-name .details .sp2{margin-top: 1px;}
     .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center;  font-size: 14px; font-weight: 500; justify-content: left; color: rgb(0, 0, 0, 0.4);}
     .main-container .box .brand .brand-name .details span .ratings{ font-size: 14px; margin-left: 10px; color: rgb(0, 0, 0, 0.4);}
-    .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 13px; color: rgb(0, 0, 0, 0.4); display: none;}
-    .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 13px; color: rgb(0, 0, 0, 0.4);}
+    .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.4); display: none;}
+    .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.4);}
 
 
 
@@ -317,15 +319,15 @@
                     </div>
 
                     <div class="open-closed" style="margin-top: 15px; display: flex; align-items: center; justify-content: left;">
-                        <i class="material-icons" style="color: rgb(0, 0, 0, 0.3); font-size: 14px; font-weight: 600;">schedule</i>
-                        <p class="open" style="display: flex; align-items: center; font-size: 14px; font-weight: 600; justify-content: left; color: rgba(6, 173, 15, 0.76); margin-left: 5px;">Open</p>
+                        <i class="material-icons" style="color: rgb(0, 0, 0, 0.6); font-size: 14px; font-weight: 600;">schedule</i>
+                        <p class="open" style="display: flex; align-items: center; font-size: 14px; justify-content: left; color: rgba(6, 173, 15, 0.76); margin-left: 5px;">Open</p>
                         <span style="width: 3px; height: 1px; border: solid 1px; margin: 0 10px; color: rgb(0, 0, 0, 0.6);"></span>
-                        <p class="close-time" style="display: flex; align-items: center; font-size: 14px; font-weight: 600; justify-content: left; color: rgb(0, 0, 0, 0.3);">Closes at 8:40 PM</p>
+                        <p class="close-time" style="display: flex; align-items: center; font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.6);">Closes at 8:40 PM</p>
                     </div>
 
                     </span>
                     <span style="margin-right: 4%;">
-                        <i class="material-icons" style="color: rgb(0, 0, 0, 0.4); background-color: rgb(0, 0, 0, 0.1); border-radius: 50%; padding: 5px; font-weight: 600; font-size: 22px;">error_outline</i>
+                        <i class="material-icons" style="color: rgb(0, 0, 0, 0.4); background-color: rgb(0, 0, 0, 0.1); border-radius: 50%; padding: 5px;  font-size: 22px;">error_outline</i>
                     </span>
                     </div>
                 </div>
@@ -350,51 +352,107 @@
         </div>
         <div class="menu" style="width: 100%; border-top:  1px rgb(192, 192, 192, 0.6); margin-top: 30px; background-color: rgba(87, 87, 87, 0.2);">
             <div class="select" style="width: 100%; overflow: hidden; height: fit-content; padding: 0px 0 0px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue; background-color: white; margin: 0 0; border-bottom: solid 0.2px rgb(202, 202, 202, 0.2);">
-                <a href="#featured1" style="height: 45px; font-size: 16px; font-weight: 400;  color: black; border-bottom: solid 2px;  display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
-                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
-                <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
+                <a href="#Deals" style="height: 45px; font-size: 16px; font-weight: 400;  color: black; border-bottom: solid 2px;  display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Deals !</a>
+                <a href="#Combos" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Combos</a>
+                <a href="#Pizzas" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Pizzas</a>
                 <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
                 <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
                 <a href="" style="height: 45px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Featured items</a>
             </div>
 
-            <div class="content1" id="featured1" style="width: 100%; border:  1px rgb(0, 0, 0, 0.3); padding: 0px 0 0 0; background-color: white;">
-                <div class="title" id="title" style="padding: 25px 4% 15px 4%; width: 100%;  margin-bottom: 5px;">
-                    <h2 style="font-family: 'Roboto', san-serif; font-size: 22px; font-family: 'Montserrat', sans-serif;">Dunkin Refreshers</h2>
+            <div class="content1" id="Deals" style="width: 100%; border:  1px rgb(0, 0, 0, 0.3); padding: 0px 0 0 0; background-color: white;">
+                <div class="title" id="title" style="padding: 25px 4% 0px 4%; width: 100%;  margin-bottom: 5px;">
+                    <h2 style="font-family: 'Roboto', san-serif; font-size: 22px; ">Deals !</h2>
                 </div>
                 <div class="menu" style="width: 100%;">
                     <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
-                        <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-deluxe-offer.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                        <div class="image"  style="height: 85px; width: 95px; background-image: url(dodo-pizza-deluxe-offer.webp);  background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
                         <span style="width: 80%; border:  1px silver;">
                             <h3 style="color: black; font-size: 16px;">Deluxe offer</h3>
-                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">Findin M yourself of breakfast? Dunkin....</p>
+                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">Findin M yourself of breakfast? Dunkin....</p>
                             <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 3,000</p>
                         </span>
                     </a>
                     <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
-                        <div class="image" style="height: 85px; width: 95px; background-image: url(dodopizza-coffe-salted_caramel_2.png); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                        <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-daily-boost.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
                         <span style="width: 75%; border:  1px silver;">
-                            <h3 style="color: black; font-size: 16px;">Coffee - Caramel</h3>
-                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">matte brown</p>
+                            <h3 style="color: black; font-size: 16px;">Daily Boost</h3>
+                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">matte brown</p>
                             <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 800</p>
                         </span>
                     </a>
                     <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
-                        <div class="image" style="height: 85px; width: 95px; background-image: url(chicken-bbqchicken-5piece-wings-dodopizza.jpeg); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                        <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-family-deal.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
                         <span style="width: 75%; border:  1px silver;">
-                            <h3 style="color: black; font-size: 16px;">5 piece Chicken wings</h3>
-                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">5 pieces of chicken wings</p>
+                            <h3 style="color: black; font-size: 16px;">Family Deal</h3>
+                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">Buy one large pizza get 2 ...</p>
                             <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 3,000</p>
                         </span>
                     </a>
                     <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
-                        <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-deluxe-offer.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                        <div class="image" style="height: 85px; width: 95px; background-image: url(Dodo-pizza-pizza\ Duet.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
                         <span style="width: 75%; border:  1px silver;">
-                            <h3 style="color: black; font-size: 16px;">Deluxe offer</h3>
-                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; font-family: 'Montserrat', sans-serif;">in search of breakfast? Dunkin....</p>
+                            <h3 style="color: black; font-size: 16px;">Pizza Duet</h3>
+                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">in search of breakfast? Dunkin....</p>
                             <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 3,000</p>
                         </span>
                     </a>
+                    <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                        <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-pasta\ deal.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                        <span style="width: 75%; border:  1px silver;">
+                            <h3 style="color: black; font-size: 16px;">Pasta Deal</h3>
+                            <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">in search of breakfast? Dunkin....</p>
+                            <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 2,100</p>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="content1" id="Combos" style="width: 100%; border:  1px rgb(0, 0, 0, 0.3); padding: 0px 0 0 0; background-color: white;">
+                    <div class="title" id="title" style="padding: 25px 4% 15px 4%; width: 100%;  margin-bottom: 5px;">
+                        <h2 style="font-family: 'Roboto', san-serif; font-size: 22px; ">Combos </h2>
+                    </div>
+                    <div class="menu" style="width: 100%;">
+                        <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                            <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-combo\ for\ 1.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                            <span style="width: 80%; border:  1px silver;">
+                                <h3 style="color: black; font-size: 16px;">Combo for 1</h3>
+                                <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">Findin M yourself of breakfast? Dunkin....</p>
+                                <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 3,000</p>
+                            </span>
+                        </a>
+                        <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                            <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-combo-for-2.webp); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                            <span style="width: 75%; border:  1px silver;">
+                                <h3 style="color: black; font-size: 16px;">Combo for 2</h3>
+                                <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">matte brown</p>
+                                <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 800</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content1" id="Pizzas" style="width: 100%; border:  1px rgb(0, 0, 0, 0.3); padding: 0px 0 0 0; background-color: white;">
+                    <div class="title" id="title" style="padding: 25px 4% 15px 4%; width: 100%;  margin-bottom: 5px;">
+                        <h2 style="font-family: 'Roboto', san-serif; font-size: 22px; ">Pizzas </h2>
+                    </div>
+                    <div class="menu" style="width: 100%;">
+                        <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                            <div class="image" style="height: 85px; width: 95px; background-image: url(dodo-pizza-dodomix.png); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                            <span style="width: 80%; border:  1px silver;">
+                                <h3 style="color: black; font-size: 16px;">Dodomix Pizza</h3>
+                                <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">Findin M yourself of breakfast? Dunkin....</p>
+                                <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 3,000</p>
+                            </span>
+                        </a>
+                        <a href="" style="display: block; border-bottom: solid 1px rgb(202, 202, 202, 0.2); width: 100%; padding: 20px 4%; display: flex; justify-content: left;  color: rgb(0, 0, 0, 0.8);">
+                            <div class="image" style="height: 85px; width: 95px; background-image: url(dodopizza-shawerma-1.png); background-size: cover;  border-radius: 5px; margin-right: 15px;"></div>
+                            <span style="width: 75%; border:  1px silver;">
+                                <h3 style="color: black; font-size: 16px;">Shawerma</h3>
+                                <p class="p2" style="margin-top: 5px; color: rgb(0, 0, 0, 0.4); font-size: 14px; ">matte brown</p>
+                                <p style="color: rgb(0, 0, 0, 0.9); margin-top: 8px; font-size: 14px; font-weight: 500;">NGN 800</p>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
