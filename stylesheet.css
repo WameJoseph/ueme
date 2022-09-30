@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Black.woff2') format('woff2'),
+        /* url(("C:\Users\Wamet\Documents\KartKrunch Website\transfonter.org-20220930-180123\TTNorms-Regular.woff") format('woff'); */
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Bold.woff2') format('woff2'),
+        url('TTNorms-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-BlackItalic.woff2') format('woff2'),
+        url('TTNorms-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Light.woff2') format('woff2'),
+        url('TTNorms-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-BoldItalic.woff2') format('woff2'),
+        url('TTNorms-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Italic.woff2') format('woff2'),
+        url('TTNorms-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Regular.woff2') format('woff2'),
+    url(("C:\Users\Wamet\Documents\KartKrunch Website\transfonter.org-20220930-180123\TTNorms-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
