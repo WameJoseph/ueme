@@ -19,154 +19,12 @@
     <!-- <link rel="stylesheet" href="stylesheet.css"> -->
     <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script>
     <link rel="preload" href="">
+    <link rel="stylesheet" href="product.css">
     <title></title>
 </head>
 <style>
-    #overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-}
-    *{
-        margin: 0; padding: 0;
-        box-sizing: border-box;
-        font-family: 'Manrope', sans-serif;
-        scroll-behavior: smooth;
-        font-weight: 500;
-    }
-    .naira{text-decoration-style:double; text-decoration-line: line-through; }
-    .star-icon{font-size: 11px; border: silver ; margin-left: 3px; margin-top: -2px; font-weight: 900;}
-    .em{color: initial; margin-left: 1px; font-size: 13px;}
-    a{text-decoration: none;}
-    body{margin: 0; padding: 0;}
-    .main-container{margin: 0; padding: 0; width: 100%;}
-    .main-container .nav{display: flex; justify-content: left; border-bottom: solid thin rgb(237, 237, 237); height: 60px; padding: 0 5% 0 3%; align-items: center; position: sticky; position: -webkit-sticky; top: 0; background-color: white; animation: mymove 1s; position: static;}
-    .main-container .nav .nv-item{border:  1px silver; display: flex; justify-content: space-between; align-items: center; cursor:pointer;}
-    .main-container .nav .bar{width: fit-content; margin-right: 10px; margin-left: 0;}
-    .main-container .nav .bar i{font-size: 24px; color: gray; color: rgb(0, 0, 0, 0.8);}
-                                                                                                                            
-    .main-container .nav .delivery{display: none;}
-    .main-container .nav .logo{margin-right: 10px;}
-    .main-container .nav .logo h1{ font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif; font-weight: 700; margin-right: auto;}
-    .main-container .nav .logo h1 span{color: orange; font-weight: 700;}
-    .main-container .nav .logo{margin-right: 10px;}
-    .main-container .nav .logo .h12{display: none;}
-    .main-container .nav .search{margin-right: 10px; border:  thin silver; border-radius: 30px; height: 38px; width: fit-content; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
-    .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 0 10px; align-items: center;}
-    .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
-    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none; display: none;  width: 70%; background-color: transparent; }
-    .main-container .nav .search form input::placeholder{ font-size: 16px;}
-    .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
-    .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-color: rgb(0, 0, 0, 0.8); color: white; cursor: pointer;}
-    .main-container .nav .cart{border:  1px rgb(170, 7, 7); display: flex; height: 32px;  width: 70px; justify-content: space-between; align-items: center; padding: 0 11.8px; border-radius: 30px; color: white; background-color: red; margin-right: ; margin-left: ;}
-    .main-container .nav .cart .sp1{align-items: center; height: 100%; display: flex;}
-    .main-container .nav .cart .sp2{align-items: center; height: 100%; display: flex;}
-    .main-container .nav .cart .sp2 p{align-items: center; height: 100%; display: flex;}
+  
 
-    .main-container .sidebar{
-        visibility:visible;
-        position: fixed !important;
-        width: 0px;
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y:auto;
-        background: white;
-        padding: 0px 0 10px 0;
-        margin: 0;
-        box-shadow: 1px 0px 5px 1.5px rgba(226, 222, 222, 0.795);
-        transition: 260ms;
-    }
-    .main-container .sidebar .nav-items{}
-    .main-container .sidebar .nav-items ul li{ border-top: solid 0.3px rgb(192, 192, 192, 0.3);    }
-    .main-container .sidebar .nav-items ul li a{ width: 100%; height: 100%; display: flex; border:  thin orange; padding: 20px 20px; align-items: center;}
-    .main-container .sidebar .nav-items ul li a:hover{ background-color: rgb(192, 192, 192, 0.2);}
-    .main-container .sidebar .nav-items ul li .shorts{width: 90%; padding: 10px 0; border:  1px; border-radius: 5px; background-color: orangered;  margin: 15px auto; justify-content: center; transition: 0.2s;}
-    .main-container .sidebar .nav-items ul li .shorts h5{margin: 0; color: white;}
-    .main-container .sidebar .nav-items ul li .shorts:hover{background-color: rgb(247, 84, 25);}
-    .main-container .sidebar .nav-items ul li .shorts i{margin: 0; margin-left: 10px; color: white;}
-    .main-container .sidebar .nav-items ul li a i{ font-size: 27px; color: black;}
-    .main-container .sidebar .nav-items ul li a h5{ margin-left: 15px; font-size: 18px; color: black;}
-    .main-container .sidebar .nav-items ul li .descript{ padding: 25px 10px;}
-    .main-container .sidebar .nav-items ul li .descript h5{ font-weight: 500; font-size: 17px;}
-    .main-container .sidebar .nav-items ul li .descript h5 .kk{ font-family: 'Montserrat Alternates', san-serif; color: orangered;}
-    
-    .main-container .box{width: 100%; height: 100%; border:  1px silver; justify-content: center; }
-    .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
-    .main-container .box .brand .image{width: 100%; height: 230px; border:  1px blue; background-size: cover; background-position: center; box-shadow: 0; display: flex; justify-content: space-between; padding: 10px 4%; align-items: flex-end; }
-    .main-container .box .brand .image .a1{color: rgb(228, 228, 228, 0.8); background-color: rgb(228, 228, 228, 0.4); background-color: rgb(128, 128, 128, 0.2); padding: 3px 3px; border-radius: 100%; font-size: 26px; margin-top: auto;}
-    .main-container .box .brand .image .a2{padding: 5px 10px 5px 10px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0 0 3px rgb(192, 192, 192, 0.6);height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-size: 15px; letter-spacing: 1px; margin-top: 0; margin-bottom: auto;}
-    .main-container .box .brand .image .a2 i{height: fit-content; margin-left: 8px; width: fit-content; font-weight: 700; font-size: 20px; color: black;}
-    .main-container .box .brand .image .logo{width: 75px; height: 75px; background-color: white; display: flex; justify-content: center; align-items: center;  margin-left: 1%;  border-radius: 50%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
-    .main-container .box .brand .image .logo img{width: 70px; height: 70px; border-radius: 18px;}
-    .main-container .box .brand .brand-name{margin-top: 15px; margin-left: 5%;}
-    .main-container .box .brand .brand-name h1{font-size: 29px;  width: 100%;}
-    .main-container .box .brand .brand-name .details{display: flex; flex-direction: column; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left;}
-    .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: auto;}
-    .main-container .box .brand .brand-name .details .sp2{margin-top: 1px;}
-    .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center;  font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.44); line-height: 20px;}
-    .main-container .box .brand .brand-name .details span .ratings{ font-size: 14px; margin-left: 10px; color: rgb(0, 0, 0, 0.4); color: rgb(0, 0, 0, 0.44);}
-    .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.4); display: none;}
-    .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.44);}
-
-
-
-    @media screen and (min-width: 530px){
-    .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat', sans-serif;}
-    .main-container .nav .logo .h12{display: block;}
-    }
-
-    @media screen and (min-width: 700px) {
-    .main-container .box{width: 100%; height: 100%; border:  1px silver; justify-content: center; }
-    .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
-    .main-container .box .brand .image{width: 100%; height: 200px; border:  1px blue;  background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); background-size: cover; background-position: center; }
-    .main-container .box .brand .image .a1{display: none;}
-    /* .main-container .box .brand .logo{width: 70px; height: 70px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 35px; margin-left: 5%;  border-radius: 50%; box-shadow: 0 0 5px rgb(138, 137, 137);}
-    .main-container .box .brand .logo img{width: 50px; height: 50px; border-radius: 100%;} */
-    }
-
-    @media screen and (min-width: 1100px){
-    .main-container .nav{ border-bottom: solid thin #f3f5f9; box-shadow: 1px 1px 3px #f3f5f9; height: 53px; padding: 0 5%; }
-    .main-container .nav .logo{margin-right: auto;}
-    .main-container .nav .logo h1{display: none; font-size: 22px; color: rgb(244, 65, 0); font-family: 'Montserrat Alternates', san-serif;}
-    .main-container .nav .logo .h12{display: block;}
-    
-    .main-container .nav .delivery{display: block; margin-right: auto; display: flex;}
-    .main-container .nav .delivery h4{margin-left: 20px; font-size: 16px; font-weight: 500; color: white; background-color: rgb(209, 12, 12); padding: 3px 5px; border-radius: 5px;}
-    .main-container .nav .delivery p{margin-left: 5px; margin-bottom: ; color: rgb(163, 163, 163); font-weight: 100; font-size: 12px; margin-top: 3px; font-family: sans-serif;}
-    .main-container .nav .delivery h5{margin-left: 5px; font-size: 15px; font-weight: 600; color: rgb(0, 0, 0, 0.8); width: 160px; border-bottom:  1.6px gray; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; align-items: center; text-decoration: underline; margin-top:; transition: .1s;}
-    .main-container .nav .delivery h5:hover{color: rgb(0, 0, 0, 0.6); margin-top: 1.5px;}
-    .main-container .nav .delivery .expand-icon{margin-left: -6px; font-size: 19px ; font-weight: 700; color: rgb(0, 0, 0, 0.8); border:  1px gray; padding: 1px; transition: 0.3s; margin-top: 5px;}
-    .main-container .nav .delivery .expand-icon:hover{border:  1px gray; background-color: rgb(192, 192, 192, 0.3); padding: 1px; border-radius: 5px;}
-    .main-container .nav .search{margin-right: 10%; border:  thin silver; border-radius: 30px; height: 38px; width: 30%; display: flex; background-color: #f3f5f9; outline:  2px rgb(0, 0, 0, 0.7); transition: 0.5s; margin-left: auto; justify-content: center; align-items: center;}
-    .main-container .nav .search form{width: 100%; justify-content: center; display: flex; padding: 10px 10px; align-items: center;}
-    .main-container .nav .search form .i1{border:  1px silver; margin-right: auto;}
-    .main-container .nav .search form input{margin: 0 5px; border:  1px blue !important; outline: none;  width: 83%; background-color: transparent; }
-    .main-container .nav .search form input::placeholder{ font-size: 14px; font-weight: 500; font-family: 'Roboto', sans-serif;}
-    .main-container .nav .search form input::-webkit-search-cancel-button{display: none}
-    .main-container .nav .search .i2{margin-left: auto; visibility: hidden; border: solid 1px gray;  padding: 3px 5px 2px 5px; align-items: center; justify-content: center; height: fit-content;  width: fit-content; border-radius: 100%; font-size: 12px; background-: rgb(0, 0, 0, 0.8); color: gray; cursor: pointer;} 
-
-    .main-container .box{width: 80%; height: 100%; border:  1px silver; justify-content: center; margin: 0 auto; margin-top: 10px;}
-    .main-container .box .brand{width: 100%; padding: 0px 0; border:  1px silver; flex-direction: column; }
-    .main-container .box .brand .image{width: 100%; height: 300px; border:  1px blue; border-radius: 10px; background-image: url(background\ pexels-chan-walrus-941869\ \(10\).jpg); padding: 10px 2%; background-size: cover; background-position: center; box-shadow: none;}
-    .main-container .box .brand .image .a2{padding: 6px 10px 5px 15px; background-color: white; color: rgb(0, 0, 0, 0.8); box-shadow: 0px 0px 10px silver; height: fit-content; border-radius: 30px; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 15px; letter-spacing: 1px; margin-top: auto; margin-bottom: 0;}
-    .main-container .box .brand .image .a2 i{height: fit-content; width: fit-content; font-weight: 900;}
-    /* .main-container .box .brand .logo{width: 90px; height: 90px; border-radius: 50%; background-color: white; display: flex; justify-content: center; align-items: center; position: relative; bottom: 45px; margin-left: 2%; box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);}
-    .main-container .box .brand .logo img{width: 70px; height: 70px; border-radius: 100%;} */
-    .main-container .box .brand .brand-name{margin-top: 20px; margin-left: 0%;}
-    .main-container .box .brand .brand-name h1{font-size: 38px; font-family: 'Montserrat', sans-serif;}
-    .main-container .box .brand .brand-name .details{display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 3px; border:  1px; text-align: left; }
-    .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: 0;}
-    .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 10px; display: block;}
-
-}
 </style>
 <body>
 
@@ -180,7 +38,7 @@
          <div class="sidebar" id="sidebar">
 
             <div class="cancel" id="close" style="height: 15%; border:  1px gray; display: flex; width: 100%; justify-content: right; align-items: center; padding: 0 20px; position: sticky; position: -webkit-sticky; top: 0; background-color: white;">
-                <i class="material-icons" onclick="makeNavDissapear()" style="font-size: 30px; cursor: pointer; border:  1px; background-color: rgb(192, 192, 192, 0.3); transition: 40ms;">close</i>
+                <i class="material-icons" onclick="on3()" style="font-size: 30px; cursor: pointer; border:  1px; background-color: rgb(192, 192, 192, 0.3); transition: 40ms;">close</i>
             </div>
             <div class="nav-items">
                 <ul>
@@ -252,7 +110,7 @@
 
         <div class="nav" id="nav">
             <div class="bar nv-item">
-                <i class="material-icons" onclick="makeNavAppear()">menu</i>   
+                <i class="material-icons" onclick="on2()">menu</i>   
             </div>
 
             <div class="logo nv-item">
@@ -355,7 +213,7 @@
             
         </div>
         <div class="menu" style="width: 100%; border-top:  1px rgb(192, 192, 192, 0.6); margin-top: 0px; background-color: rgba(87, 87, 87, 0.2);">
-            <div class="select" style="width: 100%; overflow: auto; height: fit-content; padding: 0px 0 0px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue; background-color: white; margin: 0 0; border-bottom: solid 0.2px rgb(202, 202, 202, 0.2); margin-top: 30px; position: sticky !important; position: -webkit-sticky !important; top: 0;">
+            <div class="select-menu-item" id="select" >
                 <a href="#Deals" style="height: 55px; font-size: 16px; font-weight: 400;  color: black; border-bottom: solid 2px;  display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Deals !</a>
                 <a href="#Combos" style="height: 55px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Combos</a>
                 <a href="#Pizzas" style="height: 55px; font-size: 16px; font-weight: 400; color: black; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0 10px; white-space: nowrap; letter-spacing: -0.3px;">Pizzas</a>
@@ -476,6 +334,29 @@
         function off() {
         //   document.getElementById("overlay").style.display = "none";
         }
+
+     
+function on2(){
+    document.getElementById('select').style.display = 'none';
+    document.getElementById("sidebar").style.width = "300px";
+    document.getElementById("sidebar").style.height = "100%";
+    document.getElementById('select').style.display = 'none';
+    document.getElementById("sidebar").style.visibility = "visible";
+    document.getElementById("nav").style.position = 'static';
+    document.getElementById("kart-categories").style.position = 'static';
+    document.getElementById("sticky-item").style.position = 'static';
+}
+function on3() {
+    document.getElementById('select').style.display = 'flex';
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("sidebar").style.height = "100%";
+    document.getElementById("sidebar").style.visibility = "hidden";
+    document.getElementById("nav").style.position = 'sticky';
+    document.getElementById("kart-categories").style.position = 'sticky';
+    document.getElementById("sticky-item").style.position = 'relative';
+    document.getElementById("select-").style.position = 'sticky';
+}
+
     </script>
     <script src="mainpage.js"></script>
 </body>
