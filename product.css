@@ -92,7 +92,7 @@
       .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.4); display: none;}
       .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.44);}
   
-      .select-menu-item{position: sticky; top: 0; width: 100%; overflow: auto; height: fit-content; padding: 0px 0 0px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue; background-color: white; margin: 0 0; border-bottom: solid 0.2px rgb(202, 202, 202, 0.2); margin-top: 30px;}
+      .select-menu-item{position: sticky; top: 0; width: 100%; overflow: auto; height: fit-content; padding: 0px 0 0px 5px; display: flex; justify-content: left; align-items: center; border:  1px blue; background-color: white; margin: 0 0; border-bottom: solid 0.6px rgb(202, 202, 202, 0.2); margin-top: 30px;}
   
       .main-container .box .open-closed{}
 
