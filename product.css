@@ -87,7 +87,7 @@
       .main-container .box .brand .brand-name .details{display: flex; flex-direction: column; justify-content: left; align-items: center; margin-top: 8px; border:  1px; text-align: left;}
       .main-container .box .brand .brand-name .details span{display: flex; justify-content: left; align-items: center; margin-right: auto;}
       .main-container .box .brand .brand-name .details .sp2{margin-top: 1px;}
-      .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center;  font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.6); line-height: 20px;}
+      .main-container .box .brand .brand-name .details span .p{display: flex; align-items: center;  font-size: 14px; justify-content: left; color: rgb(0, 0, 0, 0.6); font-weight: 400; line-height: 20px; border:  silver;}
       .main-container .box .brand .brand-name .details span .ratings{ font-size: 14px; margin-left: 10px; color: rgb(0, 0, 0, 0.4); color: rgb(0, 0, 0, 0.6);}
       .main-container .box .brand .brand-name .details span .split{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.6); display: none;}
       .main-container .box .brand .brand-name .details span .split2{width: 3px; height: 1px; border: solid 1px; margin: 0 20px; color: rgb(0, 0, 0, 0.6);}
